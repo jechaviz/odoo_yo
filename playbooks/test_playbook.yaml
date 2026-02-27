@@ -1,0 +1,12 @@
+metadata:
+  category: automation
+  subcategory: test
+  customer: Yo
+
+steps:
+  prod:
+    - name: Persist test file
+      action: FS.WriteJson
+      params:
+        path: "${PLAYBOOK_DIR}/output/test.json"
+        value: { "ok": true, "msg": "waiba test run" }

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Autozone",
+    "version": "latest-known",
+    "arch": "<?xml version=\"1.0\"?><t t-xml-node=\"addenda\"><ADDENDA10 VERSION=\"1.0\"/></t>"
+  },
+  {
+    "name": "Bosh",
+    "version": "latest-known",
+    "arch": "<?xml version=\"1.0\"?><t t-xml-node=\"addenda\"><customized/></t>"
+  }
+]

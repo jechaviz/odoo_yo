@@ -1,0 +1,16 @@
+[project]
+name = "odoo-yo-bridge"
+version = "0.1.0"
+description = "Odoo Online invoice/complements/addenda API bridge"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+odoo-yo-bridge = "odoo_yo_bridge.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true

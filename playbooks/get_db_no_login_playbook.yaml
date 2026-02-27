@@ -1,0 +1,41 @@
+metadata:
+  category: automation
+  subcategory: odoo
+  customer: Yo
+  lesson: obtener_bd_odoo_sin_login
+
+variables:
+  DEBUG_PORT: 9222
+  ODOO_URL: "https://jesus-chavez-galaviz.odoo.com"
+
+steps:
+  prod:
+    - name: Start browser (Edge) for CDP
+      action: Browser.Start
+      params:
+        port: "${DEBUG_PORT}"
+        minimize_window: true
+
+    - name: Connect to browser and open root page
+      action: CDP.Connect
+      params:
+        port: "${DEBUG_PORT}"
+        open_url: "${ODOO_URL}"
+
+    - name: Query session info to get DB name (assumes already logged in)
+      action: CDP.EvaluateJson
+      params:
+        port: "${DEBUG_PORT}"
+        expression: "(async()=>{try{const r=await fetch('/web/session/get_session_info',{credentials:'same-origin'});return {ok:true,session:await r.json()}}catch(e){return {error:String(e)}}})()"
+      register: session_info
+
+    - name: Persist session info
+      action: FS.WriteJson
+      params:
+        path: "${PLAYBOOK_DIR}/output/session_info.json"
+        value: "${session_info}"
+
+  debug:
+    - action: Note
+      params:
+        text: "Playbook to get Odoo DB via session info (no login)"

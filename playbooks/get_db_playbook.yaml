@@ -1,0 +1,79 @@
+metadata:
+  category: automation
+  subcategory: odoo
+  customer: Yo
+  lesson: obtener_bd_odoo
+
+variables:
+  DEBUG_PORT: 9222
+  ODOO_URL: "https://jesus-chavez-galaviz.odoo.com"
+  ODOO_USER: "jesus.cgalaviz+odoo@gmail.com"
+  ODOO_PASS: "alchuchoneA1."
+
+steps:
+  prod:
+    - name: Start browser (Edge) for CDP
+      action: Browser.Start
+      params:
+        port: "${DEBUG_PORT}"
+        minimize_window: true
+
+    - name: Connect to browser and open login page
+      action: CDP.Connect
+      params:
+        port: "${DEBUG_PORT}"
+        open_url: "${ODOO_URL}/web/login"
+
+    - name: Fill login form and submit
+      action: CDP.EvaluateJson
+      params:
+        port: "${DEBUG_PORT}"
+        expression: |
+          (async function(){
+            function sleep(ms){return new Promise(r=>setTimeout(r,ms))}
+            // Wait for login form
+            for(let i=0;i<20;i++){
+              if(document.querySelector("input[name='login']") && document.querySelector("input[name='password']")) break;
+              await sleep(300);
+            }
+            const login = document.querySelector("input[name='login']");
+            const pwd = document.querySelector("input[name='password']");
+            if(!login || !pwd) return {error:'login_form_not_found'};
+            login.value = "${ODOO_USER}";
+            pwd.value = "${ODOO_PASS}";
+            const btn = document.querySelector("button[type='submit']") || document.querySelector("button.btn-primary");
+            if(btn) btn.click();
+            // wait for navigation / session
+            for(let i=0;i<30;i++){
+              if(location.pathname !== '/web/login') break;
+              await sleep(500);
+            }
+            return {ok:true, path:location.pathname};
+          })();
+
+    - name: Query session info to get DB name
+      action: CDP.EvaluateJson
+      params:
+        port: "${DEBUG_PORT}"
+        expression: |
+          (async function(){
+            try{
+              const res = await fetch('/web/session/get_session_info', {credentials:'same-origin'});
+              const j = await res.json();
+              return {ok:true, session:j};
+            }catch(e){
+              return {error: String(e)};
+            }
+          })();
+      register: session_info
+
+    - name: Persist session info
+      action: FS.WriteJson
+      params:
+        path: "${PLAYBOOK_DIR}\\output\\session_info.json"
+        value: "${session_info}"
+
+  debug:
+    - action: Note
+      params:
+        text: "Playbook to get Odoo DB via session info"
