@@ -54,6 +54,26 @@ class InvoiceApiBridgeManager:
         "l10n_mx_edi_payment",
     ]
 
+    @classmethod
+    def action_names(cls) -> List[str]:
+        return [
+            cls.ACTION_INVOICE,
+            cls.ACTION_PAYMENT,
+            cls.ACTION_FOREIGN_TRADE,
+            cls.ACTION_ADDENDA,
+            cls.ACTION_GENERIC,
+            cls.ACTION_CARTA_PORTE,
+        ]
+
+    @classmethod
+    def parameter_keys(cls) -> List[str]:
+        return [
+            cls.TOKEN_PARAM,
+            cls.COMPLEMENTS_BASELINE_PARAM,
+            cls.COMPLEMENTS_DISCOVERY_PARAM,
+            cls.ADDENDAS_KNOWN_PARAM,
+        ]
+
     def __init__(self, client: OdooClient, project_root: Path):
         self.client = client
         self.project_root = project_root
@@ -137,6 +157,61 @@ class InvoiceApiBridgeManager:
             result["errors"].append(str(exc))
         return result
 
+    def status(self) -> Dict[str, Any]:
+        actions = self.client.search_read(
+            "ir.actions.server",
+            [("name", "in", self.action_names())],
+            fields=["id", "name", "state", "model_id", "binding_model_id"],
+            limit=200,
+        )
+        params = self.client.search_read(
+            "ir.config_parameter",
+            [("key", "in", self.parameter_keys())],
+            fields=["id", "key", "value"],
+            limit=200,
+        )
+        return {
+            "status": "ok",
+            "action_count": len(actions),
+            "param_count": len(params),
+            "actions": actions,
+            "params": params,
+        }
+
+    def rollback(self) -> Dict[str, Any]:
+        actions = self.client.search_read(
+            "ir.actions.server",
+            [("name", "in", self.action_names())],
+            fields=["id", "name"],
+            limit=200,
+        )
+        action_ids = [int(row["id"]) for row in actions if row.get("id")]
+        if action_ids:
+            self.client.execute("ir.actions.server", "unlink", action_ids)
+
+        params = self.client.search_read(
+            "ir.config_parameter",
+            [("key", "in", self.parameter_keys())],
+            fields=["id", "key"],
+            limit=200,
+        )
+        param_ids = [int(row["id"]) for row in params if row.get("id")]
+        if param_ids:
+            self.client.execute("ir.config_parameter", "unlink", param_ids)
+
+        post = self.status()
+        return {
+            "status": "rolled_back",
+            "deleted": {
+                "actions": len(action_ids),
+                "params": len(param_ids),
+            },
+            "remaining": {
+                "actions": post.get("action_count", 0),
+                "params": post.get("param_count", 0),
+            },
+        }
+
     def _ensure_token(self) -> tuple[str, bool]:
         rows = self.client.search_read("ir.config_parameter", [("key", "=", self.TOKEN_PARAM)], fields=["id", "value"], limit=1)
         if rows:
@@ -200,6 +275,15 @@ class InvoiceApiBridgeManager:
     def _sync_known_addendas(self) -> Dict[str, Any]:
         catalog_path = self.project_root / "data" / "addendas" / "known_addendas.json"
         catalog = self._load_or_seed_addenda_catalog(catalog_path)
+
+        if not self._model_id("l10n_mx_edi.addenda"):
+            return {
+                "created": 0,
+                "updated": 0,
+                "records": [],
+                "catalog_count": len(catalog),
+                "status": "model_missing",
+            }
 
         existing = self.client.search_read(
             "l10n_mx_edi.addenda",

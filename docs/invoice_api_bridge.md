@@ -79,6 +79,27 @@ Then run:
 uv run odoo-yo-bridge
 ```
 
+Safety guard (default):
+
+- CLI only allows host `jesus-chavez-galaviz.odoo.com`.
+- Override intentionally with:
+
+```bash
+uv run odoo-yo-bridge --allow-any-host
+```
+
+Read status:
+
+```bash
+uv run odoo-yo-bridge --status
+```
+
+Rollback (remove YO bridge actions + params):
+
+```bash
+uv run odoo-yo-bridge --rollback
+```
+
 ## SAT references (official)
 
 - Pagos 2.0: https://www.sat.gob.mx/consulta/12034/comprobante-de-recepcion-de-pagos
