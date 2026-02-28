@@ -1,12 +1,17 @@
 [project]
-name = "odoo-yo-bridge"
+name = "odoo-bridge"
 version = "0.1.0"
 description = "Odoo Online invoice/complements/addenda API bridge"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "PyYAML>=6.0",
+]
 
 [project.scripts]
+odoo-bridge = "odoo_bridge.cli:main"
+odoo-app-ui = "odoo_bridge.app_ui_cli:main"
 odoo-yo-bridge = "odoo_yo_bridge.cli:main"
+odoo-yo-invoicing-ui = "odoo_yo_bridge.app_ui_cli:main"
 
 [build-system]
 requires = ["hatchling"]
