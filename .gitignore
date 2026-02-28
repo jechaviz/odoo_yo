@@ -4,3 +4,5 @@ __pycache__/
 playbooks/output/
 playbooks/*.log
 *.tmp
+Buyniverse/
+Buyniverse.zip
