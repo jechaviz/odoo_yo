@@ -1,0 +1,9 @@
+/*
+  Aggregator stylesheet for local preview.
+  Odoo runtime bundle is composed by Python (app_ui_revamp.py)
+  from data/app_ui/css/*.css to keep each file under 600 lines.
+*/
+@import url('./css/00_core.css');
+@import url('./css/10_dashboard.css');
+@import url('./css/20_tables.css');
+@import url('./css/30_forms.css');

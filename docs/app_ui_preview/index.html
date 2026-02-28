@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App UI Preview</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../../data/app_ui/css/00_core.css" />
+  <link rel="stylesheet" href="../../data/app_ui/css/10_dashboard.css" />
+  <link rel="stylesheet" href="../../data/app_ui/css/20_components.css" />
+  <link rel="stylesheet" href="../../data/app_ui/css/20_tables.css" />
+  <link rel="stylesheet" href="../../data/app_ui/css/30_forms.css" />
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: #dbe8ff;
+      background: radial-gradient(circle at 20% 10%, #1e345d 0%, #0d1a33 35%, #070f20 100%);
+      overflow: hidden;
+    }
+
+    .preview-shell {
+      height: 100vh;
+      display: block;
+      /* Neural Shell handles layout */
+      border: none;
+      margin: 0;
+    }
+
+    /* Global Neural styles handled by 10_dashboard.css */
+
+    .preview-main {
+      min-width: 0;
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      background: linear-gradient(180deg, rgba(9, 18, 36, 0.88) 0%, rgba(7, 14, 29, 0.9) 100%);
+    }
+
+    .preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(10, 15, 28, 0.6);
+      backdrop-filter: blur(20px);
+      height: 54px;
+      gap: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .preview-header-left,
+    .preview-header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    /* Header buttons handled by 10_dashboard.css */
+
+    .preview-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(114, 152, 219, 0.5);
+      background: linear-gradient(180deg, #2b4979, #1a3057);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .preview-nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 16px;
+      border-bottom: 1px solid rgba(77, 109, 164, 0.3);
+      color: #c4d8f7;
+      font-size: 13px;
+      background: rgba(9, 20, 40, 0.65);
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+
+    .preview-nav span {
+      opacity: 0.82;
+    }
+
+    .preview-nav span.active {
+      color: #ffffff;
+      opacity: 1;
+      font-weight: 700;
+      border-bottom: 2px solid #4f8ed5;
+      padding-bottom: 4px;
+    }
+
+    .preview-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 6px;
+    }
+
+    .preview-controls select,
+    .preview-controls button {
+      border: 1px solid rgba(108, 146, 209, 0.45);
+      border-radius: 10px;
+      background: #10264a;
+      color: #dce9ff;
+      padding: 6px 9px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .preview-content {
+      min-width: 0;
+      min-height: 0;
+      overflow: auto;
+      padding: 14px;
+    }
+
+    #preview-app {
+      min-width: 0;
+      min-height: 620px;
+    }
+
+    @media (max-width: 1100px) {
+      .preview-shell {
+        grid-template-columns: 56px minmax(0, 1fr);
+      }
+
+      .preview-controls {
+        display: none;
+      }
+
+      .preview-nav {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .preview-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .preview-rail {
+        display: none;
+      }
+
+      .preview-main {
+        grid-template-rows: auto 1fr;
+      }
+
+
+      .preview-header {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/exis9/squery@latest/squery.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="../../data/app_ui/js/app_ui_api.js"></script>
+  <script src="../../data/app_ui/js/app_ui_state.js"></script>
+  <script src="../../data/app_ui/app_ui_i18n.js"></script>
+  <script>
+    // Mock the injected variable for preview mode
+    window.__APP_UI_I18N__ = {}; 
+  </script>
+  <script src="../../data/app_ui/app_ui_config.js"></script>
+</head>
+
+<body>
+  <div id="preview-app"></div>
+
+  <script type="module">
+    const FILTER_ORDER = ["all", "paid", "overdue", "pending", "draft"];
+    const MOCK_APPS = [
+      { key: "App", label: "App", icon: "fa-solid fa-receipt", description: "Audit-ready billing hub", color: "#38bdf8" },
+      { key: "crm", label: "Neural CRM", icon: "fa-solid fa-microchip", description: "Quantified sales pipeline", color: "#818cf8" },
+      { key: "inventory", label: "Nodes", icon: "fa-solid fa-box-open", description: "Asset & inventory tracking", color: "#fb7185" },
+    ];
+
+    async function loadYamlCatalog() {
+      const raw = await fetch("../../data/app_ui/i18n/messages.yml", { cache: "no-store" }).then((r) => r.text());
+      return window.jsyaml.load(raw) || {};
+    }
+
+    function tipForFilter(uiText, filterName) {
+      const map = {
+        all: uiText.tipFilterAll,
+        paid: uiText.tipFilterPaid,
+        overdue: uiText.tipFilterOverdue,
+        pending: uiText.tipFilterPending,
+        draft: uiText.tipFilterDraft,
+      };
+      return map[filterName] || map.all;
+    }
+
+    function seedState(uiText) {
+      return {
+        loading: false,
+        activeFilter: "all",
+        tip: `${uiText.tipFilterAll} ${uiText.tipViewFallback}`,
+        checklistOpen: false,
+        checklistCompleted: 3,
+        checklist: [
+          { id: "search", label: uiText.checklistSearch, ok: true },
+          { id: "new", label: uiText.checklistNew, ok: true },
+          { id: "list", label: uiText.checklistList, ok: true },
+          { id: "status", label: uiText.checklistStatus, ok: false },
+        ],
+        i18n: uiText,
+        kpis: {
+          overdueAmount: "$2,050.00",
+          overdueCount: 2,
+          draftAmount: "$4,600.00",
+          draftCount: 4,
+          unpaidAmount: "$2,050.00",
+          unpaidCount: 3,
+          avgPaidDays: 7,
+          postedCount: 16,
+        },
+        counts: { all: 24, paid: 16, overdue: 2, pending: 3, draft: 4 },
+      };
+    }
+
+    async function mountPreview() {
+      const catalog = await loadYamlCatalog();
+      const i18nApi = window.APP_UI_I18N_API;
+      if (!i18nApi) throw new Error("APP_UI_I18N_API was not loaded.");
+
+      const localeSelect = sq("#locale-select").get(0);
+      const queryLocale = new URLSearchParams(window.location.search).get("locale");
+      const selectedLocale = (queryLocale || localeSelect?.value || "en").toLowerCase();
+      if (localeSelect) localeSelect.value = selectedLocale.startsWith("es") ? "es" : "en";
+
+      const t = i18nApi.createTranslator(catalog, selectedLocale);
+      const uiText = i18nApi.buildUiText(t);
+      const state = Vue.reactive(seedState(uiText));
+
+      const fetchComponent = (name) => fetch(`../../data/app_ui/components/${name}.vue`, { cache: "no-store" }).then((r) => r.text());
+
+      const [shellSrc, sidebarSrc, headerSrc, kpisSrc, tableSrc] = await Promise.all([
+        fetchComponent('AppShell'),
+        fetchComponent('AppSidebar'),
+        fetchComponent('AppHeader'),
+        fetchComponent('AppKPIs'),
+        fetchComponent('AppDataTable')
+      ]);
+
+      const files = {
+        "/AppShell.vue": shellSrc,
+        "./AppSidebar.vue": sidebarSrc,
+        "./AppHeader.vue": headerSrc,
+        "./AppKPIs.vue": kpisSrc,
+        "./AppDataTable.vue": tableSrc,
+        "AppSidebar.vue": sidebarSrc,
+        "AppHeader.vue": headerSrc,
+        "AppKPIs.vue": kpisSrc,
+        "AppDataTable.vue": tableSrc
+      };
+
+      const options = {
+        moduleCache: { vue: Vue },
+        getFile(url) {
+          const key = url.startsWith('/') ? url : (url.startsWith('./') ? url : './' + url);
+          const source = files[url] || files['./' + url] || files[url.replace(/^\//, './')];
+          if (!source) throw new Error(`File not found: ${url}`);
+          return Promise.resolve(source);
+        },
+        addStyle(textContent) {
+          const style = Object.assign(document.createElement("style"), { textContent });
+          document.head.appendChild(style);
+        },
+      };
+
+      const { loadModule } = window["vue3-sfc-loader"];
+      const app = Vue.createApp({
+        components: {
+          AppShell: Vue.defineAsyncComponent(() => loadModule("/AppShell.vue", options)),
+        },
+        setup() {
+          const setFilter = (filterName) => {
+            if (!FILTER_ORDER.includes(filterName)) return;
+            state.activeFilter = filterName;
+            state.tip = `${tipForFilter(state.i18n, filterName)} ${state.i18n.tipViewFallback}`;
+          };
+          const newInvoice = () => alert("Preview mode: wire this to Odoo create action.");
+          return { state, setFilter, newInvoice, apps: MOCK_APPS };
+        },
+        template: `<AppShell :state="state" :apps="apps" @set-filter="setFilter" @new-invoice="newInvoice" @open-spotlight="() => {}" />`,
+      });
+
+      document.body.classList.add('app-neural-active');
+      app.mount("#preview-app");
+
+      sq("#toggle-loading").on("click", () => {
+        state.loading = !state.loading;
+      });
+
+      sq("#reset-state").on("click", () => {
+        const reset = seedState(state.i18n);
+        Object.assign(state, reset);
+      });
+
+      sq("#locale-select").on("change", () => {
+        const nextLocale = sq("#locale-select").get(0)?.value || "en";
+        const url = new URL(window.location.href);
+        url.searchParams.set("locale", nextLocale);
+        window.location.href = url.toString();
+      });
+    }
+
+    mountPreview().catch((err) => {
+      console.error(err);
+      sq("#preview-app").html(`<pre style="padding:1rem;color:#ff9aa9;">${String(err?.message || err)}</pre>`);
+    });
+  </script>
+</body>
+
+</html>

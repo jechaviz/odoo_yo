@@ -1,0 +1,147 @@
+/* ---- Project "Neural-Glass" Core Tokens (Reset) ---- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Neural-Glass Pro Palette (Saturated Obsidian) */
+  /* Buyniverse Enterprise Design System (Vue Port) */
+  --app-primary: #2563eb;
+  --app-primary-rgb: 37, 99, 235;
+  --app-primary-hover: #1d4ed8;
+  --app-primary-glow: rgba(37, 99, 235, 0.15);
+
+  /* Blurs */
+  --app-blur: blur(12px);
+  --app-blur-heavy: blur(40px);
+
+  /* Buyniverse Slate Palette (Dark Mode Default) */
+  --app-bg-app: #0f172a;
+  /* slate-900 */
+  --app-bg-side: #1e293b;
+  /* slate-800 */
+  --app-bg-surface: #1e293b;
+  /* slate-800 */
+  --app-bg-glass: rgba(15, 23, 42, 0.5);
+  /* slate-900 with alpha */
+  --app-bg-glass-heavy: rgba(15, 23, 42, 0.95);
+
+  /* Semantic Tones (Tailwind standard) */
+  --app-success: #10b981;
+  --app-danger: #ef4444;
+  --app-warning: #f59e0b;
+  --app-info: #3b82f6;
+
+  /* Borders & Dividers */
+  --app-border: rgba(255, 255, 255, 0.05);
+  --app-border-bright: rgba(255, 255, 255, 0.1);
+  --app-radius: 12px;
+  --app-radius-lg: 16px;
+
+  /* Typography (Inter + Outfit) */
+  --app-font-main: 'Outfit', 'Inter', sans-serif;
+  --app-font-mono: 'JetBrains Mono', monospace;
+  --app-text-primary: #f8fafc;
+  --app-text-secondary: #94a3b8;
+  --app-text-muted: #64748b;
+}
+
+/* Glassmorphism Utilities */
+.app-glass {
+  background: var(--app-bg-glass);
+  backdrop-filter: var(--app-blur);
+  -webkit-backdrop-filter: var(--app-blur);
+  border: 1px solid var(--app-border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.app-glass-heavy {
+  background: var(--app-bg-glass-heavy);
+  backdrop-filter: var(--app-blur-heavy);
+  -webkit-backdrop-filter: var(--app-blur-heavy);
+  border: 1px solid var(--app-border);
+}
+
+.app-neon-pulse {
+  animation: app-pulse 3s infinite ease-in-out;
+}
+
+/* Neural-Glass Form Elements (MatDash Inspired) */
+.app-input-glass {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: var(--app-radius) !important;
+  color: #fff !important;
+  padding: 10px 16px !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
+}
+
+.app-input-glass:focus {
+  border-color: var(--app-primary) !important;
+  background: rgba(56, 189, 248, 0.05) !important;
+  box-shadow: 0 0 10px var(--app-primary-glow) !important;
+}
+
+.app-btn-ghost {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid transparent !important;
+  color: var(--app-text-secondary) !important;
+  border-radius: var(--app-radius) !important;
+  padding: 8px 16px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1) !important;
+}
+
+.app-btn-ghost:hover {
+  background: var(--app-primary) !important;
+  color: #000 !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px var(--app-primary-glow) !important;
+}
+
+.app-btn-ghost--danger:hover {
+  background: var(--app-danger) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px var(--app-danger-glow) !important;
+}
+
+@keyframes app-pulse {
+  0% {
+    box-shadow: 0 0 10px var(--app-primary-glow);
+  }
+
+  50% {
+    box-shadow: 0 0 25px var(--app-primary-glow);
+  }
+
+  100% {
+    box-shadow: 0 0 10px var(--app-primary-glow);
+  }
+}
+
+/* Base Body Override (Dark Mode Force) */
+body.o_web_client {
+  background: var(--app-bg-app) !important;
+  color: var(--app-text-primary) !important;
+}
+
+.o_action_manager {
+  background: transparent !important;
+}
+
+/* Modern Scrollbars (Neon) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--app-primary);
+}

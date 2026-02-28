@@ -1,0 +1,146 @@
+default_locale: en
+messages:
+  en:
+    header:
+      title: "Appniverse Workspace"
+      subtitle: "All record-critical actions in one surface: customers, vendors, payments, reports and CFDI flow."
+      section_record_list: "record List"
+      new_record: "+ New record"
+    kpis:
+      overdue_amount: "Overdue Amount"
+      drafted_totals: "Drafted Totals"
+      unpaid_totals: "Unpaid Totals"
+      average_paid_time: "Average Paid Time"
+      records_suffix: "records"
+      posted_records_suffix: "posted records"
+      days_suffix: "days"
+    filters:
+      all: "All records"
+      paid: "Paid"
+      overdue: "Overdue"
+      pending: "Pending"
+      draft: "Draft"
+      search_hint: "Use native Odoo filters for detailed search"
+      search_placeholder: "Look up bill to..."
+      created_date: "Created Date"
+      due_date: "Due Date"
+      show_label: "Show"
+      per_page_label: "per page"
+    table:
+      id: "Id"
+      bill_from: "Bill From"
+      bill_to: "Bill To"
+      total_cost: "Total Cost"
+      status: "Status"
+      created: "Created"
+      due: "Due"
+      action: "Action"
+    navigation:
+      app_switcher: "App Switcher"
+      search_tooltip: "Use Odoo Search"
+      collapse_rail: "Collapse Rail"
+      view_all_apps: "View All Apps"
+      apps:
+        APP_UI: "APP_UI"
+        customers: "Customers"
+        vendors: "Vendors"
+        payments: "Payments"
+        reports: "Reports"
+    checklist:
+      title: "Operational checklist"
+      search: "Search bar available"
+      new: "New record action available"
+      list: "record list visible"
+      status: "Status badges detected"
+    empty_state:
+      title: "No records found for this scope."
+      description: "Use New record or adjust Odoo filters/date range to continue."
+    runtime:
+      fallback_title: "Appniverse Workspace"
+      fallback_subtitle: "Vue loader not available. Appniverse shell is in fallback mode."
+      badge_filter_title: "Click to filter by this status"
+    tips:
+      filter:
+        all: "Tip: review overdue and pending first to protect cash flow."
+        paid: "Tip: paid records are useful to validate payment delays and customer behavior."
+        overdue: "Tip: overdue requires immediate follow-up and payment commitment logging."
+        pending: "Tip: pending records should be checked for due date and payment terms."
+        draft: "Tip: draft records need validation before posting and stamping."
+      view_mode:
+        form: "Form mode: validate fiscal fields before posting."
+        kanban: "Kanban mode: triage by stage, then open record for action."
+        list: "List mode: use status chips + native filters for fast bulk review."
+        fallback: "Use the unified rail to keep APP_UI context while navigating related modules."
+      keyboard_shortcuts: "Tip: use Ctrl+Shift+I for new record and / for search."
+  es:
+    header:
+      title: "Centro unificado Appniverse"
+      subtitle: "Acciones criticas de facturacion en una sola vista: clientes, proveedores, pagos, reportes y flujo CFDI."
+      section_record_list: "Lista de facturas"
+      new_record: "+ Nueva factura"
+    kpis:
+      overdue_amount: "Monto vencido"
+      drafted_totals: "Totales en borrador"
+      unpaid_totals: "Totales por cobrar"
+      average_paid_time: "Promedio de pago"
+      records_suffix: "facturas"
+      posted_records_suffix: "facturas publicadas (Appniverse)"
+      days_suffix: "dias"
+    filters:
+      all: "Todas"
+      paid: "Pagadas"
+      overdue: "Vencidas"
+      pending: "Pendientes"
+      draft: "Borrador"
+      search_hint: "Usa los filtros nativos de Odoo para busqueda detallada"
+      search_placeholder: "Buscar factura por..."
+      created_date: "Fecha de creacion"
+      due_date: "Fecha de vencimiento"
+      show_label: "Mostrar"
+      per_page_label: "por pagina"
+    table:
+      id: "Id"
+      bill_from: "Emisor"
+      bill_to: "Cliente"
+      total_cost: "Costo total"
+      status: "Estado"
+      created: "Creada"
+      due: "Vence"
+      action: "Accion"
+    navigation:
+      app_switcher: "Selector de apps"
+      search_tooltip: "Usar busqueda de Odoo"
+      collapse_rail: "Colapsar barra lateral"
+      view_all_apps: "Ver todas las apps"
+      apps:
+        APP_UI: "Facturacion"
+        customers: "Clientes"
+        vendors: "Proveedores"
+        payments: "Pagos"
+        reports: "Reportes"
+    checklist:
+      title: "Checklist operativo"
+      search: "Barra de busqueda disponible"
+      new: "Accion de nueva factura disponible"
+      list: "Lista de facturas visible"
+      status: "Badges de estado detectados"
+    empty_state:
+      title: "No se encontraron facturas para este alcance."
+      description: "Usa Nueva factura o ajusta filtros/fechas en Odoo para continuar."
+    runtime:
+      fallback_title: "Centro unificado Appniverse"
+      fallback_subtitle: "No se pudo cargar Vue. Appniverse interfaz usa modo alterno."
+      badge_filter_title: "Haz click para filtrar por este estado"
+    tips:
+      filter:
+        all: "Tip: revisa primero vencidas y pendientes para proteger flujo de caja."
+        paid: "Tip: las pagadas ayudan a validar tiempos de cobro y comportamiento de clientes."
+        overdue: "Tip: las vencidas requieren seguimiento inmediato y compromiso de pago."
+        pending: "Tip: valida fechas de vencimiento y terminos en facturas pendientes."
+        draft: "Tip: en borrador debes validar datos fiscales antes de publicar y timbrar."
+      view_mode:
+        form: "Modo formulario: valida campos fiscales antes de publicar."
+        kanban: "Modo kanban: prioriza por etapa y luego entra al registro."
+        list: "Modo lista: usa chips de estado + filtros nativos para revision masiva."
+        fallback: "Usa la navegacion unificada para mantener contexto de facturacion."
+      keyboard_shortcuts: "Tip: usa Ctrl+Shift+I para nueva factura y / para buscar."

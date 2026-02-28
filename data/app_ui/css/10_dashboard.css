@@ -1,0 +1,61 @@
+/* Dashboard visual effects only (component styles live in 20_components.css) */
+
+.app-neural-shell {
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.05), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.05), transparent 40%);
+}
+
+.app-glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  background: var(--app-bg-app);
+  text-shadow: -1px 0 #ff00c1;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: app-noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes app-noise-anim {
+  0% {
+    clip: rect(10px, 9999px, 80px, 0);
+  }
+
+  100% {
+    clip: rect(60px, 9999px, 30px, 0);
+  }
+}
+
+.app-empty-portal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.app-empty-portal i {
+  font-size: 64px;
+  margin-bottom: 24px;
+  color: var(--app-primary);
+  filter: drop-shadow(0 0 10px var(--app-primary-glow));
+}
+
+body.app-neural-active .o_main_navbar {
+  display: none !important;
+}
+
+.app-glass-neon-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 10%, rgba(37, 99, 235, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 9999;
+}

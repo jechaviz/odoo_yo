@@ -1,0 +1,96 @@
+/* ---- Project NEURAL-GLASS: Form View & Document Cards ---- */
+
+/* The Main Form Card - Floating Document Look */
+body.o_web_client .o_form_view .o_form_sheet_bg {
+    background: transparent !important;
+    padding: 40px 20px !important;
+}
+
+body.o_web_client .o_form_view .o_form_sheet {
+    background: var(--app-bg-glass-heavy) !important;
+    backdrop-filter: var(--app-blur-heavy) !important;
+    border: 1px solid var(--app-border) !important;
+    border-radius: var(--app-radius-xl) !important;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.2) !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 48px !important;
+    color: var(--app-text-primary) !important;
+}
+
+/* Header & Status Ribbon */
+body.o_web_client .o_form_view .o_form_statusbar {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-bottom: 1px solid var(--app-border) !important;
+    padding: 12px 24px !important;
+    border-radius: var(--app-radius-lg) var(--app-radius-lg) 0 0 !important;
+}
+
+/* Fields & Inputs - Neural Precision */
+body.o_web_client .o_form_view .o_field_widget input,
+body.o_web_client .o_form_view .o_field_widget select,
+body.o_web_client .o_form_view .o_field_widget textarea {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    padding: 8px 12px !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+body.o_web_client .o_form_view .o_field_widget input:focus,
+body.o_web_client .o_form_view .o_field_widget select:focus {
+    border-color: var(--app-primary) !important;
+    background: rgba(56, 189, 248, 0.05) !important;
+    box-shadow: 0 0 12px var(--app-primary-glow) !important;
+}
+
+/* Labels - Technical & Muted */
+body.o_web_client .o_form_view .o_td_label label {
+    color: var(--app-text-secondary) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Mirrored Billing Info (MatDash inspired) */
+body.o_web_client .o_form_view .o_group .o_inner_group {
+    gap: 24px !important;
+}
+
+/* Notebook / Tabs - Seamless Glass */
+body.o_web_client .o_form_view .o_notebook {
+    margin-top: 32px !important;
+}
+
+body.o_web_client .o_form_view .nav-tabs {
+    border-bottom: 1px solid var(--app-border) !important;
+    gap: 16px !important;
+}
+
+body.o_web_client .o_form_view .nav-tabs .nav-link {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid transparent !important;
+    color: var(--app-text-muted) !important;
+    padding: 12px 0 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+}
+
+body.o_web_client .o_form_view .nav-tabs .nav-link.active {
+    color: var(--app-primary) !important;
+    border-bottom-color: var(--app-primary) !important;
+    text-shadow: 0 0 10px var(--app-primary-glow) !important;
+}
+
+/* Chatter / Activity - Sidebar Pulse */
+body.o_web_client .o_chatter {
+    background: transparent !important;
+    max-width: 1100px !important;
+    margin: 32px auto !important;
+    border-top: 1px solid var(--app-border) !important;
+    padding-top: 32px !important;
+}

@@ -1,0 +1,132 @@
+/* ---- Project NEURAL-GLASS: Ghost Tables ---- */
+
+body.o_web_client .o_list_view table.o_list_table {
+    background: transparent !important;
+    border: none !important;
+    border-spacing: 0 8px !important;
+    /* Row spacing */
+    border-collapse: separate !important;
+}
+
+body.o_web_client .o_list_view thead {
+    background: transparent !important;
+}
+
+body.o_web_client .o_list_view thead th {
+    border: none !important;
+    color: var(--app-text-secondary) !important;
+    font-family: var(--app-font-main) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 20px !important;
+}
+
+body.o_web_client .o_list_view tbody tr {
+    background: rgba(255, 255, 255, 0.02) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none !important;
+}
+
+body.o_web_client .o_list_view tbody tr:hover {
+    background: rgba(56, 189, 248, 0.08) !important;
+    transform: scale(1.002) translateZ(0);
+    box-shadow: inset 0 0 20px rgba(56, 189, 248, 0.05),
+        10px 0 30px rgba(0, 0, 0, 0.3);
+}
+
+body.o_web_client .o_list_view tbody td {
+    border: none !important;
+    color: var(--app-text-primary) !important;
+    font-size: 13px !important;
+    padding: 14px 20px !important;
+    vertical-align: middle !important;
+}
+
+/* Item Action Buttons (Ghost Pattern) */
+.o_list_view .o_list_button,
+.app-row-action {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid transparent !important;
+    color: var(--app-text-muted) !important;
+    width: 32px !important;
+    height: 32px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    transition: all 0.2s !important;
+}
+
+.o_list_view .o_list_button:hover,
+.app-row-action:hover {
+    background: var(--app-primary-glow) !important;
+    border-color: var(--app-primary) !important;
+    color: var(--app-primary) !important;
+}
+
+.app-row-action--danger:hover {
+    background: var(--app-danger-glow) !important;
+    border-color: var(--app-danger) !important;
+    color: var(--app-danger) !important;
+}
+
+body.o_web_client .o_list_view tbody td.o_list_number,
+body.o_web_client .o_list_view td[name="amount_total"],
+body.o_web_client .o_list_view td[name="amount_residual"] {
+    font-family: var(--app-font-data) !important;
+    font-weight: 500;
+    color: var(--app-primary) !important;
+}
+
+/* Neural Status Badges */
+body.o_web_client .o_list_view .badge,
+body.o_web_client .o_list_view .o_status {
+    background: transparent !important;
+    border: 1px solid currentColor !important;
+    padding: 4px 12px !important;
+    text-transform: uppercase;
+    font-size: 10px !important;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    border-radius: 4px !important;
+}
+
+.app-status-paid {
+    color: var(--app-success) !important;
+    filter: drop-shadow(0 0 5px var(--app-success-glow));
+}
+
+.app-status-overdue {
+    color: var(--app-danger) !important;
+    filter: drop-shadow(0 0 5px var(--app-danger-glow));
+}
+
+.app-status-pending {
+    color: var(--app-warning) !important;
+    filter: drop-shadow(0 0 5px var(--app-warning-glow));
+}
+
+.app-status-draft {
+    color: var(--app-text-muted) !important;
+    border-color: var(--app-border) !important;
+}
+
+/* Selection/Checkbox Neural Override */
+body.o_web_client .o_list_view .o_list_record_selector input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--app-border);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+body.o_web_client .o_list_view .o_list_record_selector input[type="checkbox"]:checked {
+    background: var(--app-primary);
+    border-color: var(--app-primary);
+    box-shadow: 0 0 10px var(--app-primary-glow);
+}

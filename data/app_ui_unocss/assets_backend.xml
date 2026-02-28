@@ -1,0 +1,43 @@
+<data>
+    <xpath expr="//t[@t-set='head_web']" position="inside">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/exis9/squery@latest/squery.min.js"></script>
+        <script type="text/javascript"><![CDATA[
+__APP_UI_CONFIG_JS__
+        ]]></script>
+        <script type="text/javascript"><![CDATA[
+__APP_UI_I18N_JS__
+        ]]></script>
+        <script type="text/javascript"><![CDATA[
+__APP_UI_API_JS__
+        ]]></script>
+        <script type="text/javascript"><![CDATA[
+__APP_UI_STATE_JS__
+        ]]></script>
+        <script type="text/javascript"><![CDATA[
+__APP_UI_DOM_JS__
+        ]]></script>
+        <script type="text/javascript"><![CDATA[
+__APP_UI_MARKUP_JS__
+        ]]></script>
+        <script type="text/javascript"><![CDATA[
+__APP_UI_COMPONENTS_JS__
+        ]]></script>
+        <script type="text/javascript"><![CDATA[
+__APP_UI_METRICS_JS__
+        ]]></script>
+        <style type="text/css"><![CDATA[
+__APP_UI_CSS__
+        ]]></style>
+        <script type="text/javascript"><![CDATA[
+(function() {
+    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = 'https://www.odoo.com/web/image/res.company/1/favicon';
+    document.getElementsByTagName('head')[0].appendChild(link);
+})();
+__APP_UI_JS__
+        ]]></script>
+    </xpath>
+</data>
