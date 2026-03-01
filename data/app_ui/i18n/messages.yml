@@ -5,7 +5,7 @@ messages:
       title: "Appniverse Workspace"
       subtitle: "All record-critical actions in one surface: customers, vendors, payments, reports and CFDI flow."
       section_record_list: "record List"
-      new_record: "+ New record"
+      new_record: "+ New"
     kpis:
       overdue_amount: "Overdue Amount"
       drafted_totals: "Drafted Totals"
@@ -77,7 +77,7 @@ messages:
       title: "Centro unificado Appniverse"
       subtitle: "Acciones criticas de facturacion en una sola vista: clientes, proveedores, pagos, reportes y flujo CFDI."
       section_record_list: "Lista de facturas"
-      new_record: "+ Nueva factura"
+      new_record: "+ Nuevo"
     kpis:
       overdue_amount: "Monto vencido"
       drafted_totals: "Totales en borrador"

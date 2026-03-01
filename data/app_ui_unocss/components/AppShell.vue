@@ -1,5 +1,5 @@
 <template>
-  <div class="app-pro-shell">
+  <div class="app-pro-shell min-h-screen w-full text-ui-text">
     <AppSidebar 
       :is-collapsed="isSidebarCollapsed"
       :categories="navCategories"
@@ -11,7 +11,7 @@
       @open-mega="isMegaOpen = !isMegaOpen"
     />
 
-    <div class="app-workspace">
+    <div class="app-workspace relative">
       <AppHeader 
         :is-collapsed="isSidebarCollapsed"
         @toggle-collapse="isSidebarCollapsed = !isSidebarCollapsed"
@@ -19,7 +19,7 @@
         @open-mega="isMegaOpen = !isMegaOpen"
       />
 
-      <main class="app-content-pane">
+      <main class="app-content-pane overflow-y-auto">
         <nav class="app-breadcrumbs">
           <a href="#" class="app-bc-item navigable" @click.prevent="goHome">
             <i class="fa-solid fa-house"></i>
@@ -34,21 +34,16 @@
              <h1 class="app-title-pro">Records</h1>
            </div>
            <div class="app-pane-header-right">
-             <div class="app-btn-blue-pro" @click="$emit('new-record')" role="button" tabindex="0">
-               <i class="fa-solid fa-plus"></i>
-               <span>New record</span>
-             </div>
+             <AppKPIs class="app-kpi-inline" :kpis="kpiData" :collapsed="true" />
            </div>
         </header>
 
-        <AppKPIs :kpis="kpiData" />
-
-        <section class="app-portal-card app-glass">
+        <section class="app-portal-card app-glass ui-card">
            <nav class="app-portal-tabs">
             <div 
               v-for="chip in filterChips" 
               :key="chip.key"
-              class="app-tab"
+              class="app-tab ui-soft-hover"
               :class="{ 'is-tab-active': state.activeFilter === chip.key }"
               @click="$emit('set-filter', chip.key)"
               role="button"
@@ -59,7 +54,12 @@
           </nav>
           
           <div class="app-portal-content">
-            <AppDataTable :view-mode="viewMode" @search="$emit('search', $event)" @update-view="viewMode = $event">
+            <AppDataTable
+              :view-mode="viewMode"
+              @search="$emit('search', $event)"
+              @update-view="viewMode = $event"
+              @new-record="$emit('new-record')"
+            >
               <template #content="{ viewMode }">
                 <slot name="table" :viewMode="viewMode"></slot>
               </template>
@@ -120,7 +120,7 @@ export default {
   },
   data() {
     return {
-      isSidebarCollapsed: false,
+      isSidebarCollapsed: true,
       isMegaOpen: false,
       leaveTimeout: null,
       viewMode: 'table',
@@ -152,8 +152,8 @@ export default {
           isCollapsible: true,
           links: [
             { key: 'customers', label: i.menuCustomers || 'Clients', icon: 'fa-solid fa-user-tie' },
-            { key: 'all', label: i.menurecords || 'records', icon: 'fa-solid fa-file-record-dollar' },
-            { key: 'estimates', label: i.menuEstimates || 'Estimates', icon: 'fa-solid fa-file-record' },
+            { key: 'all', label: i.menurecords || 'records', icon: '' },
+            { key: 'estimates', label: i.menuEstimates || 'Estimates', icon: '' },
             { key: 'payments', label: i.menuPayments || 'Payments', icon: 'fa-solid fa-credit-card' },
           ]
         }
@@ -205,5 +205,7 @@ export default {
 </script>
 
 <style>
-/* Scoped overrides only - core styles moved to 20_components.css */
+/* Scoped overrides only - core styles moved to css/* modular files */
 </style>
+
+

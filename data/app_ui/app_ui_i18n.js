@@ -48,7 +48,7 @@
         "All record-critical actions in one surface: customers, vendors, payments, reports and CFDI flow."
       ),
       sectionrecordList: t("header.section_record_list", "record List"),
-      newrecordButton: t("header.new_record", "+ New record"),
+      newrecordButton: t("header.new_record", "+ New"),
       kpiOverdueAmount: t("kpis.overdue_amount", "Overdue Amount"),
       kpiDraftedTotals: t("kpis.drafted_totals", "Drafted Totals"),
       kpiUnpaidTotals: t("kpis.unpaid_totals", "Unpaid Totals"),

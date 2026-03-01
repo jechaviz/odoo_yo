@@ -22,14 +22,19 @@
              class="fa-solid fa-chevron-right app-cat-chevron" 
              :class="{ 'rotate-90': openSections[cat.key] && !isCollapsed }"></i>
         </div>
-        <div class="app-nav-links" v-show="!cat.isCollapsible || (openSections[cat.key] && !isCollapsed) || isCollapsed">
+        <div
+          class="app-nav-links"
+          :class="{ 'has-active': hasActiveLink(cat) }"
+          v-show="!cat.isCollapsible || (openSections[cat.key] && !isCollapsed) || isCollapsed"
+        >
           <a v-for="link in cat.links" 
              :key="link.key" 
              href="#" 
              class="app-nav-item" 
-             :class="{ active: activeFilter === link.key }"
+             :class="{ active: activeFilter === link.key, 'is-dot-only': !link.icon }"
              @click.prevent="$emit('set-filter', link.key)">
-             <i :class="link.icon" class="app-nav-icon"></i>
+             <i v-if="link.icon" :class="link.icon" class="app-nav-icon"></i>
+             <span v-else class="app-nav-dot" aria-hidden="true"></span>
              <span class="app-item-text">{{ link.label }}</span>
              <span class="app-sidebar-floating-label">
                <span class="cat-ctx">{{ cat.name }}</span>
@@ -92,11 +97,16 @@ export default {
     },
     toggleSection(key) {
       this.$emit('toggle-section', key);
+    },
+    hasActiveLink(category) {
+      const links = Array.isArray(category?.links) ? category.links : [];
+      return links.some((link) => String(link?.key || "") === String(this.activeFilter || ""));
     }
   }
 };
 </script>
 
 <style scoped>
-/* Scoped overrides only - core styles moved to 20_components.css */
+/* Scoped overrides only - core styles moved to css/* modular files */
 </style>
+

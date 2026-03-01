@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <header class="app-topbar app-glass">
     <div class="app-topbar-left">
       <div class="app-util-btn hamburguer-menu" @click="$emit('toggle-collapse')" role="button" tabindex="0"><i class="fa-solid fa-bars"></i></div>
@@ -59,5 +59,6 @@ export default {
 </script>
 
 <style scoped>
-/* Scoped overrides only - core styles moved to 20_components.css */
+/* Scoped overrides only - core styles moved to css/* modular files */
 </style>
+

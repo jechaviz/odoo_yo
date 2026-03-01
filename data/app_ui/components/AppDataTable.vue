@@ -12,6 +12,22 @@
         </div>
       </div>
       <div class="app-toolbar-right">
+        <button class="app-toolbar-more-toggle" type="button" title="More actions">
+          <i class="fa-solid fa-angles-right"></i>
+        </button>
+        <div class="app-toolbar-onhover">
+          <div class="app-toolbar-advanced">
+            <div class="app-toolbar-sep"></div>
+            <button class="app-toolbar-btn" title="Search Filters"><i class="fa-solid fa-filter"></i></button>
+            <button class="app-toolbar-btn" title="Group By"><i class="fa-solid fa-layer-group"></i></button>
+            <button class="app-toolbar-btn" title="Favorites"><i class="fa-solid fa-star"></i></button>
+            <div class="app-toolbar-sep"></div>
+            <button class="app-toolbar-btn" title="Export"><i class="fa-solid fa-download"></i></button>
+            <button class="app-toolbar-btn" title="Import"><i class="fa-solid fa-upload"></i></button>
+            <button class="app-toolbar-btn" title="Refresh Table"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button class="app-toolbar-btn" title="Configuration"><i class="fa-solid fa-sliders"></i></button>
+          </div>
+        </div>
         <div class="app-view-switcher">
           <button class="app-view-btn" :class="{ active: viewMode === 'table' }" @click="$emit('update-view', 'table')">
             <i class="fa-solid fa-table"></i>
@@ -20,15 +36,15 @@
             <i class="fa-solid fa-grip"></i>
           </button>
         </div>
-        <div class="app-toolbar-sep"></div>
-        <button class="app-toolbar-btn" title="Search Filters"><i class="fa-solid fa-filter"></i></button>
-        <button class="app-toolbar-btn" title="Group By"><i class="fa-solid fa-layer-group"></i></button>
-        <button class="app-toolbar-btn" title="Favorites"><i class="fa-solid fa-star"></i></button>
-        <div class="app-toolbar-sep"></div>
-        <button class="app-toolbar-btn" title="Export"><i class="fa-solid fa-download"></i></button>
-        <button class="app-toolbar-btn" title="Import"><i class="fa-solid fa-upload"></i></button>
-        <button class="app-toolbar-btn" title="Refresh Table"><i class="fa-solid fa-arrows-rotate"></i></button>
-        <button class="app-toolbar-btn" title="Configuration"><i class="fa-solid fa-sliders"></i></button>
+        <button
+          class="app-toolbar-new-record app-btn-blue-pro"
+          type="button"
+          @click="$emit('new-record')"
+          title="Create new"
+        >
+          <i class="fa-solid fa-plus"></i>
+          <span>New</span>
+        </button>
       </div>
     </div>
 
@@ -56,6 +72,7 @@
 <script>
 export default {
   name: 'AppDataTable',
+  emits: ['search', 'update-view', 'new-record'],
   props: {
     viewMode: { type: String, default: 'table' }
   },
@@ -73,5 +90,6 @@ export default {
 </script>
 
 <style scoped>
-/* Scoped overrides only - core styles moved to 20_components.css */
+/* Scoped overrides only - core styles moved to css/* modular files */
 </style>
+

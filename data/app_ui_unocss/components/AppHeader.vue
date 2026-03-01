@@ -1,19 +1,19 @@
-<template>
-  <header class="app-topbar app-glass">
+﻿<template>
+  <header class="app-topbar app-glass ui-card">
     <div class="app-topbar-left">
       <div class="app-util-btn hamburguer-menu" @click="$emit('toggle-collapse')" role="button" tabindex="0"><i class="fa-solid fa-bars"></i></div>
-      <div class="app-search-bar-pro">
+      <div class="app-search-bar-pro ui-focus-ring">
          <i class="fa-solid fa-magnifying-glass"></i>
          <input type="text" placeholder="Search records..." @click="$emit('open-spotlight')">
       </div>
     </div>
 
     <div class="app-topbar-right">
-      <div class="app-util-btn" title="AI Assistant" role="button" tabindex="0"><i class="fa-solid fa-wand-magic-sparkles" style="color: var(--app-primary);"></i></div>
-      <div class="app-util-btn" title="Discuss" role="button" tabindex="0"><i class="fa-solid fa-comments"></i></div>
-      <div class="app-util-btn" title="Activities" role="button" tabindex="0"><i class="fa-solid fa-clock"></i></div>
-      <div class="app-util-btn" title="Brightness" role="button" tabindex="0"><i class="fa-solid fa-sun"></i></div>
-      <div class="app-util-btn" title="Notifications" role="button" tabindex="0"><i class="fa-solid fa-bell"></i></div>
+      <div class="app-util-btn ui-soft-hover" title="AI Assistant" role="button" tabindex="0"><i class="fa-solid fa-wand-magic-sparkles" style="color: var(--app-primary);"></i></div>
+      <div class="app-util-btn ui-soft-hover" title="Discuss" role="button" tabindex="0"><i class="fa-solid fa-comments"></i></div>
+      <div class="app-util-btn ui-soft-hover" title="Activities" role="button" tabindex="0"><i class="fa-solid fa-clock"></i></div>
+      <div class="app-util-btn ui-soft-hover" title="Brightness" role="button" tabindex="0"><i class="fa-solid fa-sun"></i></div>
+      <div class="app-util-btn ui-soft-hover" title="Notifications" role="button" tabindex="0"><i class="fa-solid fa-bell"></i></div>
       
       <div class="app-user-profile-wrapper" @mouseenter="showProfile = true" @mouseleave="showProfile = false">
         <div class="app-user-profile">
@@ -59,5 +59,6 @@ export default {
 </script>
 
 <style scoped>
-/* Scoped overrides only - core styles moved to 20_components.css */
+/* Scoped overrides only - core styles moved to css/* modular files */
 </style>
+
