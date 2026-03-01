@@ -1,0 +1,46 @@
+﻿/* 23. Breadcrumbs */
+
+/* 2.1 Breadcrumbs */
+.app-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: -11px;
+    /* Decreased space below (-2px) */
+    margin-top: 12px;
+    /* Increased space above (+2px) */
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.5;
+}
+
+.app-bc-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--app-text-secondary);
+    transition: color 0.2s;
+}
+
+.app-bc-item i {
+    font-size: 14px;
+    color: var(--app-primary);
+    filter: drop-shadow(0 0 5px var(--app-primary-glow));
+}
+
+.app-bc-item:hover {
+    color: #fff;
+}
+
+.app-bc-item.active {
+    color: #fff;
+    font-weight: 700;
+}
+
+.app-bc-sep {
+    font-size: 10px;
+    color: var(--app-text-muted);
+    opacity: 0.5;
+}
+

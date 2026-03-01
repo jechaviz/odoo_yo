@@ -1,0 +1,31 @@
+﻿/* 20. Shell layout */
+
+/* Buyniverse Component Library - Vue Port */
+
+/* 0. Shell & Workspace Layout */
+.app-pro-shell {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: var(--app-bg-app);
+    overflow: hidden;
+    font-family: var(--app-font-main);
+}
+
+.app-workspace {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    position: relative;
+    background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.03), transparent 40%);
+}
+
+.app-content-pane {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 32px 32px;
+    /* Reduced top padding for lean layout */
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, transparent 100%);
+}
+

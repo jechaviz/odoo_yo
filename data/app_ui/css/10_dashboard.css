@@ -1,4 +1,4 @@
-/* Dashboard visual effects only (component styles live in 20_components.css) */
+﻿/* Dashboard visual effects only (component styles live in css/* modular files) */
 
 .app-neural-shell {
   background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.05), transparent 40%),
@@ -59,3 +59,4 @@ body.app-neural-active .o_main_navbar {
   pointer-events: none;
   z-index: 9999;
 }
+

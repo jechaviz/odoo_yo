@@ -1,0 +1,227 @@
+﻿/* 27. Data table shell */
+
+/* 4. Enriched DataTable */
+.app-data-table-shell {
+    background: var(--app-bg-side);
+    border-radius: var(--app-radius-lg);
+    border: 1px solid var(--app-border);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-table-toolbar {
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    border-bottom: 1px solid var(--app-border);
+    background: rgba(6, 12, 24, 0.52);
+}
+
+.app-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 240px;
+}
+
+.app-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.app-toolbar-more-toggle {
+    order: 1;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--app-border);
+    border-radius: 8px;
+    background: rgba(10, 18, 34, 0.72);
+    color: var(--app-text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.app-toolbar-more-toggle i {
+    font-size: 12px;
+    transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease;
+}
+
+.app-toolbar-more-toggle:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(20, 31, 53, 0.88);
+}
+
+.app-toolbar-onhover {
+    order: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    transform: translateX(-8px) scale(0.985);
+    transform-origin: left center;
+    filter: saturate(0.8);
+    pointer-events: none;
+    transition:
+        opacity 0.26s cubic-bezier(0.22, 1, 0.36, 1),
+        max-width 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.26s ease;
+    margin-left: 0;
+}
+
+.app-toolbar-advanced {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity 0.2s ease, transform 0.26s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: 0.03s;
+}
+
+.app-toolbar-advanced > * {
+    opacity: 0;
+    transform: translateX(6px);
+    transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.app-toolbar-advanced > *:nth-child(1) { transition-delay: 0.05s; }
+.app-toolbar-advanced > *:nth-child(2) { transition-delay: 0.07s; }
+.app-toolbar-advanced > *:nth-child(3) { transition-delay: 0.09s; }
+.app-toolbar-advanced > *:nth-child(4) { transition-delay: 0.11s; }
+.app-toolbar-advanced > *:nth-child(5) { transition-delay: 0.13s; }
+.app-toolbar-advanced > *:nth-child(6) { transition-delay: 0.15s; }
+.app-toolbar-advanced > *:nth-child(7) { transition-delay: 0.17s; }
+.app-toolbar-advanced > *:nth-child(8) { transition-delay: 0.19s; }
+.app-toolbar-advanced > *:nth-child(9) { transition-delay: 0.21s; }
+.app-toolbar-advanced > *:nth-child(10) { transition-delay: 0.23s; }
+
+.app-toolbar-more-toggle:hover + .app-toolbar-onhover,
+.app-toolbar-more-toggle:focus-visible + .app-toolbar-onhover,
+.app-toolbar-onhover:hover,
+.app-toolbar-onhover:focus-within {
+    opacity: 1;
+    max-width: 640px;
+    transform: translateX(0) scale(1);
+    filter: saturate(1);
+    pointer-events: auto;
+}
+
+.app-toolbar-more-toggle:hover i,
+.app-toolbar-more-toggle:focus-visible i {
+    transform: rotate(180deg);
+    color: #fff;
+}
+
+.app-toolbar-more-toggle:hover + .app-toolbar-onhover .app-toolbar-advanced,
+.app-toolbar-more-toggle:focus-visible + .app-toolbar-onhover .app-toolbar-advanced,
+.app-toolbar-onhover:hover .app-toolbar-advanced,
+.app-toolbar-onhover:focus-within .app-toolbar-advanced {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.app-toolbar-more-toggle:hover + .app-toolbar-onhover .app-toolbar-advanced > *,
+.app-toolbar-more-toggle:focus-visible + .app-toolbar-onhover .app-toolbar-advanced > *,
+.app-toolbar-onhover:hover .app-toolbar-advanced > *,
+.app-toolbar-onhover:focus-within .app-toolbar-advanced > * {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.app-view-switcher {
+    order: 3;
+    display: flex;
+    background: var(--app-bg-app);
+    border-radius: 8px;
+    padding: 2px;
+    border: 1px solid var(--app-border);
+}
+
+.app-view-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--app-text-muted);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+
+.app-view-btn:hover {
+    color: #fff;
+    background: rgba(148, 163, 184, 0.16);
+}
+
+.app-view-btn.active {
+    color: #fff;
+    background: rgba(var(--app-primary-rgb), 0.24);
+    box-shadow: inset 0 0 0 1px rgba(var(--app-primary-rgb), 0.38);
+}
+
+.app-toolbar-new-record {
+    order: 4;
+    padding: 9px 16px !important;
+    min-height: 34px;
+    font-size: 13px !important;
+    border-radius: 10px !important;
+    margin-left: 8px;
+    box-shadow: 0 8px 20px rgba(var(--app-primary-rgb), 0.32);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-toolbar-new-record i {
+    font-size: 12px;
+}
+
+@media (max-width: 1120px) {
+    .app-toolbar-right {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .app-toolbar-onhover {
+        opacity: 1;
+        max-width: none;
+        overflow: visible;
+        transform: none;
+        filter: none;
+        pointer-events: auto;
+    }
+
+    .app-toolbar-advanced,
+    .app-toolbar-advanced > * {
+        opacity: 1;
+        transform: none;
+        transition-delay: 0s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .app-toolbar-onhover,
+    .app-toolbar-advanced,
+    .app-toolbar-advanced > *,
+    .app-view-btn {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+

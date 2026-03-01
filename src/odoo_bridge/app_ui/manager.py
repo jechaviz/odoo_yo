@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Any, Dict, Optional
 
 from odoo_bridge.app_ui.asset_builder import AppUiAssetBuilder
-from odoo_bridge.app_ui.config import AppUiConfig
+from odoo_bridge.app_ui.config import AppUiConfig, build_app_ui_config
 from odoo_bridge.odoo_client import OdooClient
 
 
@@ -12,7 +12,7 @@ class AppUiThemeManager:
     def __init__(self, client: OdooClient, project_root: Path, config: Optional[AppUiConfig] = None):
         self.client = client
         self.project_root = project_root
-        self.config = config or AppUiConfig()
+        self.config = config or build_app_ui_config("classic")
         self.assets = AppUiAssetBuilder(project_root=project_root, config=self.config)
 
     def apply(self) -> Dict[str, Any]:

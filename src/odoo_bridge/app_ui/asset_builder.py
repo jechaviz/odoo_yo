@@ -25,6 +25,11 @@ class AppUiAssetBuilder:
         components_js = self._read_asset(self.config.components_js_path)
         metrics_js = self._read_asset(self.config.metrics_js_path)
         js_template = self._read_asset(self.config.runtime_js_path)
+        unocss_runtime_js = (
+            self._read_asset(self.config.unocss_runtime_js_path)
+            if self.config.unocss_runtime_js_path
+            else ""
+        )
 
         components_map = self._collect_components_map()
         i18n_catalog = self._read_i18n_catalog()
@@ -46,6 +51,7 @@ class AppUiAssetBuilder:
             .replace("__APP_UI_MARKUP_JS__", self._for_cdata(markup_js))
             .replace("__APP_UI_COMPONENTS_JS__", self._for_cdata(components_js))
             .replace("__APP_UI_METRICS_JS__", self._for_cdata(metrics_js))
+            .replace("__APP_UI_UNOCSS_RUNTIME_JS__", self._for_cdata(unocss_runtime_js))
             .replace("__APP_UI_CSS__", self._for_cdata(css_bundle))
             .replace("__APP_UI_JS__", self._for_cdata(js_runtime))
         )

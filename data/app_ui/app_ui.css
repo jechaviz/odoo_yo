@@ -5,5 +5,14 @@
 */
 @import url('./css/00_core.css');
 @import url('./css/10_dashboard.css');
+@import url('./css/20_shell_layout.css');
+@import url('./css/21_sidebar.css');
+@import url('./css/22_topbar_profile.css');
+@import url('./css/23_breadcrumbs.css');
+@import url('./css/24_pane_header.css');
+@import url('./css/25_kpis.css');
+@import url('./css/26_portal_tabs.css');
+@import url('./css/27_datatable_shell.css');
+@import url('./css/28_overlays_popups.css');
 @import url('./css/20_tables.css');
 @import url('./css/30_forms.css');

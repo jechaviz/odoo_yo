@@ -1,0 +1,531 @@
+﻿/* 21. Sidebar navigation */
+
+/* 1. Sidebar */
+.app-sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, rgba(4, 10, 22, 0.96) 0%, rgba(8, 16, 33, 0.95) 100%);
+    border-right: 1px solid var(--app-border);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+}
+
+.app-sidebar.collapsed {
+    width: 80px;
+}
+
+.app-sidebar-brand {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid var(--app-border);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.app-sidebar.collapsed .app-sidebar-brand {
+    padding: 24px 0;
+    justify-content: center;
+    gap: 0;
+}
+
+.app-brand-logo {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: var(--app-text-muted);
+    border: 1px solid transparent;
+    border-radius: 12px;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-brand-logo.apps-mode {
+    background: transparent;
+    border-color: transparent;
+    color: #fff;
+    box-shadow: none;
+}
+
+.app-sidebar-brand:hover .app-brand-logo {
+    background: transparent;
+    border-color: transparent;
+    color: #fff;
+}
+
+.app-brand-logo::after,
+.app-sidebar.collapsed .app-sidebar-settings-btn::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    bottom: 4px;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, transparent, rgba(var(--app-primary-rgb), 0.96), transparent);
+    box-shadow: 0 0 10px rgba(var(--app-primary-rgb), 0.72);
+    opacity: 0.95;
+}
+
+.app-brand-name {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.app-brand-chevron {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--app-text-muted);
+    opacity: 0.6;
+    transition: transform 0.3s;
+}
+
+.app-sidebar-brand:hover .app-brand-chevron {
+    color: #fff;
+    opacity: 1;
+}
+
+.app-sidebar.collapsed .app-brand-name,
+.app-sidebar.collapsed .app-brand-chevron {
+    display: none;
+}
+
+.app-sidebar-nav {
+    flex: 1;
+    padding: 24px 12px;
+    overflow-y: auto;
+    overflow-x: visible;
+    /* Prevents horizontal clipping */
+}
+
+.app-sidebar.collapsed .app-sidebar-nav {
+    overflow: visible;
+    /* Entirely visible in collapsed mode to allow labels */
+}
+
+.app-nav-group {
+    margin-bottom: 24px;
+    position: relative;
+    overflow: visible;
+}
+
+.app-nav-label-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Forced left alignment */
+    padding: 0 12px 14px;
+    cursor: pointer;
+    gap: 12px;
+    position: relative;
+    /* Fixed: Add relative for floating labels */
+}
+
+.app-nav-label {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--app-text-muted);
+}
+
+.app-sidebar.collapsed .app-nav-label-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+.app-sidebar.collapsed .app-nav-label,
+.app-sidebar.collapsed .app-cat-chevron {
+    display: none;
+}
+
+.app-cat-chevron {
+    font-size: 10px;
+    color: var(--app-text-muted);
+    transition: transform 0.2s;
+    margin-left: auto;
+    /* Push to right */
+}
+
+.app-cat-chevron.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.app-cat-icon {
+    font-size: 14px;
+    margin-right: 12px;
+    opacity: 0.8;
+}
+
+.app-sidebar.collapsed .app-cat-icon {
+    margin-right: 0;
+    font-size: 18px;
+    opacity: 1;
+}
+
+.app-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    /* Increased horizontal padding */
+    border-radius: 12px;
+    color: var(--app-text-secondary);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.app-nav-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.app-nav-item.active {
+    background: rgba(var(--app-primary-rgb), 0.12);
+    /* Slightly more visible base */
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Expanded mode: No animation, static highlight only */
+    border-right: 3px solid var(--app-primary);
+}
+
+@keyframes app-active-pulse-expanded {
+
+    0%,
+    100% {
+        background: rgba(var(--app-primary-rgb), 0.1);
+        box-shadow: inset 0 0 0 1px rgba(var(--app-primary-rgb), 0.15);
+    }
+
+    50% {
+        background: rgba(var(--app-primary-rgb), 0.18);
+        box-shadow: inset 0 0 0 1px rgba(var(--app-primary-rgb), 0.3),
+            0 0 15px rgba(var(--app-primary-rgb), 0.2);
+    }
+}
+
+.app-nav-links {
+    position: relative;
+    padding-bottom: 4px;
+    overflow: visible;
+}
+
+.app-sidebar.collapsed .app-nav-links {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+}
+
+/* Collapsed mode: no guide line; indicators stay attached to real icons only */
+.app-sidebar.collapsed .app-nav-links::before {
+    content: none;
+    display: none;
+}
+
+.app-sidebar.collapsed .app-nav-item {
+    width: 44px !important;
+    height: 44px !important;
+    margin: 6px auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 12px;
+    justify-content: center;
+    padding: 0 !important;
+    overflow: visible !important;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.app-sidebar.collapsed .app-nav-item i {
+    display: block;
+    font-size: 14px;
+    opacity: 0.9;
+    width: auto;
+}
+
+.app-sidebar.collapsed .app-nav-item.is-dot-only {
+    gap: 0 !important;
+}
+
+.app-nav-dot {
+    display: none;
+}
+
+.app-sidebar.collapsed .app-nav-dot {
+    display: block;
+    position: static;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: transparent;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    box-shadow: none;
+    transition: all 0.24s ease;
+}
+
+.app-sidebar.collapsed .app-nav-item.active .app-nav-dot {
+    width: 8px;
+    height: 8px;
+    border: none;
+    background: var(--app-primary);
+    box-shadow: 0 0 0 2px rgba(var(--app-primary-rgb), 0.22), 0 0 10px rgba(var(--app-primary-rgb), 0.46);
+    animation: app-active-dot-pulse 1.7s ease-in-out infinite;
+}
+
+.app-sidebar.collapsed .app-nav-item:hover .app-nav-dot {
+    border-color: rgba(var(--app-primary-rgb), 0.8);
+    box-shadow: 0 0 8px rgba(var(--app-primary-rgb), 0.3);
+}
+
+.app-sidebar.collapsed .app-nav-item.active {
+    background: rgba(var(--app-primary-rgb), 0.16) !important;
+    box-shadow: inset 0 0 0 1px rgba(var(--app-primary-rgb), 0.35),
+        0 0 16px rgba(var(--app-primary-rgb), 0.22) !important;
+}
+
+.app-sidebar.collapsed .app-nav-item.is-dot-only:hover,
+.app-sidebar.collapsed .app-nav-item.is-dot-only.active {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+@keyframes app-active-dot-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.18);
+        opacity: 1;
+    }
+}
+
+.app-item-text {
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.app-sidebar.collapsed .app-item-text {
+    display: none !important;
+    /* Fix: Hide labels in collapsed mode */
+}
+
+.app-sidebar-floating-label {
+    display: none !important;
+    /* Force hide by default */
+}
+
+.app-sidebar.collapsed .app-nav-label-wrapper:hover .app-sidebar-floating-label,
+.app-sidebar.collapsed .app-nav-item:hover .app-sidebar-floating-label {
+    display: flex !important;
+    /* Show only on hover */
+}
+
+.app-sidebar.collapsed .app-sidebar-floating-label {
+    position: absolute;
+    left: calc(100% + 15px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 8px 14px;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    pointer-events: none;
+    z-index: 2000;
+    box-shadow: 15px 0 40px rgba(0, 0, 0, 0.6);
+    align-items: center;
+    gap: 10px;
+    animation: app-label-slide 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes app-label-slide {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-15px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0) scale(1);
+    }
+}
+
+.app-sidebar.collapsed .app-sidebar-floating-label::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: rgba(15, 23, 42, 0.95);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cat-ctx {
+    opacity: 0.5;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ctx-sep {
+    font-size: 8px;
+    opacity: 0.3;
+}
+
+.item-name {
+    color: var(--app-primary);
+}
+
+.app-sidebar-util {
+    padding: 24px 0px;
+    /* Removing horizontal padding to let children align */
+    margin-top: auto;
+    border-top: 1px solid var(--app-border);
+    background: rgba(15, 23, 42, 0.4);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: visible;
+}
+
+/* Subtle accent line for fixed footer */
+.app-sidebar-util::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--app-primary), transparent);
+    opacity: 0.3;
+}
+
+.app-sidebar.collapsed .app-sidebar-util {
+    padding: 12px 0;
+    align-items: center;
+}
+
+.app-util-wrapper {
+    width: 100%;
+    padding: 0 12px;
+    position: relative;
+}
+
+.app-sidebar-settings-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 12px;
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color: var(--app-text-muted);
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    appearance: none;
+}
+
+.app-sidebar-settings-btn i {
+    width: 20px;
+    text-align: center;
+    font-size: 18px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.app-util-text {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--app-font-main);
+}
+
+.app-sidebar-settings-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.app-sidebar-settings-btn:hover i {
+    transform: rotate(45deg);
+    color: var(--app-primary);
+}
+
+.app-sidebar.collapsed .app-util-wrapper {
+    width: auto;
+    padding: 0;
+}
+
+.app-sidebar.collapsed .app-sidebar-settings-btn {
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin: 0 auto;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--app-text-muted);
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.app-sidebar.collapsed .app-sidebar-settings-btn:hover {
+    background: transparent;
+    border-color: transparent;
+}
+
+.app-sidebar.collapsed .app-sidebar-settings-btn .app-util-text {
+    display: none;
+}
+
+.app-collapse-trigger {
+    width: 38px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--app-border);
+    border-radius: 8px;
+    color: var(--app-text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.app-collapse-trigger:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border-color: var(--app-border-bright);
+}
+

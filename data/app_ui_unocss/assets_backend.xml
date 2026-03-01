@@ -2,6 +2,12 @@
     <xpath expr="//t[@t-set='head_web']" position="inside">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/exis9/squery@latest/squery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-wind3.global.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-attributify.global.js"></script>
+        <script type="text/javascript"><![CDATA[
+__APP_UI_UNOCSS_RUNTIME_JS__
+        ]]></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@unocss/runtime/core.global.js"></script>
         <script type="text/javascript"><![CDATA[
 __APP_UI_CONFIG_JS__
         ]]></script>
