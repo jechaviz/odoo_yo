@@ -6,3 +6,10 @@ playbooks/*.log
 *.tmp
 Buyniverse/
 Buyniverse.zip
+.codex_tools/
+.codex_tmp_preview_server.js
+codex_shell_audit.spec.js
+codex_shell_eval_click.js
+codex_shell_filter_check.js
+preview_server.log
+test-results/
