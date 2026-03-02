@@ -1,341 +1,263 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>App UI Preview</title>
+  <title>Odoo App Revamp Preview</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/00_core.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/10_dashboard.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/20_shell_layout.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/21_sidebar.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/22_topbar_profile.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/23_breadcrumbs.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/24_pane_header.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/25_kpis.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/26_portal_tabs.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/27_datatable_shell.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/28_overlays_popups.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/20_tables.css" />
-  <link rel="stylesheet" href="../../data/app_ui/css/30_forms.css" />
   <style>
-    :root {
-      color-scheme: dark;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-family: "Manrope", "Inter", "Segoe UI", system-ui, sans-serif;
       color: #dbe8ff;
       background: radial-gradient(circle at 20% 10%, #1e345d 0%, #0d1a33 35%, #070f20 100%);
-      overflow: hidden;
     }
-
-    .preview-shell {
-      height: 100vh;
-      display: block;
-      /* Neural Shell handles layout */
-      border: none;
-      margin: 0;
-    }
-
-    /* Global Neural styles handled by 10_dashboard.css */
-
-    .preview-main {
-      min-width: 0;
-      display: grid;
-      grid-template-rows: auto auto 1fr;
-      background: linear-gradient(180deg, rgba(9, 18, 36, 0.88) 0%, rgba(7, 14, 29, 0.9) 100%);
-    }
-
-    .preview-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(10, 15, 28, 0.6);
-      backdrop-filter: blur(20px);
-      height: 54px;
-      gap: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    .preview-header-left,
-    .preview-header-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-width: 0;
-    }
-
-    /* Header buttons handled by 10_dashboard.css */
-
-    .preview-avatar {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid rgba(114, 152, 219, 0.5);
-      background: linear-gradient(180deg, #2b4979, #1a3057);
+    .preview-toolbar {
+      position: fixed;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-size: 16px;
-    }
-
-    .preview-nav {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 10px 16px;
-      border-bottom: 1px solid rgba(77, 109, 164, 0.3);
-      color: #c4d8f7;
-      font-size: 13px;
-      background: rgba(9, 20, 40, 0.65);
-      white-space: nowrap;
-      overflow-x: auto;
-    }
-
-    .preview-nav span {
-      opacity: 0.82;
-    }
-
-    .preview-nav span.active {
-      color: #ffffff;
-      opacity: 1;
-      font-weight: 700;
-      border-bottom: 2px solid #4f8ed5;
-      padding-bottom: 4px;
-    }
-
-    .preview-controls {
-      display: flex;
-      align-items: center;
       gap: 8px;
-      margin-left: 6px;
+      padding: 8px;
+      border: 1px solid rgba(148, 163, 184, 0.32);
+      border-radius: 999px;
+      background: rgba(6, 12, 24, 0.72);
+      backdrop-filter: blur(10px);
     }
-
-    .preview-controls select,
-    .preview-controls button {
-      border: 1px solid rgba(108, 146, 209, 0.45);
-      border-radius: 10px;
-      background: #10264a;
-      color: #dce9ff;
-      padding: 6px 9px;
+    .preview-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
       font-size: 12px;
-      cursor: pointer;
+      border-radius: 999px;
+      text-decoration: none;
+      color: #cfe5ff;
+      border: 1px solid transparent;
+      background: rgba(15, 25, 46, 0.62);
     }
-
-    .preview-content {
-      min-width: 0;
-      min-height: 0;
-      overflow: auto;
-      padding: 14px;
+    .preview-chip.active {
+      color: #fff;
+      border-color: rgba(67, 97, 238, 0.52);
+      background: rgba(44, 74, 182, 0.52);
+      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.22);
     }
-
-    #preview-app {
-      min-width: 0;
-      min-height: 620px;
-    }
-
-    @media (max-width: 1100px) {
-      .preview-shell {
-        grid-template-columns: 56px minmax(0, 1fr);
-      }
-
-      .preview-controls {
-        display: none;
-      }
-
-      .preview-nav {
-        font-size: 12px;
-      }
-    }
-
-    @media (max-width: 860px) {
-      .preview-shell {
-        grid-template-columns: 1fr;
-      }
-
-      .preview-rail {
-        display: none;
-      }
-
-      .preview-main {
-        grid-template-rows: auto 1fr;
-      }
-
-
-      .preview-header {
-        flex-wrap: wrap;
-      }
-    }
+    #preview-app { min-height: 100vh; }
   </style>
+
   <script src="https://cdn.jsdelivr.net/gh/exis9/squery@latest/squery.min.js"></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   <script src="https://unpkg.com/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-  <script src="../../data/app_ui/js/app_ui_api.js"></script>
-  <script src="../../data/app_ui/js/app_ui_state.js"></script>
-  <script src="../../data/app_ui/app_ui_i18n.js"></script>
-  <script>
-    // Mock the injected variable for preview mode
-    window.__APP_UI_I18N__ = {}; 
-  </script>
-  <script src="../../data/app_ui/app_ui_config.js"></script>
 </head>
 
 <body>
+  <div class="preview-toolbar" id="preview-toolbar"></div>
   <div id="preview-app"></div>
 
   <script type="module">
-    const FILTER_ORDER = ["all", "paid", "overdue", "pending", "draft"];
-    const MOCK_APPS = [
-      { key: "App", label: "App", icon: "fa-solid fa-receipt", description: "Audit-ready billing hub", color: "#38bdf8" },
-      { key: "crm", label: "Neural CRM", icon: "fa-solid fa-microchip", description: "Quantified sales pipeline", color: "#818cf8" },
-      { key: "inventory", label: "Nodes", icon: "fa-solid fa-box-open", description: "Asset & inventory tracking", color: "#fb7185" },
+    const ROOT = window.odooApp || (window.odooApp = {});
+    const params = new URLSearchParams(window.location.search);
+    const locale = (params.get("locale") || "en").toLowerCase().startsWith("es") ? "es" : "en";
+    const base = "../../data/app_ui_unocss";
+
+    const cssParts = [
+      "css/00_core.css",
+      "css/10_dashboard.css",
+      "css/20_shell_layout.css",
+      "css/21_sidebar.css",
+      "css/22_topbar_profile.css",
+      "css/23_breadcrumbs.css",
+      "css/24_pane_header.css",
+      "css/25_kpis.css",
+      "css/26_portal_tabs.css",
+      "css/27_datatable_shell.css",
+      "css/28_overlays_popups.css",
+      "css/31_shell_cards.css",
+      "css/32_shell_menus.css",
+      "css/33_shell_primitives.css",
+      "css/34_command_palette.css",
+      "css/35_shell_enrichment.css",
+      "css/36_shell_insights.css",
+      "css/37_shell_activity.css",
+      "css/38_shell_dashboard.css",
+      "css/39_shell_detail.css",
+      "css/40_shell_execution.css",
+      "css/20_tables.css",
+      "css/30_forms.css",
     ];
 
-    async function loadYamlCatalog() {
-      const raw = await fetch("../../data/app_ui/i18n/messages.yml", { cache: "no-store" }).then((r) => r.text());
-      return window.jsyaml.load(raw) || {};
+    function setToolbar() {
+      const next = (l) => `?locale=${l}`;
+      const chips = [
+        { label: "UnoCSS", href: next(locale), active: true },
+        { label: locale === "es" ? "ES" : "EN", href: next(locale === "es" ? "en" : "es"), active: false },
+      ];
+      const host = document.getElementById("preview-toolbar");
+      host.innerHTML = chips
+        .map((chip) => `<a class="preview-chip ${chip.active ? 'active' : ''}" href="${chip.href}">${chip.label}</a>`)
+        .join("");
     }
 
-    function tipForFilter(uiText, filterName) {
-      const map = {
-        all: uiText.tipFilterAll,
-        paid: uiText.tipFilterPaid,
-        overdue: uiText.tipFilterOverdue,
-        pending: uiText.tipFilterPending,
-        draft: uiText.tipFilterDraft,
-      };
-      return map[filterName] || map.all;
+    function injectStyles() {
+      cssParts.forEach((path) => {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = `${base}/${path}`;
+        document.head.appendChild(link);
+      });
     }
 
-    function seedState(uiText) {
-      return {
-        loading: false,
-        activeFilter: "all",
-        tip: `${uiText.tipFilterAll} ${uiText.tipViewFallback}`,
-        checklistOpen: false,
-        checklistCompleted: 3,
-        checklist: [
-          { id: "search", label: uiText.checklistSearch, ok: true },
-          { id: "new", label: uiText.checklistNew, ok: true },
-          { id: "list", label: uiText.checklistList, ok: true },
-          { id: "status", label: uiText.checklistStatus, ok: false },
-        ],
-        i18n: uiText,
-        kpis: {
-          overdueAmount: "$2,050.00",
-          overdueCount: 2,
-          draftAmount: "$4,600.00",
-          draftCount: 4,
-          unpaidAmount: "$2,050.00",
-          unpaidCount: 3,
-          avgPaidDays: 7,
-          postedCount: 16,
-        },
-        counts: { all: 24, paid: 16, overdue: 2, pending: 3, draft: 4 },
-      };
+    async function loadScript(src) {
+      await new Promise((resolve, reject) => {
+        const s = document.createElement("script");
+        s.src = src;
+        s.async = false;
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+      });
+    }
+
+    async function loadRuntime() {
+      await loadScript("https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-wind3.global.js");
+      await loadScript("https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-attributify.global.js");
+      await loadScript("https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-typography.global.js");
+      await loadScript(`${base}/js/unocss_runtime.js`);
+      await loadScript("https://cdn.jsdelivr.net/npm/@unocss/runtime/core.global.js");
+
+      const yamlRaw = await fetch(`${base}/i18n/messages.yml`, { cache: "no-store" }).then((r) => r.text());
+      const i18nCatalog = window.jsyaml.load(yamlRaw) || {};
+      ROOT.bootstrap = Object.assign({}, ROOT.bootstrap || {}, { i18nCatalog });
+      ROOT.i18nCatalog = i18nCatalog;
+      const inlineI18n = document.createElement("script");
+      inlineI18n.textContent = `var __ODOO_BOOTSTRAP_I18N_CATALOG__ = ${JSON.stringify(i18nCatalog)};`;
+      document.head.appendChild(inlineI18n);
+
+      await loadScript(`${base}/app_ui_i18n.js`);
+      await loadScript(`${base}/app_ui_config.js`);
+      await loadScript(`${base}/js/app_ui_datatable_schema.js`);
+      await loadScript(`${base}/js/app_ui_datatable_filters.js`);
+      await loadScript(`${base}/js/app_ui_datatable_views.js`);
+      await loadScript(`${base}/js/app_ui_shell_demo.js`);
+      await loadScript(`${base}/js/app_ui_demo_data.js`);
+      await loadScript(`${base}/js/app_ui_api.js`);
+      await loadScript(`${base}/js/app_ui_state.js`);
     }
 
     async function mountPreview() {
-      const catalog = await loadYamlCatalog();
-      const i18nApi = window.APP_UI_I18N_API;
-      if (!i18nApi) throw new Error("APP_UI_I18N_API was not loaded.");
+      await loadRuntime();
+      setToolbar();
+      injectStyles();
 
-      const localeSelect = sq("#locale-select").get(0);
-      const queryLocale = new URLSearchParams(window.location.search).get("locale");
-      const selectedLocale = (queryLocale || localeSelect?.value || "en").toLowerCase();
-      if (localeSelect) localeSelect.value = selectedLocale.startsWith("es") ? "es" : "en";
+      const i18nApi = ROOT.i18n;
+      const demo = ROOT.demo;
+      const stateApi = ROOT.state;
 
-      const t = i18nApi.createTranslator(catalog, selectedLocale);
+      if (!i18nApi || !demo || !stateApi) {
+        throw new Error("Preview runtime modules were not loaded correctly.");
+      }
+
+      const t = i18nApi.createTranslator(ROOT.i18nCatalog, locale);
       const uiText = i18nApi.buildUiText(t);
-      const state = Vue.reactive(seedState(uiText));
+      const state = stateApi.ensureVueState();
 
-      const fetchComponent = (name) => fetch(`../../data/app_ui/components/${name}.vue`, { cache: "no-store" }).then((r) => r.text());
-
-      const [shellSrc, sidebarSrc, headerSrc, kpisSrc, tableSrc] = await Promise.all([
-        fetchComponent('AppShell'),
-        fetchComponent('AppSidebar'),
-        fetchComponent('AppHeader'),
-        fetchComponent('AppKPIs'),
-        fetchComponent('AppDataTable')
-      ]);
-
-      const files = {
-        "/AppShell.vue": shellSrc,
-        "./AppSidebar.vue": sidebarSrc,
-        "./AppHeader.vue": headerSrc,
-        "./AppKPIs.vue": kpisSrc,
-        "./AppDataTable.vue": tableSrc,
-        "AppSidebar.vue": sidebarSrc,
-        "AppHeader.vue": headerSrc,
-        "AppKPIs.vue": kpisSrc,
-        "AppDataTable.vue": tableSrc
+      state.i18n = uiText;
+      const kpis = demo.buildKpis(uiText);
+      state.kpis = { ...state.kpis, ...kpis };
+      state.kpis.cards = kpis.cards || [];
+      state.activeFilter = "all";
+      state.tableQuery = "";
+      state.tablePage = 1;
+      state.tablePageSize = 10;
+      state.tableRows = demo.getTableRows("all", "", uiText);
+      state.notifications = demo.buildShellNotifications(uiText);
+      state.profile = demo.buildShellProfile(uiText);
+      state.workspaceCards = demo.buildWorkspaceCards(uiText);
+      state.dashboardSections = demo.buildDashboardSections(uiText, state.tableRows);
+      state.shellBrand = demo.buildShellBrand(uiText);
+      state.focusRecordId = state.tableRows[0]?.id || null;
+      state.counts = {
+        all: demo.getTableRows("all", "", uiText).length,
+        paid: demo.getTableRows("paid", "", uiText).length,
+        overdue: demo.getTableRows("overdue", "", uiText).length,
+        pending: demo.getTableRows("pending", "", uiText).length,
+        draft: demo.getTableRows("draft", "", uiText).length,
       };
 
       const options = {
         moduleCache: { vue: Vue },
         getFile(url) {
-          const key = url.startsWith('/') ? url : (url.startsWith('./') ? url : './' + url);
-          const source = files[url] || files['./' + url] || files[url.replace(/^\//, './')];
-          if (!source) throw new Error(`File not found: ${url}`);
-          return Promise.resolve(source);
+          const normalized = String(url || "")
+            .replace(/\\/g, "/")
+            .replace(/^\.\//, "")
+            .replace(/^\/+/, "");
+          return fetch(`${base}/components/${normalized}`, { cache: "no-store" }).then((r) => r.text());
         },
         addStyle(textContent) {
-          const style = Object.assign(document.createElement("style"), { textContent });
+          const style = document.createElement("style");
+          style.textContent = textContent;
           document.head.appendChild(style);
         },
       };
 
       const { loadModule } = window["vue3-sfc-loader"];
+      const resolveRows = () => {
+        state.tableRows = demo.getTableRows(state.activeFilter, state.tableQuery, uiText);
+      };
+
       const app = Vue.createApp({
         components: {
-          AppShell: Vue.defineAsyncComponent(() => loadModule("/AppShell.vue", options)),
+          Shell: Vue.defineAsyncComponent(() => loadModule("app/layout/Shell.vue", options)),
+          CommandPalette: Vue.defineAsyncComponent(() => loadModule("app/workspace/CommandPalette.vue", options)),
         },
         setup() {
-          const setFilter = (filterName) => {
-            if (!FILTER_ORDER.includes(filterName)) return;
+          const cpRef = Vue.ref(null);
+          const apps = (ROOT.config?.navigation?.railApps || []).map((appItem) => ({
+            ...appItem,
+            label: uiText.navApps?.[appItem.labelKey] || appItem.labelKey,
+            description: "Open module",
+          }));
+
+          const onFilter = (filterName) => {
             state.activeFilter = filterName;
-            state.tip = `${tipForFilter(state.i18n, filterName)} ${state.i18n.tipViewFallback}`;
+            state.tablePage = 1;
+            resolveRows();
           };
-          const newInvoice = () => alert("Preview mode: wire this to Odoo create action.");
-          return { state, setFilter, newInvoice, apps: MOCK_APPS };
+          const onSearch = (query) => {
+            state.tableQuery = String(query || "");
+            state.tablePage = 1;
+            resolveRows();
+          };
+          const onNewRecord = () => alert("Preview mode: hook this action to Odoo create record");
+          const openSpotlight = () => {
+            if (cpRef.value && cpRef.value.open) cpRef.value.open();
+          };
+
+          return { state, apps, cpRef, onFilter, onSearch, onNewRecord, openSpotlight };
         },
-        template: `<AppShell :state="state" :apps="apps" @set-filter="setFilter" @new-invoice="newInvoice" @open-spotlight="() => {}" />`,
+        template: `
+          <div>
+            <Shell :state="state" :apps="apps" @set-filter="onFilter" @search="onSearch" @new-record="onNewRecord" @open-spotlight="openSpotlight" />
+            <CommandPalette ref="cpRef" :i18n="state.i18n" :apps="apps" @new-record="onNewRecord" @filter-overdue="onFilter('overdue')" />
+          </div>
+        `,
       });
 
-      document.body.classList.add('app-neural-active');
+      document.body.classList.add("app-neural-active");
       app.mount("#preview-app");
-
-      sq("#toggle-loading").on("click", () => {
-        state.loading = !state.loading;
-      });
-
-      sq("#reset-state").on("click", () => {
-        const reset = seedState(state.i18n);
-        Object.assign(state, reset);
-      });
-
-      sq("#locale-select").on("change", () => {
-        const nextLocale = sq("#locale-select").get(0)?.value || "en";
-        const url = new URL(window.location.href);
-        url.searchParams.set("locale", nextLocale);
-        window.location.href = url.toString();
-      });
     }
 
-    mountPreview().catch((err) => {
-      console.error(err);
-      sq("#preview-app").html(`<pre style="padding:1rem;color:#ff9aa9;">${String(err?.message || err)}</pre>`);
+    mountPreview().catch((error) => {
+      console.error(error);
+      document.getElementById("preview-app").innerHTML = `<pre style="padding:1rem;color:#ff9aa9;">${String(error?.message || error)}</pre>`;
     });
   </script>
 </body>
