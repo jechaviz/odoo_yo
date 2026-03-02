@@ -1,7 +1,8 @@
 (() => {
+  const ROOT = window.odooApp || (window.odooApp = {});
   // Component layer for runtime shell (buttons, links, chips).
-  const DOM = window.APP_UI_DOM;
-  const MARKUP = window.APP_UI_MARKUP;
+  const DOM = ROOT.dom;
+  const MARKUP = ROOT.markup;
   if (!DOM || !MARKUP) return;
 
   const { create, append, on, html, toggleClass } = DOM;
@@ -97,7 +98,7 @@
     children.filter(Boolean).forEach((child) => append(parent, child));
   }
 
-  window.APP_UI_COMPONENTS = Object.freeze({
+  ROOT.components = Object.freeze({
     createIconAction,
     createRailLink,
     createGridLink,

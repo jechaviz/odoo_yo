@@ -1,3 +1,3 @@
-from odoo_bridge.app_ui.manager import AppUiThemeManager
+from odoo_bridge.app_ui.manager import ThemeManager
 
-__all__ = ["AppUiThemeManager"]
+__all__ = ["ThemeManager"]

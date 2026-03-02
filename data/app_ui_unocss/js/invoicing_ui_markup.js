@@ -1,6 +1,7 @@
 (() => {
+  const ROOT = window.odooApp || (window.odooApp = {});
   // Markup atomics: centralized HTML builders to reduce string duplication.
-  const DEFAULT_TOOLTIP_CLASS = "app-APP_UI-tooltip";
+  const DEFAULT_TOOLTIP_CLASS = "app-tooltip";
   const STYLE_TOKENS = new Set(["solid", "regular", "brands", "light", "thin", "duotone"]);
 
   function escapeHtml(value) {
@@ -58,7 +59,7 @@
     return target;
   }
 
-  window.APP_UI_MARKUP = Object.freeze({
+  ROOT.markup = Object.freeze({
     escapeHtml,
     normalizeIconClasses,
     iconMarkup,

@@ -1,4 +1,5 @@
 (() => {
+  const ROOT = window.odooApp || (window.odooApp = {});
   // Pure metric/domain helpers for record UI.
 
   function formatMoney(value, locale = "es-MX", currency = "MXN") {
@@ -49,7 +50,7 @@
     return "all";
   }
 
-  window.APP_UI_METRICS = Object.freeze({
+  ROOT.metrics = Object.freeze({
     formatMoney,
     daysBetween,
     classifyRows,

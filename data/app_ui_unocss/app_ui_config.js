@@ -1,8 +1,10 @@
 (() => {
+  const ROOT = window.odooApp || (window.odooApp = {});
+  const BOOTSTRAP = ROOT.bootstrap || (ROOT.bootstrap = {});
   // Centralized runtime config (SoC): selectors, IDs, shortcuts, URLs.
   const config = {
     storage: {
-      disableKey: "appUiDisabled",
+      disableKey: "odooAppRevampDisabled",
     },
     breakpoints: {
       touchLikeMaxWidth: 1200,
@@ -59,20 +61,44 @@
       appsLandingHref: "/odoo/apps",
       railApps: [
         {
-          key: "conversations",
-          labelKey: "conversations",
+          key: "discuss",
+          labelKey: "discuss",
           icon: "fa-comments",
           color: "#ff8400",
           href: "/odoo/action-mail.action_discuss",
-          match: ["mail.discuss"],
+          match: ["mail.discuss", "action_discuss"],
         },
         {
-          key: "dashboards",
-          labelKey: "dashboards",
-          icon: "fa-table-cells-large",
-          color: "#875a7b",
-          href: "/odoo/action-board.board_my_dash_action",
-          match: ["board.board"],
+          key: "contacts",
+          labelKey: "contacts",
+          icon: "fa-address-book",
+          color: "#00b8d9",
+          href: "/odoo/action-contacts.action_contacts",
+          match: ["contacts", "res.partner"],
+        },
+        {
+          key: "sales",
+          labelKey: "sales",
+          icon: "fa-chart-line",
+          color: "#5a6acf",
+          href: "/odoo/action-sale.action_quotations_with_onboarding",
+          match: ["sale.order", "action_quotations"],
+        },
+        {
+          key: "rental",
+          labelKey: "rental",
+          icon: "fa-key",
+          color: "#2fb67e",
+          href: "/odoo/action-sale_renting.rental_order_action",
+          match: ["rental", "sale_renting"],
+        },
+        {
+          key: "inventory",
+          labelKey: "inventory",
+          icon: "fa-boxes-stacked",
+          color: "#f58b4c",
+          href: "/odoo/action-stock.stock_picking_type_action",
+          match: ["stock.picking", "stock.quant", "inventory"],
         },
         {
           key: "accounting",
@@ -80,7 +106,23 @@
           icon: "fa-file-invoice-dollar",
           color: "#00a09d",
           href: "/odoo/action-account.action_move_out_invoice_type",
-          match: ["account.move"],
+          match: ["account.move", "account.payment", "invoice"],
+        },
+        {
+          key: "purchase",
+          labelKey: "purchase",
+          icon: "fa-cart-shopping",
+          color: "#9f65c2",
+          href: "/odoo/action-purchase.purchase_rfq",
+          match: ["purchase.order", "purchase"],
+        },
+        {
+          key: "reports",
+          labelKey: "reports",
+          icon: "fa-chart-pie",
+          color: "#66b2ff",
+          href: "/odoo/apps",
+          match: ["report", "dashboard"],
         },
         {
           key: "apps",
@@ -106,8 +148,9 @@
   };
 
   // Decoupled i18n catalog (loaded from YAML at build/apply time).
-  const i18n = __APP_UI_I18N__;
+  const i18nCatalog = __ODOO_BOOTSTRAP_I18N_CATALOG__;
 
-  window.app_ui_CONFIG = Object.freeze(config);
-  window.APP_UI_I18N = i18n;
+  ROOT.config = Object.freeze(config);
+  BOOTSTRAP.i18nCatalog = Object.freeze(i18nCatalog || { default_locale: "en", messages: { en: {} } });
+  ROOT.i18nCatalog = BOOTSTRAP.i18nCatalog;
 })();

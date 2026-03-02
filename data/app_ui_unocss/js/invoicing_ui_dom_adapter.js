@@ -1,4 +1,5 @@
 (() => {
+  const ROOT = window.odooApp || (window.odooApp = {});
   // DOM adapter module: provides sq/native compatible primitives.
 
   function hasSq() {
@@ -121,7 +122,7 @@
     target.innerHTML = String(content || "");
   }
 
-  window.APP_UI_DOM = Object.freeze({
+  ROOT.dom = Object.freeze({
     hasSq,
     selectOne,
     selectAll,

@@ -1,13 +1,16 @@
 (() => {
-  // SoC note: runtime config is expected from data/app_ui/app_ui_config.js.
-  const CONFIG = window.app_ui_CONFIG;
+  const ROOT = window.odooApp || (window.odooApp = {});
+  const BOOTSTRAP = ROOT.bootstrap || (ROOT.bootstrap = {});
+  // SoC note: runtime config is expected from data/app_ui_unocss/app_ui_config.js.
+  const CONFIG = ROOT.config;
   if (!CONFIG) return;
 
   const DISABLE_KEY = CONFIG.storage.disableKey;
   if (window.localStorage && window.localStorage.getItem(DISABLE_KEY) === "1") return;
 
-  const COMPONENTS_MAP = __APP_UI_COMPONENTS_MAP__;
-  const I18N_CATALOG = window.APP_UI_I18N || { default_locale: "en", messages: { en: {} } };
+  const COMPONENTS_MAP = BOOTSTRAP.componentsMap || __ODOO_BOOTSTRAP_COMPONENTS_MAP__;
+  BOOTSTRAP.componentsMap = COMPONENTS_MAP;
+  const I18N_CATALOG = ROOT.i18nCatalog || { default_locale: "en", messages: { en: {} } };
   const VUE_CDN = CONFIG.cdn.vue;
   const SFC_LOADER_CDN = CONFIG.cdn.sfcLoader;
   const SQUERY_CDN = CONFIG.cdn.squery;
@@ -24,21 +27,29 @@
   const FILTER_ORDER = Array.isArray(CONFIG.filters?.order)
     ? CONFIG.filters.order
     : ["all", "paid", "overdue", "pending", "draft"];
-  const I18N_API = window.APP_UI_I18N_API;
+  const I18N_API = ROOT.i18n;
   if (!I18N_API) return;
-  const DOM = window.APP_UI_DOM;
+  const DOM = ROOT.dom;
   if (!DOM) return;
   const { hasSq, selectOne, selectAll, on, toggleClass, hasClass, create, append, prepend, html } = DOM;
-  const COMPONENTS = window.APP_UI_COMPONENTS;
+  const COMPONENTS = ROOT.components;
   if (!COMPONENTS) return;
   const { createIconAction, createRailLink, createGridLink } = COMPONENTS;
-  const METRICS = window.APP_UI_METRICS;
+  const METRICS = ROOT.metrics;
   if (!METRICS) return;
   const { formatMoney, daysBetween, classifyRows, inferFilterFromStatusText } = METRICS;
 
-  const API = window.APP_UI_API;
-  const STATE_MGR = window.APP_UI_STATE;
+  const API = ROOT.api;
+  const STATE_MGR = ROOT.state;
   if (!API || !STATE_MGR) return;
+  const DEMO = ROOT.demo;
+
+  function normalizeComponentPath(url) {
+    return String(url || "")
+      .replace(/\\/g, "/")
+      .replace(/^\.\//, "")
+      .replace(/^\/+/, "");
+  }
 
   function appLabel(app, uiText) {
     if (!app) return "";
@@ -84,7 +95,7 @@
   function ensureSQueryRuntime() {
     if (hasSq()) return Promise.resolve();
     if (squeryReadyPromise) return squeryReadyPromise;
-    squeryReadyPromise = ensureScript(SQUERY_CDN, "app-APP_UI-squery-runtime").catch(() => { });
+    squeryReadyPromise = ensureScript(SQUERY_CDN, "app-shell-squery-runtime").catch(() => { });
     return squeryReadyPromise;
   }
 
@@ -92,8 +103,8 @@
     if (window.Vue && window["vue3-sfc-loader"]) return Promise.resolve();
     if (runtimeReadyPromise) return runtimeReadyPromise;
     runtimeReadyPromise = (async () => {
-      if (!window.Vue) await ensureScript(VUE_CDN, "app-APP_UI-vue-runtime");
-      if (!window["vue3-sfc-loader"]) await ensureScript(SFC_LOADER_CDN, "app-APP_UI-sfc-loader");
+      if (!window.Vue) await ensureScript(VUE_CDN, "app-shell-vue-runtime");
+      if (!window["vue3-sfc-loader"]) await ensureScript(SFC_LOADER_CDN, "app-shell-sfc-loader");
     })().catch(() => { });
     return runtimeReadyPromise;
   }
@@ -105,7 +116,7 @@
 
     toggleClass(document.body, "app-neural-active", true);
 
-    const rail = create("aside", { id: CONFIG.ui.railId, className: "app-APP_UI-rail" });
+    const rail = create("aside", { id: CONFIG.ui.railId, className: "app-shell-rail" });
     if (!rail) return;
 
     const top = create("div", { className: "app-top-actions" });
@@ -148,7 +159,7 @@
       tooltip: uiText.navCollapseRail,
     });
     on(collapseBtn, "click", () => {
-      toggleClass(document.body, "app-APP_UI-rail-collapsed");
+      toggleClass(document.body, "app-shell-rail-collapsed");
     });
     append(bottom, collapseBtn);
     append(rail, bottom);
@@ -158,10 +169,10 @@
   function ensureSwitcherPanel() {
     if (selectOne(`#${CONFIG.ui.switcherPanelId}`)) return;
     const uiText = STATE_MGR.getUiText();
-    const panel = create("div", { id: CONFIG.ui.switcherPanelId, className: "app-APP_UI-switcher-panel" });
+    const panel = create("div", { id: CONFIG.ui.switcherPanelId, className: "app-switcher-panel" });
     if (!panel) return;
 
-    const grid = create("div", { className: "app-APP_UI-switcher-grid" });
+    const grid = create("div", { className: "app-switcher-grid" });
     APPS.forEach((app) => {
       const link = createGridLink({
         href: app.href,
@@ -174,7 +185,7 @@
 
     const all = create("button", {
       type: "button",
-      className: "app-APP_UI-view-all",
+      className: "app-switcher-view-all",
       textContent: uiText.navViewAllApps,
     });
     on(all, "click", () => {
@@ -269,7 +280,19 @@
       toggleClass(row, CONFIG.ui.rowHiddenClass, !show);
       if (show) visibleCount += 1;
     }
-    tableBody.dataset.yoVisibleCount = String(visibleCount);
+    tableBody.dataset.appVisibleCount = String(visibleCount);
+  }
+
+  function syncTableRows(filterName) {
+    const state = STATE_MGR.ensureVueState();
+    if (!API.fetchTableRows) return;
+    state.tableRows = API.fetchTableRows(
+      filterName || state.activeFilter,
+      state.tableQuery || "",
+      state.i18n || {},
+      state.activeSurface || "records"
+    );
+    state.tablePage = 1;
   }
 
   function applyMetricsFromRows(rows) {
@@ -317,6 +340,7 @@
     state.tip = `${tipForFilter(state.activeFilter)} ${viewModeTip()}`;
 
     applyQuickFilterToVisibleList(state.activeFilter);
+    syncTableRows(state.activeFilter);
     styleInteractiveBadges();
     STATE_MGR.updateChecklistFromDom();
   }
@@ -325,6 +349,20 @@
     const state = STATE_MGR.ensureVueState();
     state.activeFilter = FILTER_ORDER.includes(filterName) ? filterName : "all";
     applyMetricsFromRows(cachedRows);
+  }
+
+  function handleTableSearch(query) {
+    const state = STATE_MGR.ensureVueState();
+    state.tableQuery = String(query || "");
+    if (API.fetchTableRows) {
+      state.tableRows = API.fetchTableRows(
+        state.activeFilter,
+        state.tableQuery,
+        state.i18n || {},
+        state.activeSurface || "records"
+      );
+      state.tablePage = 1;
+    }
   }
 
   function clickNewrecord() {
@@ -373,7 +411,7 @@
 
     if (!(window.Vue && window["vue3-sfc-loader"])) {
       const uiText = STATE_MGR.getUiText();
-      html(wrapper, `<section id="app-APP_UI-record-hub"><div class="app-head"><div><h2>${uiText.runtimeFallbackTitle}</h2><p class="app-sub">${uiText.runtimeFallbackSubtitle}</p></div><button class="app-new-record">${uiText.newrecordButton}</button></div></section>`);
+      html(wrapper, `<section id="app-record-hub"><div class="app-head"><div><h2>${uiText.runtimeFallbackTitle}</h2><p class="app-sub">${uiText.runtimeFallbackSubtitle}</p></div><button class="app-new-record">${uiText.newrecordButton}</button></div></section>`);
       const fallbackBtn = selectOne(CONFIG.selectors.fallbackNewrecordButton, wrapper);
       if (fallbackBtn) on(fallbackBtn, "click", clickNewrecord);
       vueMounted = true;
@@ -385,8 +423,13 @@
     const options = {
       moduleCache: { vue: window.Vue },
       getFile(url) {
-        const name = url.split('/').pop();
-        const source = COMPONENTS_MAP[name] || COMPONENTS_MAP[url] || COMPONENTS_MAP['./' + name];
+        const normalized = normalizeComponentPath(url);
+        const name = normalized.split('/').pop();
+        const source =
+          COMPONENTS_MAP[normalized] ||
+          COMPONENTS_MAP[url] ||
+          COMPONENTS_MAP[name] ||
+          COMPONENTS_MAP['./' + name];
         if (!source) throw new Error(`SFC file not found: ${url}`);
         return Promise.resolve(source);
       },
@@ -398,26 +441,31 @@
 
     const app = createApp({
       components: {
-        AppShell: defineAsyncComponent(() => loadModule("AppShell.vue", options)),
-        CommandPalette: defineAsyncComponent(() => loadModule("CommandPalette.vue", options))
+        Shell: defineAsyncComponent(() => loadModule("app/layout/Shell.vue", options)),
+        CommandPalette: defineAsyncComponent(() => loadModule("app/workspace/CommandPalette.vue", options))
       },
       setup() {
         const state = STATE_MGR.ensureVueState();
         const cpRef = window.Vue.ref(null);
         window.Vue.onMounted(() => { cpInstance = cpRef.value; });
+        const openSpotlight = () => {
+          if (cpRef.value && typeof cpRef.value.open === "function") cpRef.value.open();
+        };
 
         return {
           state,
           cpRef,
           apps: APPS,
-          onNewrecord: clickNewrecord,
+          onNewRecord: clickNewrecord,
           onSetFilter: setActiveFilter,
+          onSearch: handleTableSearch,
+          openSpotlight,
         };
       },
       template: `
         <div>
-          <AppShell :state="state" :apps="apps" @new-record="onNewrecord" @set-filter="onSetFilter" @open-spotlight="cpRef.open()" />
-          <CommandPalette ref="cpRef" :i18n="state.i18n" :apps="apps" @new-record="onNewrecord" />
+          <Shell :state="state" :apps="apps" @new-record="onNewRecord" @set-filter="onSetFilter" @search="onSearch" @open-spotlight="openSpotlight" />
+          <CommandPalette ref="cpRef" :i18n="state.i18n" :apps="apps" @new-record="onNewRecord" @filter-overdue="onSetFilter('overdue')" />
         </div>
       `,
     });
@@ -474,6 +522,15 @@
     ensureSwitcherPanel();
     markActiveIcons();
     mountrecordHubVue();
+    if (DEMO && API.fetchTableRows) {
+      const state = STATE_MGR.ensureVueState();
+      state.tableRows = API.fetchTableRows(
+        state.activeFilter,
+        state.tableQuery || "",
+        state.i18n || {},
+        state.activeSurface || "records"
+      );
+    }
     if (isrecordContext()) refreshrecordKpis();
   }
 

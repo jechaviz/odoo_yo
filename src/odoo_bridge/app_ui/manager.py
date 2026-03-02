@@ -3,17 +3,17 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any, Dict, Optional
 
-from odoo_bridge.app_ui.asset_builder import AppUiAssetBuilder
-from odoo_bridge.app_ui.config import AppUiConfig, build_app_ui_config
+from odoo_bridge.app_ui.asset_builder import AssetBuilder
+from odoo_bridge.app_ui.config import ThemeConfig, build_theme_config
 from odoo_bridge.odoo_client import OdooClient
 
 
-class AppUiThemeManager:
-    def __init__(self, client: OdooClient, project_root: Path, config: Optional[AppUiConfig] = None):
+class ThemeManager:
+    def __init__(self, client: OdooClient, project_root: Path, config: Optional[ThemeConfig] = None):
         self.client = client
         self.project_root = project_root
-        self.config = config or build_app_ui_config("classic")
-        self.assets = AppUiAssetBuilder(project_root=project_root, config=self.config)
+        self.config = config or build_theme_config()
+        self.assets = AssetBuilder(project_root=project_root, config=self.config)
 
     def apply(self) -> Dict[str, Any]:
         webclient_bootstrap_id = self._webclient_bootstrap_view_id()

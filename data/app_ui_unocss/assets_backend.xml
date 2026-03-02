@@ -4,36 +4,40 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/exis9/squery@latest/squery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-wind3.global.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-attributify.global.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@unocss/runtime/preset-typography.global.js"></script>
         <script type="text/javascript"><![CDATA[
-__APP_UI_UNOCSS_RUNTIME_JS__
+__ODOO_SHELL_UNOCSS_RUNTIME_JS__
         ]]></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@unocss/runtime/core.global.js"></script>
         <script type="text/javascript"><![CDATA[
-__APP_UI_CONFIG_JS__
+__ODOO_SHELL_CONFIG_JS__
         ]]></script>
         <script type="text/javascript"><![CDATA[
-__APP_UI_I18N_JS__
+__ODOO_SHELL_I18N_JS__
         ]]></script>
         <script type="text/javascript"><![CDATA[
-__APP_UI_API_JS__
+__ODOO_SHELL_API_JS__
         ]]></script>
         <script type="text/javascript"><![CDATA[
-__APP_UI_STATE_JS__
+__ODOO_SHELL_STATE_JS__
         ]]></script>
         <script type="text/javascript"><![CDATA[
-__APP_UI_DOM_JS__
+__ODOO_SHELL_DEMO_JS__
         ]]></script>
         <script type="text/javascript"><![CDATA[
-__APP_UI_MARKUP_JS__
+__ODOO_SHELL_DOM_JS__
         ]]></script>
         <script type="text/javascript"><![CDATA[
-__APP_UI_COMPONENTS_JS__
+__ODOO_SHELL_MARKUP_JS__
         ]]></script>
         <script type="text/javascript"><![CDATA[
-__APP_UI_METRICS_JS__
+__ODOO_SHELL_COMPONENTS_JS__
+        ]]></script>
+        <script type="text/javascript"><![CDATA[
+__ODOO_SHELL_METRICS_JS__
         ]]></script>
         <style type="text/css"><![CDATA[
-__APP_UI_CSS__
+__ODOO_SHELL_CSS__
         ]]></style>
         <script type="text/javascript"><![CDATA[
 (function() {
@@ -43,7 +47,7 @@ __APP_UI_CSS__
     link.href = 'https://www.odoo.com/web/image/res.company/1/favicon';
     document.getElementsByTagName('head')[0].appendChild(link);
 })();
-__APP_UI_JS__
+__ODOO_SHELL_JS__
         ]]></script>
     </xpath>
 </data>

@@ -4,11 +4,13 @@
       :is-collapsed="isSidebarCollapsed"
       :categories="navCategories"
       :active-filter="state.activeFilter"
+      :active-surface="state.activeSurface || 'records'"
       :open-sections="openSections"
       :brand="shellBrand"
       :ui-text="state.i18n || {}"
       @toggle-section="toggleSection"
       @set-filter="$emit('set-filter', $event)"
+      @set-surface="onSurfaceSelect"
       @open-mega="isMegaOpen = !isMegaOpen"
     />
 
@@ -221,13 +223,19 @@ export default {
     },
   },
   computed: {
+    surfaceProfile() {
+      return this.demoCall('buildSurfaceProfile', {}, this.state.activeSurface || 'records', this.state.i18n || {});
+    },
     breadcrumbs() {
+      if (Array.isArray(this.surfaceProfile?.breadcrumbs) && this.surfaceProfile.breadcrumbs.length) {
+        return this.surfaceProfile.breadcrumbs;
+      }
       return this.state.breadcrumbs?.length
         ? this.state.breadcrumbs
         : this.demoCall('buildShellBreadcrumbs', [], this.state.i18n || {});
     },
     paneTitle() {
-      return this.state.i18n?.sectionrecordList || 'Records';
+      return this.surfaceProfile?.title || this.state.i18n?.sectionrecordList || 'Records';
     },
     activeShellMode() {
       return this.state.shellMode || this.shellModeOptions[0]?.value || 'overview';
@@ -306,6 +314,7 @@ export default {
       return this.state.themeMode === 'ice' ? 'is-theme-ice' : 'is-theme-night';
     },
     shellBrand() {
+      if (this.surfaceProfile?.brand) return this.surfaceProfile.brand;
       return this.state.shellBrand || {
         icon: 'fa-file-invoice-dollar',
         title: this.state.i18n?.navApps?.accounting || 'Accounting',
@@ -343,11 +352,15 @@ export default {
       };
     },
     workspacePrimaryCards() {
-      const cards = Array.isArray(this.state.workspaceCards?.primary) ? this.state.workspaceCards.primary : this.demoCall('buildWorkspaceCards', { primary: [], secondary: [] }, this.state.i18n || {}).primary;
+      const cards = Array.isArray(this.state.workspaceCards?.primary)
+        ? this.state.workspaceCards.primary
+        : this.demoCall('buildWorkspaceCards', { primary: [], secondary: [] }, this.state.i18n || {}, this.state.activeSurface || 'records').primary;
       return cards.filter((card) => this.matchesMode(card));
     },
     workspaceSecondaryCards() {
-      const cards = Array.isArray(this.state.workspaceCards?.secondary) ? this.state.workspaceCards.secondary : this.demoCall('buildWorkspaceCards', { primary: [], secondary: [] }, this.state.i18n || {}).secondary;
+      const cards = Array.isArray(this.state.workspaceCards?.secondary)
+        ? this.state.workspaceCards.secondary
+        : this.demoCall('buildWorkspaceCards', { primary: [], secondary: [] }, this.state.i18n || {}, this.state.activeSurface || 'records').secondary;
       return cards.filter((card) => this.matchesMode(card));
     },
     dashboardTitle() {
@@ -359,7 +372,7 @@ export default {
     dashboardSections() {
       const sections = this.state.dashboardSections?.length
         ? this.state.dashboardSections
-        : this.demoCall('buildDashboardSections', [], this.state.i18n || {}, this.allRows());
+        : this.demoCall('buildDashboardSections', [], this.state.i18n || {}, this.allRows(), this.state.activeSurface || 'records');
       return sections.map((section) => ({
         ...section,
         widgets: (section.widgets || []).filter((widget) => this.matchesMode(widget)),
@@ -427,7 +440,8 @@ export default {
       return typeof DEMO?.[name] === 'function' ? DEMO[name](...args) : fallback;
     },
     allRows() {
-      return this.demoCall('getTableRows', [], 'all', '', this.state.i18n || {});
+      const surface = this.state.activeSurface || 'records';
+      return this.demoCall('getTableRowsBySurface', this.demoCall('getTableRows', [], 'all', '', this.state.i18n || {}), surface, 'all', '', this.state.i18n || {});
     },
     ensureOperationsRecord(record) {
       const recordId = record?.id;
@@ -471,6 +485,14 @@ export default {
         return;
       }
       if (item?.href && item.href !== '#') window.location.href = item.href;
+    },
+    onSurfaceSelect(surfaceKey) {
+      const nextSurface = String(surfaceKey || 'records');
+      this.state.activeSurface = nextSurface;
+      const profile = this.demoCall('buildSurfaceProfile', {}, nextSurface, this.state.i18n || {});
+      this.state.surfaceProfile = profile;
+      const defaultFilter = profile?.defaultFilter || 'all';
+      this.applyFilterSelection(defaultFilter);
     },
     handleContextAction(item) {
       const key = item?.key || '';
@@ -605,7 +627,15 @@ export default {
     applyFilterSelection(filterName) {
       this.state.activeFilter = filterName;
       this.state.tablePage = 1;
-      this.state.tableRows = this.demoCall('getTableRows', [], filterName, this.state.tableQuery || '', this.state.i18n || {});
+      const surface = this.state.activeSurface || 'records';
+      this.state.tableRows = this.demoCall(
+        'getTableRowsBySurface',
+        this.demoCall('getTableRows', [], filterName, this.state.tableQuery || '', this.state.i18n || {}),
+        surface,
+        filterName,
+        this.state.tableQuery || '',
+        this.state.i18n || {}
+      );
       if (!this.state.tableRows.some((row) => row.id === this.state.focusRecordId)) {
         this.state.focusRecordId = this.state.tableRows[0]?.id || this.allRows()[0]?.id || null;
       }
