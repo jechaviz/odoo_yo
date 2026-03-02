@@ -1,0 +1,159 @@
+/* 34. Command palette */
+
+.app-spotlight-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 15vh;
+}
+
+.app-spotlight-modal {
+    width: 100%;
+    max-width: 640px;
+    border-radius: var(--app-radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--app-border);
+}
+
+.app-spotlight-search {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+    border-bottom: 1px solid var(--app-border);
+}
+
+.app-neon-glow {
+    color: var(--app-primary);
+    filter: drop-shadow(0 0 5px var(--app-primary-glow));
+}
+
+.app-spotlight-search input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--app-text-primary);
+    font-family: var(--app-font-main);
+}
+
+.app-spotlight-search input::placeholder {
+    color: var(--app-text-muted);
+}
+
+.app-cp-esc {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--app-text-muted);
+    padding: 4px 8px;
+    border: 1px solid var(--app-border);
+    border-radius: 4px;
+}
+
+.app-spotlight-results {
+    max-height: 480px;
+    overflow-y: auto;
+    padding: 12px;
+}
+
+.app-spotlight-item {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    gap: 16px;
+    border-radius: var(--app-radius);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+}
+
+.app-spotlight-item.is-active {
+    background: rgba(56, 189, 248, 0.08);
+    border-color: var(--app-border-active);
+    transform: translateX(4px);
+}
+
+.app-item-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--app-text-secondary);
+}
+
+.app-spotlight-item.is-active .app-item-icon {
+    color: var(--app-primary);
+    background: var(--app-primary-glow);
+    box-shadow: 0 0 15px var(--app-primary-glow);
+}
+
+.app-item-label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-item-label strong {
+    font-size: 13px;
+    letter-spacing: 0.02em;
+}
+
+.app-item-label span {
+    font-size: 11px;
+    color: var(--app-text-muted);
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.app-item-action {
+    opacity: 0;
+    color: var(--app-primary);
+    transition: opacity 0.2s;
+}
+
+.app-spotlight-item.is-active .app-item-action {
+    opacity: 1;
+}
+
+.app-spotlight-footer {
+    padding: 12px 24px;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--app-border);
+}
+
+.app-footer-keys {
+    display: flex;
+    gap: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--app-text-muted);
+}
+
+.app-footer-keys kbd {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--app-border);
+    border-radius: 4px;
+    padding: 2px 5px;
+    margin-right: 4px;
+}
+
+.app-footer-sys {
+    font-size: 9px;
+    font-weight: 800;
+    color: var(--app-primary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.6;
+}

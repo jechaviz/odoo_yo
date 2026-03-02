@@ -1,0 +1,41 @@
+/* 32. Shell menus */
+
+.app-shell-context-menu {
+    position: fixed;
+    z-index: 6000;
+    min-width: 220px;
+    padding: 8px;
+    border-radius: 18px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow: 0 24px 44px rgba(2, 6, 23, 0.42);
+}
+
+.app-shell-context-menu__item {
+    width: 100%;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #edf4ff;
+    font-size: 13px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.app-shell-context-menu__item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.app-shell-context-menu__item i {
+    width: 14px;
+    color: var(--app-primary);
+}
+
+.app-shell-context-menu__separator {
+    height: 1px;
+    margin: 6px 2px;
+    background: rgba(148, 163, 184, 0.14);
+}

@@ -1,9 +1,11 @@
 (() => {
-    // Reactive state management for APP_UI UI.
-    const CONFIG = window.app_ui_CONFIG;
-    const I18N_API = window.APP_UI_I18N_API;
-    const I18N_CATALOG = window.APP_UI_I18N;
-    const DOM = window.APP_UI_DOM;
+  const ROOT = window.odooApp || (window.odooApp = {});
+    // Reactive state management for the app shell.
+    const CONFIG = ROOT.config;
+    const I18N_API = ROOT.i18n;
+    const I18N_CATALOG = ROOT.i18nCatalog;
+    const DOM = ROOT.dom;
+    const DEMO = ROOT.demo;
 
     let metricsState = null;
 
@@ -24,6 +26,34 @@
 
     function buildStateSeed() {
         const uiText = getUiText();
+        const activeSurface = "records";
+        const surfaceProfile = DEMO && typeof DEMO.buildSurfaceProfile === "function"
+            ? DEMO.buildSurfaceProfile(activeSurface, uiText)
+            : {};
+        const demoRows = DEMO
+            ? (typeof DEMO.getTableRowsBySurface === "function"
+                ? DEMO.getTableRowsBySurface(activeSurface, "all", "", uiText)
+                : DEMO.getTableRows("all", "", uiText))
+            : [];
+        const demoKpis = DEMO ? DEMO.buildKpis(uiText) : null;
+        const demoNotifications = DEMO && typeof DEMO.buildShellNotifications === "function" ? DEMO.buildShellNotifications(uiText) : [];
+        const demoProfile = DEMO && typeof DEMO.buildShellProfile === "function" ? DEMO.buildShellProfile(uiText) : {};
+        const demoWorkspaceCards = DEMO && typeof DEMO.buildWorkspaceCards === "function" ? DEMO.buildWorkspaceCards(uiText) : { primary: [], secondary: [] };
+        const demoBrand = surfaceProfile.brand
+            || (DEMO && typeof DEMO.buildShellBrand === "function" ? DEMO.buildShellBrand(uiText) : {});
+        const demoBreadcrumbs = surfaceProfile.breadcrumbs?.length
+            ? surfaceProfile.breadcrumbs
+            : (DEMO && typeof DEMO.buildShellBreadcrumbs === "function" ? DEMO.buildShellBreadcrumbs(uiText) : []);
+        const demoUtilityActions = DEMO && typeof DEMO.buildShellUtilityActions === "function" ? DEMO.buildShellUtilityActions(uiText) : [];
+        const demoShellModes = DEMO && typeof DEMO.buildShellModes === "function" ? DEMO.buildShellModes(uiText) : [];
+        const demoShellInsights = DEMO && typeof DEMO.buildShellInsights === "function" ? DEMO.buildShellInsights(uiText) : [];
+        const demoShellActivity = DEMO && typeof DEMO.buildShellActivity === "function" ? DEMO.buildShellActivity(uiText) : [];
+        const demoQuickCreateActions = DEMO && typeof DEMO.buildQuickCreateActions === "function" ? DEMO.buildQuickCreateActions(uiText) : [];
+        const demoDashboardSections = DEMO && typeof DEMO.buildDashboardSections === "function" ? DEMO.buildDashboardSections(uiText, demoRows) : [];
+        const seedRecord = demoRows[0] || null;
+        const seedOperations = DEMO && typeof DEMO.buildOperationsSurfaceData === "function" && seedRecord
+            ? DEMO.buildOperationsSurfaceData(seedRecord, uiText)
+            : {};
         return {
             loading: false,
             activeFilter: "all",
@@ -33,16 +63,46 @@
             checklist: buildChecklist(uiText),
             i18n: uiText,
             kpis: {
-                overdueAmount: "$0.00",
-                overdueCount: 0,
-                draftAmount: "$0.00",
-                draftCount: 0,
-                unpaidAmount: "$0.00",
-                unpaidCount: 0,
-                avgPaidDays: 0,
-                postedCount: 0,
+                overdueAmount: demoKpis?.overdueAmount || "$0.00",
+                overdueCount: demoKpis?.overdueCount || 0,
+                draftAmount: demoKpis?.draftAmount || "$0.00",
+                draftCount: demoKpis?.draftCount || 0,
+                unpaidAmount: demoKpis?.unpaidAmount || "$0.00",
+                unpaidCount: demoKpis?.unpaidCount || 0,
+                avgPaidDays: demoKpis?.avgPaidDays || 0,
+                postedCount: demoKpis?.postedCount || 0,
+                cards: demoKpis?.cards || [],
             },
-            counts: { all: 0, paid: 0, overdue: 0, pending: 0, draft: 0 },
+            counts: {
+                all: demoRows.length,
+                paid: demoRows.filter((row) => row.type === "paid").length,
+                overdue: demoRows.filter((row) => row.type === "overdue").length,
+                pending: demoRows.filter((row) => row.type === "pending").length,
+                draft: demoRows.filter((row) => row.type === "draft").length,
+            },
+            tableRows: demoRows,
+            tableQuery: "",
+            tablePage: 1,
+            tablePageSize: 10,
+            notifications: demoNotifications,
+            profile: demoProfile,
+            workspaceCards: demoWorkspaceCards,
+            shellBrand: demoBrand,
+            activeSurface,
+            surfaceProfile,
+            breadcrumbs: demoBreadcrumbs,
+            utilityActions: demoUtilityActions,
+            shellModes: demoShellModes,
+            shellInsights: demoShellInsights,
+            activityFeed: demoShellActivity,
+            quickCreateActions: demoQuickCreateActions,
+            dashboardSections: demoDashboardSections,
+            focusRecordId: demoRows[0]?.id || null,
+            shellMode: demoShellModes[0]?.value || "overview",
+            themeMode: "night",
+            primaryActionLabel: uiText.headerCreateNew || "Create New",
+            operationsByRecord: seedRecord ? { [seedRecord.id]: seedOperations } : {},
+            operationsTab: seedOperations?.activeTab || "form",
         };
     }
 
@@ -72,7 +132,7 @@
         state.checklistOpen = state.checklistCompleted < state.checklist.length;
     }
 
-    window.APP_UI_STATE = Object.freeze({
+    ROOT.state = Object.freeze({
         ensureVueState,
         updateChecklistFromDom,
         getUiText,

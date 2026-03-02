@@ -1,0 +1,108 @@
+﻿.app-shell-composer-grid {
+  display: grid;
+}
+
+.app-execution-pad__body {
+  display: grid;
+  gap: 1rem;
+}
+
+.app-execution-pad__hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+}
+
+.app-execution-pad__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(148, 163, 184, 0.78);
+}
+
+.app-execution-pad__hero-copy h3,
+.app-execution-pad__hero-copy p {
+  margin: 0;
+}
+
+.app-execution-pad__hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.app-execution-pad__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.app-execution-pad__field,
+.app-execution-pad__notes {
+  min-height: 100%;
+}
+
+.app-execution-pad__field {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem 1.1rem;
+}
+
+.app-execution-pad__field-header {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.app-execution-pad__field-header span {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.app-execution-pad__field-header small {
+  color: rgba(148, 163, 184, 0.82);
+}
+
+.app-execution-pad__rating-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: rgba(191, 219, 254, 0.88);
+  font-size: 0.78rem;
+}
+
+.app-execution-pad__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+}
+
+.app-execution-pad__suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.app-execution-pad__actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.app-execution-pad__empty {
+  padding: 1rem 1.1rem;
+  color: rgba(191, 219, 254, 0.78);
+}
+
+@media (max-width: 1180px) {
+  .app-execution-pad__grid {
+    grid-template-columns: 1fr;
+  }
+}

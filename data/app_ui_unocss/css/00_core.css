@@ -1,5 +1,5 @@
 /* ---- Project "Neural-Glass" Core Tokens (Reset) ---- */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
 
 :root {
   /* Neural-Glass Pro Palette (Saturated Obsidian) */
@@ -36,9 +36,10 @@
   --app-radius: 12px;
   --app-radius-lg: 16px;
 
-  /* Typography (Inter + Outfit) */
-  --app-font-main: 'Outfit', 'Inter', sans-serif;
-  --app-font-mono: 'JetBrains Mono', monospace;
+  /* Typography */
+  --app-font-main: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --app-font-display: 'Sora', 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --app-font-mono: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --app-text-primary: #f8fafc;
   --app-text-secondary: #94a3b8;
   --app-text-muted: #64748b;

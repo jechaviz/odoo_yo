@@ -1,7 +1,7 @@
 /*
   Aggregator stylesheet for local preview.
   Odoo runtime bundle is composed by Python (app_ui_revamp.py)
-  from data/app_ui/css/*.css to keep each file under 600 lines.
+  from data/app_ui_unocss/css/*.css to keep each file under 600 lines.
 */
 @import url('./css/00_core.css');
 @import url('./css/10_dashboard.css');
@@ -14,5 +14,16 @@
 @import url('./css/26_portal_tabs.css');
 @import url('./css/27_datatable_shell.css');
 @import url('./css/28_overlays_popups.css');
+@import url('./css/31_shell_cards.css');
+@import url('./css/32_shell_menus.css');
+@import url('./css/33_shell_primitives.css');
+@import url('./css/34_command_palette.css');
+@import url('./css/35_shell_enrichment.css');
+@import url('./css/36_shell_insights.css');
+@import url('./css/37_shell_activity.css');
+@import url('./css/38_shell_dashboard.css');
+@import url('./css/39_shell_detail.css');
+@import url('./css/40_shell_execution.css');
+@import url('./css/41_shell_operations.css');
 @import url('./css/20_tables.css');
 @import url('./css/30_forms.css');

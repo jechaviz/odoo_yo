@@ -57,10 +57,17 @@
     transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease;
 }
 
-.app-toolbar-more-toggle:hover {
+.app-toolbar-more-toggle:hover,
+.app-toolbar-more-toggle[aria-expanded="true"] {
     color: #fff;
     border-color: rgba(255, 255, 255, 0.18);
     background: rgba(20, 31, 53, 0.88);
+}
+
+.app-toolbar-more-toggle:hover i,
+.app-toolbar-more-toggle[aria-expanded="true"] i {
+    transform: rotate(180deg);
+    color: #fff;
 }
 
 .app-toolbar-onhover {
@@ -113,24 +120,20 @@
 .app-toolbar-more-toggle:hover + .app-toolbar-onhover,
 .app-toolbar-more-toggle:focus-visible + .app-toolbar-onhover,
 .app-toolbar-onhover:hover,
-.app-toolbar-onhover:focus-within {
+.app-toolbar-onhover:focus-within,
+.app-data-table-shell.is-toolbar-expanded .app-toolbar-onhover {
     opacity: 1;
-    max-width: 640px;
+    max-width: 680px;
     transform: translateX(0) scale(1);
     filter: saturate(1);
     pointer-events: auto;
 }
 
-.app-toolbar-more-toggle:hover i,
-.app-toolbar-more-toggle:focus-visible i {
-    transform: rotate(180deg);
-    color: #fff;
-}
-
 .app-toolbar-more-toggle:hover + .app-toolbar-onhover .app-toolbar-advanced,
 .app-toolbar-more-toggle:focus-visible + .app-toolbar-onhover .app-toolbar-advanced,
 .app-toolbar-onhover:hover .app-toolbar-advanced,
-.app-toolbar-onhover:focus-within .app-toolbar-advanced {
+.app-toolbar-onhover:focus-within .app-toolbar-advanced,
+.app-data-table-shell.is-toolbar-expanded .app-toolbar-advanced {
     opacity: 1;
     transform: translateX(0);
 }
@@ -138,9 +141,31 @@
 .app-toolbar-more-toggle:hover + .app-toolbar-onhover .app-toolbar-advanced > *,
 .app-toolbar-more-toggle:focus-visible + .app-toolbar-onhover .app-toolbar-advanced > *,
 .app-toolbar-onhover:hover .app-toolbar-advanced > *,
-.app-toolbar-onhover:focus-within .app-toolbar-advanced > * {
+.app-toolbar-onhover:focus-within .app-toolbar-advanced > *,
+.app-data-table-shell.is-toolbar-expanded .app-toolbar-advanced > * {
     opacity: 1;
     transform: translateX(0);
+}
+
+.app-toolbar-btn.active {
+    color: #fff;
+    background: rgba(var(--app-primary-rgb), 0.26);
+    border-color: rgba(var(--app-primary-rgb), 0.36);
+}
+
+.app-btn-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: #1d4ed8;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    margin-left: 6px;
 }
 
 .app-view-switcher {
@@ -225,3 +250,863 @@
     }
 }
 
+.app-record-table-wrap {
+    width: 100%;
+    overflow: auto;
+}
+
+.app-record-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.app-record-table thead th {
+    text-align: left;
+    padding: 12px 14px;
+    color: var(--app-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 11px;
+    border-bottom: 1px solid var(--app-border);
+}
+
+.app-record-table thead th.app-th-sortable {
+    user-select: none;
+    position: relative;
+    overflow: visible;
+}
+
+.app-sort-icon {
+    margin-left: 6px;
+    opacity: 0.7;
+    font-size: 10px;
+}
+
+.app-th-shell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+.app-th-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    cursor: pointer;
+}
+
+.app-th-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.app-th-drag,
+.app-th-filter {
+    width: 22px;
+    height: 22px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: rgba(148, 163, 184, 0.6);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(1px);
+    transition: opacity 0.16s ease, background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.app-record-table thead th:hover .app-th-drag,
+.app-record-table thead th:hover .app-th-filter,
+.app-record-table thead th.is-filter-open .app-th-filter {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.app-th-drag:hover,
+.app-th-filter:hover,
+.app-th-filter.active {
+    color: #fff;
+    background: rgba(var(--app-primary-rgb), 0.18);
+}
+
+.app-th-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.app-column-filter-popover {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 8;
+    min-width: 220px;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    background: rgba(5, 11, 22, 0.98);
+    box-shadow: 0 18px 42px rgba(2, 8, 20, 0.58);
+}
+
+.app-column-filter-popover-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.app-btn-ghost.compact {
+    min-width: 30px;
+    min-height: 30px;
+    padding: 0;
+}
+
+.app-th-resizer {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 8px;
+    height: 100%;
+    cursor: col-resize;
+}
+
+.app-th-resizer::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 3px;
+    width: 1px;
+    background: rgba(148, 163, 184, 0.18);
+    transition: background 0.18s ease;
+}
+
+.app-record-table thead th:hover .app-th-resizer::after {
+    background: rgba(var(--app-primary-rgb), 0.42);
+}
+
+.app-table-filter-row th {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--app-border);
+}
+
+.app-column-filter-input {
+    width: 100%;
+    min-height: 28px;
+    border-radius: 7px;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    background: rgba(8, 15, 28, 0.8);
+    color: var(--app-text-primary);
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.app-column-filter-empty {
+    color: rgba(148, 163, 184, 0.45);
+}
+
+.app-record-table tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    color: var(--app-text-primary);
+}
+
+.app-record-table .mono {
+    font-family: var(--app-font-data);
+    color: #d6e9ff;
+    font-weight: 600;
+}
+
+.app-record-table .is-numeric {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.app-record-table .is-actions {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.app-cell {
+    min-height: 44px;
+}
+
+.app-inline-editor {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 170px;
+}
+
+.app-inline-input {
+    min-height: 28px;
+    border-radius: 8px;
+    border: 1px solid rgba(var(--app-primary-rgb), 0.45);
+    background: rgba(8, 15, 28, 0.86);
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 12px;
+    min-width: 110px;
+}
+
+.app-inline-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 1px solid var(--app-border);
+    background: rgba(15, 23, 42, 0.92);
+    color: var(--app-text-muted);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.app-inline-btn.is-save {
+    color: #86efac;
+}
+
+.app-table-settings-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10030;
+    background: rgba(4, 9, 18, 0.66);
+    backdrop-filter: blur(3px);
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.app-table-settings-modal {
+    width: min(760px, 92vw);
+    max-height: min(90vh, 780px);
+    overflow: auto;
+    border-radius: 14px;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    background: linear-gradient(180deg, rgba(10, 19, 36, 0.98), rgba(7, 13, 25, 0.98));
+    box-shadow: 0 32px 60px rgba(0, 0, 0, 0.45);
+}
+
+.app-table-settings-head,
+.app-table-settings-foot {
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-table-settings-foot {
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    border-bottom: none;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.app-table-settings-head h3 {
+    margin: 0;
+    font-size: 17px;
+    color: #fff;
+}
+
+.app-table-settings-section {
+    padding: 16px 18px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.app-table-settings-section h4 {
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: #c8daff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.app-table-settings-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 8px;
+}
+
+.app-table-settings-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--app-text-primary);
+}
+
+.app-table-settings-filters-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.app-filter-rules {
+    display: grid;
+    gap: 8px;
+}
+
+.app-filter-rule-row {
+    display: grid;
+    grid-template-columns: minmax(120px, 1fr) minmax(120px, 1fr) minmax(120px, 1.4fr) auto;
+    gap: 8px;
+}
+
+.app-filter-select,
+.app-filter-input {
+    min-height: 32px;
+    border-radius: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.32);
+    background: rgba(9, 17, 32, 0.84);
+    color: var(--app-text-primary);
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.app-filter-select.logic {
+    max-width: 110px;
+}
+
+.app-table-settings-actions-inline {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.app-record-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    padding: 8px;
+}
+
+.app-record-card {
+    border: 1px solid var(--app-border);
+    border-radius: 14px;
+    background: rgba(7, 14, 27, 0.72);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app-record-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.app-record-card-id {
+    font-family: var(--app-font-data);
+    font-weight: 600;
+}
+
+.app-record-card-body {
+    display: grid;
+    gap: 6px;
+    color: var(--app-text-secondary);
+    font-size: 12px;
+}
+
+.app-record-card-body strong {
+    color: var(--app-text-primary);
+    margin-left: 4px;
+}
+
+.app-record-card-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+.app-status-pill {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.app-empty-state {
+    min-height: 140px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--app-text-secondary);
+    gap: 8px;
+}
+
+.app-table-skeleton {
+    padding: 12px;
+    display: grid;
+    gap: 10px;
+}
+
+.app-table-skeleton__head {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--app-text-secondary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.app-skeleton-row {
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(148, 163, 184, 0.12) 0%, rgba(148, 163, 184, 0.06) 50%, rgba(148, 163, 184, 0.12) 100%);
+    background-size: 280% 100%;
+    animation: app-skeleton-shimmer 1.2s ease-in-out infinite;
+}
+
+.app-page-size {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 14px;
+    font-size: 12px;
+    color: var(--app-text-secondary);
+}
+
+.app-page-size select {
+    border: 1px solid var(--app-border);
+    border-radius: 8px;
+    background: var(--app-bg-app);
+    color: var(--app-text-primary);
+    padding: 3px 8px;
+}
+
+.app-hidden-import {
+    display: none;
+}
+
+@keyframes app-skeleton-shimmer {
+    0% { background-position: 100% 0; }
+    100% { background-position: 0 0; }
+}
+
+.app-table-views {
+    position: relative;
+}
+
+.app-table-view-trigger {
+    min-height: 36px;
+    padding: 0 12px;
+    border-radius: 10px;
+    border: 1px solid var(--app-border);
+    background: rgba(7, 14, 28, 0.9);
+    color: var(--app-text-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.app-table-view-dirty {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #f59e0b;
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.55);
+}
+
+.app-table-view-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 220px;
+    padding: 8px;
+    border-radius: 14px;
+    border: 1px solid var(--app-border);
+    background: rgba(6, 12, 22, 0.96);
+    box-shadow: 0 18px 48px rgba(3, 8, 19, 0.58);
+    z-index: 25;
+}
+
+.app-table-view-item {
+    width: 100%;
+    min-height: 38px;
+    padding: 0 12px;
+    border: none;
+    background: transparent;
+    color: var(--app-text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.app-table-view-item:hover,
+.app-table-view-item.active {
+    background: rgba(var(--app-primary-rgb), 0.16);
+}
+
+.app-group-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 14px 20px 0;
+}
+
+.app-group-tab {
+    min-height: 34px;
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: rgba(10, 18, 32, 0.72);
+    color: var(--app-text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.app-group-tab.active {
+    color: #fff;
+    border-color: rgba(var(--app-primary-rgb), 0.36);
+    background: rgba(var(--app-primary-rgb), 0.18);
+}
+
+.app-inline-chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.app-mini-chip {
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(30, 41, 59, 0.9);
+    color: #dbeafe;
+    font-size: 11px;
+}
+
+.app-mini-chip.is-user {
+    background: rgba(var(--app-primary-rgb), 0.18);
+}
+
+.app-rating-readonly {
+    display: inline-flex;
+    gap: 4px;
+    color: rgba(148, 163, 184, 0.35);
+}
+
+.app-rating-readonly .active {
+    color: #fbbf24;
+}
+
+.app-urgency-readonly {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.app-urgency-track {
+    width: 72px;
+    height: 6px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: rgba(148, 163, 184, 0.16);
+}
+
+.app-urgency-track i {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #38bdf8, #2563eb);
+}
+
+.app-kanban-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 20px;
+}
+
+.app-kanban-column {
+    border-radius: 18px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    background: rgba(8, 14, 26, 0.74);
+    min-height: 420px;
+    padding: 14px;
+}
+
+.app-kanban-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.app-kanban-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.app-kanban-card {
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    background: rgba(16, 24, 40, 0.96);
+    padding: 14px;
+    cursor: grab;
+}
+
+.app-kanban-card-head,
+.app-kanban-card footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.app-kanban-card h5 {
+    margin: 12px 0 4px;
+    font-size: 15px;
+}
+
+.app-kanban-card p {
+    margin: 0 0 14px;
+    color: var(--app-text-secondary);
+}
+
+.app-row-context-menu {
+    position: fixed;
+    min-width: 180px;
+    padding: 8px;
+    border-radius: 14px;
+    border: 1px solid var(--app-border);
+    background: rgba(6, 12, 22, 0.98);
+    box-shadow: 0 18px 48px rgba(3, 8, 19, 0.62);
+    z-index: 50;
+}
+
+.app-context-item {
+    width: 100%;
+    min-height: 36px;
+    padding: 0 12px;
+    border: none;
+    background: transparent;
+    color: var(--app-text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.app-context-item:hover {
+    background: rgba(var(--app-primary-rgb), 0.16);
+}
+
+.app-inline-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.app-inline-star {
+    border: none;
+    background: transparent;
+    color: rgba(148, 163, 184, 0.35);
+    cursor: pointer;
+}
+
+.app-inline-star.active {
+    color: #fbbf24;
+}
+
+.app-table-settings-modal.is-wide {
+    width: min(960px, calc(100vw - 48px));
+}
+
+.app-table-settings-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 0 28px 12px;
+}
+
+.app-table-settings-tab {
+    min-height: 34px;
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: rgba(12, 19, 34, 0.72);
+    color: var(--app-text-secondary);
+    cursor: pointer;
+}
+
+.app-table-settings-tab.active {
+    color: #fff;
+    background: rgba(var(--app-primary-rgb), 0.2);
+    border-color: rgba(var(--app-primary-rgb), 0.36);
+}
+
+.app-table-settings-grid.two-col,
+.app-table-settings-grid.order-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.app-table-settings-check.is-column-row {
+    min-height: 54px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    background: rgba(8, 13, 24, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.app-table-settings-check.is-column-row small {
+    display: block;
+    color: var(--app-text-muted);
+}
+
+.app-filter-group-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.app-filter-group-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.app-filter-rules.nested {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.app-filter-node {
+    padding-left: 16px;
+    border-left: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.app-filter-rule-row.is-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.app-order-panel,
+.app-width-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.app-order-row {
+    min-height: 42px;
+    padding: 0 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    background: rgba(8, 13, 24, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-order-actions {
+    display: inline-flex;
+    gap: 8px;
+}
+
+.app-table-settings-foot.split {
+    justify-content: space-between;
+}
+
+.app-btn-ghost.danger {
+    color: #fca5a5;
+}
+
+.app-table-dashboard {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.app-table-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.app-dashboard-mini-card,
+.app-dashboard-group-card {
+    border-radius: 18px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    background: rgba(10, 18, 34, 0.76);
+    padding: 16px;
+}
+
+.app-dashboard-mini-card small,
+.app-dashboard-group-card header span {
+    color: var(--app-text-secondary);
+}
+
+.app-dashboard-mini-card strong {
+    display: block;
+    margin: 10px 0 4px;
+    font-size: 22px;
+}
+
+.app-table-dashboard-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.app-dashboard-group-card header,
+.app-dashboard-group-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.app-dashboard-group-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.app-dashboard-group-row small {
+    display: block;
+    color: var(--app-text-muted);
+}
+
+@media (max-width: 960px) {
+    .app-table-settings-grid.two-col,
+    .app-table-settings-grid.order-grid,
+    .app-kanban-wrap,
+    .app-table-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}

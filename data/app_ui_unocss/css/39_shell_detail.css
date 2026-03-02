@@ -1,0 +1,124 @@
+.app-detail-view {
+  display: grid;
+  gap: 1rem;
+}
+
+.app-detail-view__hero,
+.app-detail-view__section,
+.app-detail-view__empty {
+  padding: 1rem 1.05rem;
+  border: 1px solid rgba(130, 151, 190, 0.14);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(15, 25, 46, 0.92), rgba(8, 15, 30, 0.94));
+}
+
+.app-detail-view__hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.app-detail-view__eyebrow {
+  margin: 0 0 0.3rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(170, 192, 240, 0.66);
+}
+
+.app-detail-view__hero h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
+
+.app-detail-view__hero p,
+.app-detail-view__section-header p,
+.app-detail-view__empty {
+  margin: 0.28rem 0 0;
+  color: rgba(212, 223, 248, 0.72);
+}
+
+.app-detail-view__hero-status {
+  display: grid;
+  justify-items: end;
+  gap: 0.7rem;
+}
+
+.app-detail-view__hero-tags,
+.app-detail-view__record-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.app-detail-view__hero-tags {
+  margin-top: 0.7rem;
+}
+
+.app-detail-view__cta {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  background: rgba(37, 99, 235, 0.2);
+  color: #e6efff;
+  cursor: pointer;
+}
+
+.app-detail-view__sections {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.app-detail-view__record-tags {
+  padding: 1rem 1.05rem;
+}
+
+.app-detail-view__section-header h4 {
+  margin: 0;
+  font-size: 0.96rem;
+  color: #f8fbff;
+}
+
+.app-detail-view__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+  margin-top: 0.9rem;
+}
+
+.app-detail-view__field {
+  display: grid;
+  gap: 0.24rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgba(142, 162, 203, 0.1);
+}
+
+.app-detail-view__field span {
+  font-size: 0.73rem;
+  color: rgba(173, 189, 220, 0.66);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.app-detail-view__field strong {
+  color: #eef4ff;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .app-detail-view__hero,
+  .app-detail-view__hero-status {
+    justify-items: start;
+  }
+
+  .app-detail-view__hero {
+    flex-direction: column;
+  }
+
+  .app-detail-view__grid {
+    grid-template-columns: 1fr;
+  }
+}

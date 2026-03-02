@@ -1,6 +1,8 @@
 (() => {
-    // Centralized API/RPC adapter for Odoo APP_UI.
-    const CONFIG = window.app_ui_CONFIG;
+  const ROOT = window.odooApp || (window.odooApp = {});
+    // Centralized API/RPC adapter for the app shell.
+    const CONFIG = ROOT.config;
+    const DEMO = ROOT.demo;
 
     async function fetchrecords() {
         if (!CONFIG) return [];
@@ -21,19 +23,34 @@
             id: Date.now(),
         };
 
-        const response = await fetch(CONFIG.rpc.recordSearchReadUrl, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
-            credentials: "same-origin",
-        });
+        try {
+            const response = await fetch(CONFIG.rpc.recordSearchReadUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+                credentials: "same-origin",
+            });
 
-        const data = await response.json();
-        if (data.error) throw new Error(data.error.message || "RPC error");
-        return Array.isArray(data.result) ? data.result : [];
+            const data = await response.json();
+            if (data.error) throw new Error(data.error.message || "RPC error");
+            const rows = Array.isArray(data.result) ? data.result : [];
+            if (rows.length) return rows;
+        } catch (_err) {
+            // Fallback to local demo rows in preview/sandbox contexts.
+        }
+        return DEMO ? DEMO.getMetricRows("all") : [];
     }
 
-    window.APP_UI_API = Object.freeze({
+    function fetchTableRows(filterName = "all", query = "", i18n = {}, surfaceKey = "records") {
+        if (!DEMO) return [];
+        if (typeof DEMO.getTableRowsBySurface === "function") {
+            return DEMO.getTableRowsBySurface(surfaceKey, filterName, query, i18n);
+        }
+        return DEMO.getTableRows(filterName, query, i18n);
+    }
+
+    ROOT.api = Object.freeze({
         fetchrecords,
+        fetchTableRows,
     });
 })();

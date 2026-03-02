@@ -1,4 +1,4 @@
-default_locale: en
+﻿default_locale: en
 messages:
   en:
     header:
@@ -6,6 +6,19 @@ messages:
       subtitle: "All record-critical actions in one surface: customers, vendors, payments, reports and CFDI flow."
       section_record_list: "record List"
       new_record: "+ New"
+      create_new: "Create New"
+      actions:
+        assistant: "AI Assistant"
+        discuss: "Discuss"
+        activities: "Activities"
+        theme: "Theme"
+      notifications:
+        title: "Notifications"
+        subtitle: "Events that require attention across apps."
+        mark_all: "Mark all as read"
+    breadcrumbs:
+      home: "Home"
+      records: "Records"
     kpis:
       overdue_amount: "Overdue Amount"
       drafted_totals: "Drafted Totals"
@@ -30,22 +43,291 @@ messages:
       id: "Id"
       bill_from: "Bill From"
       bill_to: "Bill To"
+      email: "Email"
       total_cost: "Total Cost"
       status: "Status"
+      stage: "Stage"
       created: "Created"
       due: "Due"
+      owner: "Owner"
+      collaborators: "Collaborators"
+      module: "Module"
+      payment_term: "Payment Term"
+      tags: "Tags"
+      rating: "Rating"
+      urgency: "Urgency"
       action: "Action"
+      loading: "Loading records..."
+      settings_title: "Table settings"
+      settings_columns: "Columns"
+      settings_filters: "Advanced filters"
+      settings_value: "Value"
+      manage_views: "Manage views"
+      default_view_name: "Default view"
+      view_name: "View name"
+      save_as_new: "Save as new"
+      update_current: "Update current"
+      delete_view: "Delete view"
+      sort_label: "Sort"
+      group_by_label: "Group by"
+      layout_label: "Layout"
+      order_label: "Column order"
+      width_label: "Column widths"
+      add_sort: "Add sort"
+      cancel_text: "Cancel"
+      apply_text: "Apply"
     navigation:
       app_switcher: "App Switcher"
       search_tooltip: "Use Odoo Search"
       collapse_rail: "Collapse Rail"
       view_all_apps: "View All Apps"
       apps:
-        APP_UI: "APP_UI"
+        discuss: "Discuss"
+        contacts: "Contacts"
+        sales: "Sales"
+        rental: "Rental"
+        inventory: "Inventory"
         customers: "Customers"
         vendors: "Vendors"
         payments: "Payments"
         reports: "Reports"
+        accounting: "Accounting"
+        purchase: "Purchase"
+        apps: "Apps"
+        settings: "Settings"
+    sidebar:
+      settings:
+        popup_title: "Settings & Apps"
+        apps: "App switcher"
+        profile: "Profile settings"
+        system: "System config"
+    shell:
+      notifications:
+        collections:
+          title: "Collections follow-up"
+          text: "Innovate Inc. needs a payment commitment logged before noon."
+        draft:
+          title: "Draft ready to post"
+          text: "RiverBend EPC is complete and ready for fiscal validation."
+        data:
+          title: "Cross-app dependency"
+          text: "Contacts requires one RFC fix before stamping can continue."
+      modes:
+        overview:
+          label: "Overview"
+          description: "Stay at executive altitude and watch the handoffs that can block collections."
+        execution:
+          label: "Execution"
+          description: "Focus on the next operator actions across accounting, rental, and customer master data."
+        quality:
+          label: "Data quality"
+          description: "Surface the records that usually fail before posting, stamping, or collection follow-up."
+      panels:
+        primary:
+          title: "Workspace signals"
+          subtitle: "Cross-app cards that surface collections, operations, and master data checkpoints."
+        secondary:
+          title: "Execution shortcuts"
+          subtitle: "Compact cards for the next action, context owner, and related surfaces."
+      workspace:
+        loading_card: "Loading card..."
+      dashboard:
+        loading_section: "Loading section..."
+      detail:
+        title: "Record detail"
+        subtitle: "A structured read of the selected record, not a raw form dump."
+        eyebrow: "Focused record"
+        cta: "Focus in table"
+        empty: "No active record to inspect."
+      execution:
+        title: "Execution pad"
+        subtitle: "Capture operator intent, handoff notes, and priority without leaving the shell."
+        eyebrow: "Working record"
+        note_label: "Operator note"
+        note_hint: "Keep the note actionable and specific."
+        note_placeholder: "Summarize the next move, dependency, or blocker..."
+        tags_label: "Signal tags"
+        tags_hint: "Short labels that survive handoff."
+        tags_placeholder: "Add tag and press Enter"
+        rating_label: "Priority score"
+        rating_hint: "A compact score for urgency and operator attention."
+        rating_value: "Current score"
+        save: "Save note"
+        follow_up: "Create follow-up"
+        empty: "Pick a record to capture a note."
+      operations:
+        title: "Operations surfaces"
+        subtitle: "Form, comments, files, tasks, and milestones in a single context-preserving panel."
+        empty: "Pick a record to activate operations surfaces."
+        tabs:
+          form: "Form"
+          comments: "Comments"
+          files: "Files"
+          tasks: "Tasks"
+          milestones: "Milestones"
+        form:
+          title: "Record form"
+          subtitle: "Field-level edits with explicit save and reset controls."
+          save: "Save changes"
+          reset: "Reset"
+        comments:
+          title: "Threaded comments"
+          subtitle: "Capture rationale and handoff context directly on the focused record."
+          composer_label: "New comment"
+          composer_placeholder: "Write a precise update for the next owner..."
+          post: "Post comment"
+          reply: "Reply"
+          reply_send: "Send reply"
+          reply_placeholder: "Add a reply..."
+          empty: "No comments yet."
+        files:
+          title: "File explorer"
+          subtitle: "Organize and edit record artifacts in-context."
+          upload: "Upload"
+          new: "New file"
+          rename: "Rename"
+          save: "Save"
+          rename_input: "New file name"
+          rename_apply: "Apply"
+          editor_label: "File content"
+          editor_placeholder: "Write markdown, notes, or structured text..."
+          empty: "Select a file from the explorer."
+        tasks:
+          title: "Task board"
+          subtitle: "Drag tasks between status columns to keep handoffs visible."
+          status_new: "New"
+          status_in_progress: "In progress"
+          status_testing: "Testing"
+          status_awaiting_feedback: "Awaiting feedback"
+          status_complete: "Complete"
+        milestones:
+          title: "Milestones"
+          subtitle: "Track contract stages and drill into task readiness."
+          progress: "Completion"
+          tasks_label: "Tasks linked to this milestone"
+        seed:
+          comment_collections: "Collections follow-up queued for the account."
+          comment_ops: "Operations confirms dispatch status and return window."
+          comment_reply: "Logged. Keeping this record in execution mode until posting passes."
+          task_review: "Review fiscal profile"
+          task_collections: "Collections call"
+          task_evidence: "Attach payment evidence"
+          task_approval: "Posting approval"
+          task_done: "Close execution log"
+          milestone_intake: "Intake readiness"
+          milestone_execution: "Operational execution"
+          milestone_closure: "Financial closure"
+      mega:
+        title: "Cross-app handoff"
+        subtitle: "Use the same shell to move across apps without losing context."
+      cards:
+        collections:
+          title: "Collections focus"
+          subtitle: "Protect overdue revenue and assign the next contact motion."
+        operations:
+          title: "Operations handoff"
+          subtitle: "Bridge execution, dispatch, and invoice readiness."
+        master_data:
+          title: "Master data watch"
+          subtitle: "Watch the records that usually break invoicing downstream."
+        next_action:
+          title: "Next action"
+          subtitle: "The shortest path to the next meaningful move."
+      labels:
+        owner: "Owner"
+        next: "Next"
+        queue: "Queue"
+        due_today: "Due today"
+        missing_rfc: "Missing RFC"
+        pending_catalog: "Catalog review"
+        stage: "Stage"
+        progress_collection: "Collection coverage"
+        progress_operations: "Operational readiness"
+        progress_quality: "Quality score"
+        progress_momentum: "Momentum"
+      actions:
+        open: "Open"
+        review: "Review"
+        inspect: "Inspect"
+      quick_create:
+        title: "Create in context"
+        subtitle: "Start the next workflow without losing the current app shell."
+        groups:
+          finance: "Finance"
+          operations: "Operations"
+        invoice:
+          title: "New invoice"
+          subtitle: "Start a posted or draft invoice from the current shell."
+        payment:
+          title: "Register payment"
+          subtitle: "Capture payment evidence and keep the residual clean."
+        contact:
+          title: "New customer contact"
+          subtitle: "Create the partner record before pricing or invoicing."
+        report:
+          title: "Open report"
+          subtitle: "Jump to reporting without leaving the shell context."
+      insights:
+        title: "System posture"
+        subtitle: "Reusable shell signals shared across apps, not tied to one table."
+        collections:
+          eyebrow: "Collections"
+          title: "Cash exposure under control"
+          description: "Overdue balances are isolated and the next owner is already assigned."
+          meta_label: "Today"
+          progress: "Coverage"
+        operations:
+          eyebrow: "Operations"
+          title: "Rental handoff synchronized"
+          description: "Exchange, returns, and invoice readiness stay visible in the same shell."
+          meta_label: "Queue"
+          progress: "Ready"
+        quality:
+          eyebrow: "Quality"
+          title: "Data issues contained"
+          description: "RFC, catalogs, and partner readiness are surfaced before posting fails."
+          meta_label: "Blocked"
+          progress: "Integrity"
+      activity:
+        title: "Activity feed"
+        subtitle: "Cross-app events that explain why the shell changed, not just what changed."
+        empty: "No activity yet."
+        status_label: "Status change"
+        status_text: "moved RiverBend EPC from draft validation into posting review."
+        quality_label: "Quality alert"
+        quality_text: "flagged two contacts without RFC before CFDI stamping."
+        assigned_label: "Task assigned"
+        assigned_text: "assigned the rental exchange review to Field Ops before invoice release."
+        open_record: "Open record"
+        open_contacts: "Open contacts"
+    profile:
+      switch:
+        title: "Switch user"
+        finance: "Finance"
+        operations: "Operations"
+      menu:
+        profile: "Profile"
+        billing: "Billing"
+        settings: "Settings"
+        logout: "Log out"
+    command_palette:
+      placeholder: "Search actions, apps, or records..."
+      footer:
+        navigate: "Navigate"
+        execute: "Execute"
+        close: "Close"
+        system: "Unified command surface"
+      actions:
+        open_app: "Open app"
+        create_record:
+          title: "Create new record"
+          description: "Start a new workflow from the current shell."
+        focus_overdue:
+          title: "Focus overdue records"
+          description: "Jump directly to the records that need collection follow-up."
+        open_contacts:
+          title: "Open contacts"
+          description: "Move to the customer master data surface."
     checklist:
       title: "Operational checklist"
       search: "Search bar available"
@@ -70,14 +352,27 @@ messages:
         form: "Form mode: validate fiscal fields before posting."
         kanban: "Kanban mode: triage by stage, then open record for action."
         list: "List mode: use status chips + native filters for fast bulk review."
-        fallback: "Use the unified rail to keep APP_UI context while navigating related modules."
+        fallback: "Use the unified rail to keep app context while navigating related modules."
       keyboard_shortcuts: "Tip: use Ctrl+Shift+I for new record and / for search."
   es:
     header:
-      title: "Centro unificado Appniverse"
-      subtitle: "Acciones criticas de facturacion en una sola vista: clientes, proveedores, pagos, reportes y flujo CFDI."
+      title: "Centro unificado de aplicaciones"
+      subtitle: "Acciones criticas del negocio en una sola vista: clientes, proveedores, pagos, reportes y flujo CFDI."
       section_record_list: "Lista de facturas"
       new_record: "+ Nuevo"
+      create_new: "Crear"
+      actions:
+        assistant: "Asistente IA"
+        discuss: "Mensajes"
+        activities: "Actividades"
+        theme: "Tema"
+      notifications:
+        title: "Notificaciones"
+        subtitle: "Eventos que requieren atencion entre aplicaciones."
+        mark_all: "Marcar todo como leido"
+    breadcrumbs:
+      home: "Home"
+      records: "Records"
     kpis:
       overdue_amount: "Monto vencido"
       drafted_totals: "Totales en borrador"
@@ -102,22 +397,291 @@ messages:
       id: "Id"
       bill_from: "Emisor"
       bill_to: "Cliente"
+      email: "Correo"
       total_cost: "Costo total"
       status: "Estado"
+      stage: "Etapa"
       created: "Creada"
       due: "Vence"
+      owner: "Responsable"
+      collaborators: "Colaboradores"
+      module: "Modulo"
+      payment_term: "Termino de pago"
+      tags: "Etiquetas"
+      rating: "Calificacion"
+      urgency: "Urgencia"
       action: "Accion"
+      loading: "Cargando registros..."
+      settings_title: "Configuracion de tabla"
+      settings_columns: "Columnas"
+      settings_filters: "Filtros avanzados"
+      settings_value: "Valor"
+      manage_views: "Gestionar vistas"
+      default_view_name: "Vista base"
+      view_name: "Nombre de vista"
+      save_as_new: "Guardar como nueva"
+      update_current: "Actualizar actual"
+      delete_view: "Eliminar vista"
+      sort_label: "Orden"
+      group_by_label: "Agrupar por"
+      layout_label: "Layout"
+      order_label: "Orden de columnas"
+      width_label: "Ancho de columnas"
+      add_sort: "Agregar orden"
+      cancel_text: "Cancelar"
+      apply_text: "Aplicar"
     navigation:
       app_switcher: "Selector de apps"
       search_tooltip: "Usar busqueda de Odoo"
       collapse_rail: "Colapsar barra lateral"
       view_all_apps: "Ver todas las apps"
       apps:
-        APP_UI: "Facturacion"
+        discuss: "Mensajes"
+        contacts: "Contactos"
+        sales: "Ventas"
+        rental: "Rentas"
+        inventory: "Inventario"
         customers: "Clientes"
         vendors: "Proveedores"
         payments: "Pagos"
         reports: "Reportes"
+        accounting: "Contabilidad"
+        purchase: "Compras"
+        apps: "Apps"
+        settings: "Ajustes"
+    sidebar:
+      settings:
+        popup_title: "Ajustes y apps"
+        apps: "Selector de apps"
+        profile: "Ajustes de perfil"
+        system: "Configuracion del sistema"
+    shell:
+      notifications:
+        collections:
+          title: "Seguimiento de cobranza"
+          text: "Innovate Inc. necesita un compromiso de pago registrado antes del mediodia."
+        draft:
+          title: "Borrador listo para publicar"
+          text: "RiverBend EPC esta completo y listo para validacion fiscal."
+        data:
+          title: "Dependencia entre apps"
+          text: "Contactos requiere una correccion de RFC antes de continuar con el timbrado."
+      modes:
+        overview:
+          label: "Vista general"
+          description: "Mantente en nivel ejecutivo y vigila los handoffs que pueden bloquear la cobranza."
+        execution:
+          label: "Ejecucion"
+          description: "Enfoca las siguientes acciones operativas entre contabilidad, rental y datos maestros del cliente."
+        quality:
+          label: "Calidad de datos"
+          description: "Expone los registros que suelen fallar antes de publicar, timbrar o dar seguimiento de cobranza."
+      panels:
+        primary:
+          title: "Senales del workspace"
+          subtitle: "Tarjetas inter-app que exponen cobranza, operacion y puntos de control de datos maestros."
+        secondary:
+          title: "Atajos de ejecucion"
+          subtitle: "Tarjetas compactas para la siguiente accion, responsable y superficies relacionadas."
+      workspace:
+        loading_card: "Cargando tarjeta..."
+      dashboard:
+        loading_section: "Cargando seccion..."
+      detail:
+        title: "Detalle del registro"
+        subtitle: "Una lectura estructurada del registro seleccionado, no un volcado crudo del formulario."
+        eyebrow: "Registro enfocado"
+        cta: "Enfocar en tabla"
+        empty: "No hay un registro activo para inspeccionar."
+      execution:
+        title: "Pad de ejecucion"
+        subtitle: "Captura la intencion operativa, notas de handoff y prioridad sin salir del shell."
+        eyebrow: "Registro en trabajo"
+        note_label: "Nota operativa"
+        note_hint: "Manten la nota accionable y especifica."
+        note_placeholder: "Resume el siguiente movimiento, dependencia o bloqueo..."
+        tags_label: "Etiquetas de senal"
+        tags_hint: "Etiquetas cortas que sobreviven al handoff."
+        tags_placeholder: "Agrega etiqueta y presiona Enter"
+        rating_label: "Puntaje de prioridad"
+        rating_hint: "Un puntaje compacto para urgencia y atencion operativa."
+        rating_value: "Puntaje actual"
+        save: "Guardar nota"
+        follow_up: "Crear seguimiento"
+        empty: "Selecciona un registro para capturar una nota."
+      operations:
+        title: "Superficies operativas"
+        subtitle: "Formulario, comentarios, archivos, tareas e hitos en un panel unificado sin perder contexto."
+        empty: "Selecciona un registro para activar las superficies operativas."
+        tabs:
+          form: "Formulario"
+          comments: "Comentarios"
+          files: "Archivos"
+          tasks: "Tareas"
+          milestones: "Hitos"
+        form:
+          title: "Formulario del registro"
+          subtitle: "Edicion por campo con controles explicitos para guardar y resetear."
+          save: "Guardar cambios"
+          reset: "Resetear"
+        comments:
+          title: "Comentarios en hilo"
+          subtitle: "Captura contexto y razonamiento operativo sobre el registro enfocado."
+          composer_label: "Nuevo comentario"
+          composer_placeholder: "Escribe una actualizacion precisa para el siguiente responsable..."
+          post: "Publicar comentario"
+          reply: "Responder"
+          reply_send: "Enviar respuesta"
+          reply_placeholder: "Agregar respuesta..."
+          empty: "Aun no hay comentarios."
+        files:
+          title: "Explorador de archivos"
+          subtitle: "Organiza y edita artefactos del registro dentro del mismo contexto."
+          upload: "Subir"
+          new: "Nuevo archivo"
+          rename: "Renombrar"
+          save: "Guardar"
+          rename_input: "Nuevo nombre de archivo"
+          rename_apply: "Aplicar"
+          editor_label: "Contenido del archivo"
+          editor_placeholder: "Escribe markdown, notas o texto estructurado..."
+          empty: "Selecciona un archivo desde el explorador."
+        tasks:
+          title: "Tablero de tareas"
+          subtitle: "Arrastra tareas entre columnas de estado para mantener visibles los handoffs."
+          status_new: "Nueva"
+          status_in_progress: "En progreso"
+          status_testing: "Pruebas"
+          status_awaiting_feedback: "Esperando feedback"
+          status_complete: "Completa"
+        milestones:
+          title: "Hitos"
+          subtitle: "Rastrea etapas de contrato y profundiza en la preparacion de tareas."
+          progress: "Avance"
+          tasks_label: "Tareas vinculadas a este hito"
+        seed:
+          comment_collections: "Seguimiento de cobranza en cola para la cuenta."
+          comment_ops: "Operaciones confirma estado de despacho y ventana de retorno."
+          comment_reply: "Registrado. Se mantiene en modo ejecucion hasta pasar publicacion."
+          task_review: "Revisar perfil fiscal"
+          task_collections: "Llamada de cobranza"
+          task_evidence: "Adjuntar evidencia de pago"
+          task_approval: "Aprobacion de publicacion"
+          task_done: "Cerrar bitacora de ejecucion"
+          milestone_intake: "Preparacion de intake"
+          milestone_execution: "Ejecucion operativa"
+          milestone_closure: "Cierre financiero"
+      mega:
+        title: "Handoff entre apps"
+        subtitle: "Usa el mismo shell para moverte entre apps sin perder contexto."
+      cards:
+        collections:
+          title: "Foco de cobranza"
+          subtitle: "Protege el vencido y asigna el siguiente movimiento de contacto."
+        operations:
+          title: "Handoff operativo"
+          subtitle: "Conecta ejecucion, despacho y preparacion de facturacion."
+        master_data:
+          title: "Vigilancia de datos maestros"
+          subtitle: "Observa los registros que suelen romper la facturacion aguas abajo."
+        next_action:
+          title: "Siguiente accion"
+          subtitle: "La ruta mas corta al siguiente movimiento con valor."
+      labels:
+        owner: "Responsable"
+        next: "Siguiente"
+        queue: "Cola"
+        due_today: "Vence hoy"
+        missing_rfc: "RFC faltante"
+        pending_catalog: "Revision de catalogo"
+        stage: "Etapa"
+        progress_collection: "Cobertura de cobranza"
+        progress_operations: "Preparacion operativa"
+        progress_quality: "Puntaje de calidad"
+        progress_momentum: "Momentum"
+      actions:
+        open: "Abrir"
+        review: "Revisar"
+        inspect: "Inspeccionar"
+      quick_create:
+        title: "Crear en contexto"
+        subtitle: "Inicia el siguiente flujo sin perder el shell actual."
+        groups:
+          finance: "Finanzas"
+          operations: "Operaciones"
+        invoice:
+          title: "Nueva factura"
+          subtitle: "Inicia una factura publicada o borrador desde el shell actual."
+        payment:
+          title: "Registrar pago"
+          subtitle: "Captura evidencia de pago y mantén limpio el residual."
+        contact:
+          title: "Nuevo contacto cliente"
+          subtitle: "Crea el partner antes de cotizar o facturar."
+        report:
+          title: "Abrir reporte"
+          subtitle: "Ve a reportes sin salir del contexto actual."
+      insights:
+        title: "Postura del sistema"
+        subtitle: "Senales reutilizables del shell compartidas entre apps, no ligadas a una sola tabla."
+        collections:
+          eyebrow: "Cobranza"
+          title: "Exposicion de caja bajo control"
+          description: "Los saldos vencidos estan aislados y el siguiente responsable ya esta asignado."
+          meta_label: "Hoy"
+          progress: "Cobertura"
+        operations:
+          eyebrow: "Operaciones"
+          title: "Handoff de rental sincronizado"
+          description: "Cambios, devoluciones y preparacion de factura siguen visibles en el mismo shell."
+          meta_label: "Cola"
+          progress: "Listo"
+        quality:
+          eyebrow: "Calidad"
+          title: "Incidencias de datos contenidas"
+          description: "RFC, catalogos y readiness de partners se exponen antes de que falle la publicacion."
+          meta_label: "Bloqueado"
+          progress: "Integridad"
+      activity:
+        title: "Fuente de actividad"
+        subtitle: "Eventos entre apps que explican por que cambio el shell, no solo que cambio."
+        empty: "Aun no hay actividad."
+        status_label: "Cambio de estado"
+        status_text: "movio RiverBend EPC de validacion en borrador a revision para publicacion."
+        quality_label: "Alerta de calidad"
+        quality_text: "marco dos contactos sin RFC antes del timbrado CFDI."
+        assigned_label: "Tarea asignada"
+        assigned_text: "asigno la revision del intercambio de renta a Field Ops antes de liberar la factura."
+        open_record: "Abrir registro"
+        open_contacts: "Abrir contactos"
+    profile:
+      switch:
+        title: "Cambiar usuario"
+        finance: "Finanzas"
+        operations: "Operaciones"
+      menu:
+        profile: "Perfil"
+        billing: "Facturacion"
+        settings: "Configuracion"
+        logout: "Cerrar sesion"
+    command_palette:
+      placeholder: "Busca acciones, apps o registros..."
+      footer:
+        navigate: "Navegar"
+        execute: "Ejecutar"
+        close: "Cerrar"
+        system: "Superficie unificada de comandos"
+      actions:
+        open_app: "Abrir app"
+        create_record:
+          title: "Crear nuevo registro"
+          description: "Inicia un nuevo flujo desde el shell actual."
+        focus_overdue:
+          title: "Enfocar vencidas"
+          description: "Ve directo a los registros que requieren cobranza inmediata."
+        open_contacts:
+          title: "Abrir contactos"
+          description: "Mueve el flujo hacia la superficie de datos maestros de clientes."
     checklist:
       title: "Checklist operativo"
       search: "Barra de busqueda disponible"
@@ -144,3 +708,4 @@ messages:
         list: "Modo lista: usa chips de estado + filtros nativos para revision masiva."
         fallback: "Usa la navegacion unificada para mantener contexto de facturacion."
       keyboard_shortcuts: "Tip: usa Ctrl+Shift+I para nueva factura y / para buscar."
+
