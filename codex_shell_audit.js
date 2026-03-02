@@ -71,6 +71,32 @@ async function activateOpsTab(page, tabKey) {
   await page.$eval(selector, (el) => el.click());
 }
 
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+async function activateSurface(page, label) {
+  await page.waitForSelector('.app-sidebar .app-nav-item', { timeout: 5000 });
+  const clicked = await page.$eval('.app-sidebar-nav', (root, targetLabel) => {
+    const norm = (value) => String(value || '').trim().toLowerCase();
+    const wanted = norm(targetLabel);
+    const candidates = Array.from(root.querySelectorAll('.app-nav-item'));
+    for (const item of candidates) {
+      const textNode = item.querySelector('.app-item-text');
+      const label = norm(textNode ? textNode.textContent : item.textContent);
+      if (label === wanted) {
+        item.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+        return true;
+      }
+    }
+    return false;
+  }, label);
+  if (!clicked) {
+    throw new Error(`Unable to activate surface "${label}" from sidebar nav`);
+  }
+  await page.waitForTimeout(180);
+}
+
 (async () => {
   let hardStop = null;
   const server = createStaticServer(ROOT);
@@ -264,6 +290,33 @@ async function activateOpsTab(page, tabKey) {
     await ownerInput.fill('Audit Owner');
     await page.$eval('.app-ops-form .app-button.is-primary', (el) => el.click());
     result.operationsFormRendered = await page.locator('.app-ops-form__grid .app-ops-form__field').count();
+
+    result.surfaceAudit = {};
+    const surfaceTargets = [
+      { key: 'customers', label: 'Customers' },
+      { key: 'vendors', label: 'Vendors' },
+      { key: 'payments', label: 'Payments' },
+      { key: 'reports', label: 'Reports' },
+    ];
+    for (const surface of surfaceTargets) {
+      await activateSurface(page, surface.label);
+      const paneTitle = ((await page.locator('.app-title-pro').textContent()) || '').trim();
+      const activeNavLabels = (await page.locator('.app-sidebar .app-nav-item.active .app-item-text').allTextContents())
+        .map((entry) => String(entry || '').trim())
+        .filter(Boolean);
+      const rowCount = await page.locator('.app-record-table tbody tr').count();
+      result.surfaceAudit[surface.key] = { paneTitle, activeNavLabels, rowCount };
+      const isSurfaceActive = activeNavLabels.some((entry) => entry.toLowerCase() === surface.label.toLowerCase());
+      if (!isSurfaceActive) {
+        result.errors.push(`Surface nav mismatch for ${surface.key}: active nav labels are "${activeNavLabels.join(', ')}"`);
+      }
+      if (!paneTitle.toLowerCase().includes(surface.label.toLowerCase())) {
+        result.errors.push(`Surface title mismatch for ${surface.key}: pane title is "${paneTitle}"`);
+      }
+      if (rowCount < 1) {
+        result.errors.push(`Surface table has no rows for ${surface.key}`);
+      }
+    }
 
     if (result.quickCreateGroups < 2) result.errors.push(`Expected >= 2 quick-create groups, got ${result.quickCreateGroups}`);
     if (result.quickCreateCards < 2) result.errors.push(`Expected >= 2 quick-create cards in first group, got ${result.quickCreateCards}`);

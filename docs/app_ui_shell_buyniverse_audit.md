@@ -320,3 +320,42 @@ Impact:
 
 - no more lock/freeze when changing operations tabs or posting comments/files
 - operations interactions now complete in audit without watchdog timeout
+
+## Pass 5 Addendum (2026-03-01)
+
+Scope completed in this pass:
+
+1. cross-surface navigation audit hardening (`records/customers/vendors/payments/reports`)
+2. deterministic sidebar activation in collapsed mode
+3. explicit surface-level render/data checks in the audit contract
+
+### Audit extension
+
+Updated `codex_shell_audit.js` now validates, per surface:
+
+1. sidebar navigation activation in collapsed shell
+2. pane title alignment with selected surface
+3. active sidebar labels include target surface
+4. table renders rows for selected surface dataset
+
+Surface matrix validated:
+
+- `customers`
+- `vendors`
+- `payments`
+- `reports`
+
+Result payload (latest):
+
+```json
+{
+  "ok": true,
+  "errors": [],
+  "surfaceAudit": {
+    "customers": { "paneTitle": "Customers", "activeNavLabels": ["All records", "Customers"], "rowCount": 10 },
+    "vendors": { "paneTitle": "Vendors", "activeNavLabels": ["All records", "Vendors"], "rowCount": 10 },
+    "payments": { "paneTitle": "Payments", "activeNavLabels": ["Overdue", "Payments"], "rowCount": 2 },
+    "reports": { "paneTitle": "Reports", "activeNavLabels": ["All records", "Reports"], "rowCount": 10 }
+  }
+}
+```
