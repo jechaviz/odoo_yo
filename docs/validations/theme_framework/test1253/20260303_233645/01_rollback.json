@@ -1,0 +1,9 @@
+{
+  "status": "rolled_back",
+  "themes": [
+    "accounting_shell_v1"
+  ],
+  "assets_deactivated": 5,
+  "views_deactivated": 0,
+  "theme_params_removed": 2
+}

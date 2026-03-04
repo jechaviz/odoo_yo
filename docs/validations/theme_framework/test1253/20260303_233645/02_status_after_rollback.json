@@ -1,0 +1,19 @@
+{
+  "status": "ok",
+  "host": "test1253.odoo.com",
+  "active_themes": [],
+  "params": [
+    {
+      "id": 88,
+      "key": "theme_framework.active_themes",
+      "value": "[]"
+    },
+    {
+      "id": 89,
+      "key": "theme_framework.catalog_version",
+      "value": "1.0.0"
+    }
+  ],
+  "assets": [],
+  "views": []
+}
