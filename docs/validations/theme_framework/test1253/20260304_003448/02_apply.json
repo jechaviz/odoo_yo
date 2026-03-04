@@ -1,0 +1,23 @@
+﻿{
+  "status": "ready",
+  "catalog_version": "1.2.0",
+  "host": "test1253.odoo.com",
+  "deployed": [
+    {
+      "key": "accounting_shell_v1",
+      "title": "Accounting Shell V1",
+      "assets": 12,
+      "qweb_views": 1,
+      "params": [
+        "theme_framework.active_profile",
+        "theme_framework.mode",
+        "theme_framework.runtime_locale",
+        "theme_framework.vendor_source"
+      ]
+    }
+  ],
+  "skipped": [],
+  "active_themes": [
+    "accounting_shell_v1"
+  ]
+}

@@ -1,4 +1,4 @@
-﻿version: "1.1.0"
+﻿version: "1.2.0"
 metadata:
   owner: "odoo_yo"
   purpose: "Generic backend theme framework catalog"
@@ -19,6 +19,11 @@ themes:
         bundle: "web.assets_backend"
         directive: "append"
         sequence: 1105
+      - name: "Theme Vendor UI Bridge"
+        path: "data/theme_framework/assets/js/vendor_ui_bridge.js"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1107
       - name: "Theme Core Tokens"
         path: "data/theme_framework/assets/css/00_tokens.css"
         bundle: "web.assets_backend"
@@ -49,9 +54,20 @@ themes:
         bundle: "web.assets_backend"
         directive: "append"
         sequence: 1160
+      - name: "Theme Vendor Hybrid Surface"
+        path: "data/theme_framework/assets/css/33_vendor_hybrid_surface.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1165
+      - name: "Theme Vendor Sidebar Panel"
+        path: "data/theme_framework/assets/css/34_vendor_sidebar_panel.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1166
     params:
       theme_framework.runtime_locale: "es_MX"
       theme_framework.mode: "core_port"
+      theme_framework.vendor_source: "apps.odoo.com/backend-themes"
 
   - key: "procurement_shell_v1"
     title: "Procurement Shell V1"

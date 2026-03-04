@@ -105,6 +105,10 @@ node scripts/theme_framework/deep_visual_audit.js \
 - `docs/validations/theme_framework/test1253/20260303_235224/`
 - Audit report:
 - `docs/validations/theme_framework/test1253/20260303_235224/audit.md`
+- Latest vendor-base audited run:
+- `docs/validations/theme_framework/test1253/20260304_003448/`
+- Audit report:
+- `docs/validations/theme_framework/test1253/20260304_003448/audit.md`
 
 ## Design Discipline
 
@@ -120,3 +124,27 @@ node scripts/theme_framework/deep_visual_audit.js \
 2. Add component-level parity checklist (topbar, user menu, control panel, list/form/kanban/dialog).
 3. Add screenshot diff scoring (baseline vs live) for geometry/color drift control.
 4. Add automated rollback-on-failure gate when deep visual pass drops below threshold.
+
+## External Theme Base (apps.odoo.com)
+
+Downloaded backend themes under `C:/git/odoo/themes` are now integrated as an analyzed base.
+
+Import command:
+
+```bash
+uv run python scripts/theme_framework/import_vendor_themes.py \
+  --themes-root C:/git/odoo/themes \
+  --output-root data/theme_framework/vendor/imported
+```
+
+Integration outputs:
+
+- `data/theme_framework/vendor/imported/_summary.json`
+- `data/theme_framework/vendor/imported/_summary.md`
+- `docs/theme_framework_vendor_sources.md`
+
+Catalog integration (active in `core_port_v1`):
+
+- `data/theme_framework/assets/css/33_vendor_hybrid_surface.css`
+- `data/theme_framework/assets/css/34_vendor_sidebar_panel.css`
+- `data/theme_framework/assets/js/vendor_ui_bridge.js`

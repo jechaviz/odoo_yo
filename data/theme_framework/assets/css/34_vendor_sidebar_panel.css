@@ -1,0 +1,83 @@
+﻿/* Vendor-derived sidebar/panel compatibility layer.
+   Activates when third-party templates inject #sidebar_panel markup.
+*/
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel {
+  background: linear-gradient(180deg, rgba(13, 26, 50, 0.95), rgba(8, 18, 36, 0.98));
+  border-right: 1px solid rgba(101, 139, 212, 0.26);
+  box-shadow: 14px 0 32px rgba(2, 8, 20, 0.44);
+  z-index: 60;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel .sidebar,
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel .sidebar {
+  padding: 14px 10px;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel .sidebar_head,
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel .sidebar_head {
+  color: #cfe0ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel .sidebar_menu,
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel .sidebar_menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel .sidebar_menu li a,
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel .sidebar_menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #bcd1f3;
+  border-radius: 10px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  transition: all 140ms ease;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel .sidebar_menu li a:hover,
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel .sidebar_menu li a:hover,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel .sidebar_menu li a.active,
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel .sidebar_menu li a.active {
+  color: #f4f8ff;
+  background: linear-gradient(120deg, rgba(85, 110, 230, 0.35), rgba(68, 88, 184, 0.36));
+  border-color: rgba(111, 132, 234, 0.46);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel .sidebar_close a,
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel .sidebar_close a {
+  color: #c8dcff;
+  border-radius: 9px;
+  padding: 5px;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel .sidebar_close a:hover,
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel .sidebar_close a:hover {
+  background: rgba(83, 112, 195, 0.26);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel .o_menu_systray,
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel .o_menu_systray {
+  margin-top: 10px;
+  border-top: 1px solid rgba(99, 137, 208, 0.2);
+  padding-top: 8px;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel .o_menu_systray .dropdown-toggle,
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel .o_menu_systray .dropdown-toggle {
+  color: #cfe1ff;
+  border-radius: 10px;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .sidebar_panel .o_menu_systray .dropdown-toggle:hover,
+body.theme-fw-enabled.theme-fw-vendor-hybrid #sidebar_panel .o_menu_systray .dropdown-toggle:hover {
+  background: rgba(83, 112, 195, 0.26);
+}

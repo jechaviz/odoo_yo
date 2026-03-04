@@ -1,0 +1,1967 @@
+{
+  "generatedAt": "2026-03-04T06:36:07.929Z",
+  "baseUrl": "https://test1253.odoo.com",
+  "browserChannel": "msedge",
+  "total": 192,
+  "passed": 192,
+  "failed": 0,
+  "perRoot": {
+    "Accounting": {
+      "total": 77,
+      "passed": 77,
+      "failed": 0
+    },
+    "Apps": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "Dashboards": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "Discuss": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0
+    },
+    "Documents": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "Knowledge": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "Settings": {
+      "total": 85,
+      "passed": 85,
+      "failed": 0
+    }
+  },
+  "rows": [
+    {
+      "idx": 1,
+      "menu_id": 229,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Accounting/Assets & Liabilities/Assets",
+      "url": "https://test1253.odoo.com/odoo?menu_id=229&action=392",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0001_Accounting_Assets.png"
+    },
+    {
+      "idx": 2,
+      "menu_id": 233,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Accounting/Assets & Liabilities/Loans",
+      "url": "https://test1253.odoo.com/odoo?menu_id=233&action=410",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0002_Accounting_Loans.png"
+    },
+    {
+      "idx": 3,
+      "menu_id": 191,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Accounting/Closing/Lock Dates…",
+      "url": "https://test1253.odoo.com/odoo?menu_id=191&action=336",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 4,
+      "menu_id": 187,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Accounting/Closing/Reconcile",
+      "url": "https://test1253.odoo.com/odoo?menu_id=187&action=329",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 5,
+      "menu_id": 178,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Accounting/Closing/Secure Entries",
+      "url": "https://test1253.odoo.com/odoo?menu_id=178&action=316",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 6,
+      "menu_id": 197,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Accounting/Closing/Tax Returns",
+      "url": "https://test1253.odoo.com/odoo?menu_id=197&action=371",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 7,
+      "menu_id": 144,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Accounting/Transactions/Analytic Items",
+      "url": "https://test1253.odoo.com/odoo?menu_id=144&action=193",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 8,
+      "menu_id": 143,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Accounting/Transactions/Journal Entries",
+      "url": "https://test1253.odoo.com/odoo?menu_id=143&action=270",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 9,
+      "menu_id": 189,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Account Groups",
+      "url": "https://test1253.odoo.com/odoo?menu_id=189&action=325",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 10,
+      "menu_id": 188,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Account Tags",
+      "url": "https://test1253.odoo.com/odoo?menu_id=188&action=324",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 11,
+      "menu_id": 211,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Accounting Reports",
+      "url": "https://test1253.odoo.com/odoo?menu_id=211&action=364",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 12,
+      "menu_id": 230,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Asset Models",
+      "url": "https://test1253.odoo.com/odoo?menu_id=230&action=393",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 13,
+      "menu_id": 168,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Cash Roundings",
+      "url": "https://test1253.odoo.com/odoo?menu_id=168&action=304",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 14,
+      "menu_id": 160,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Chart of Accounts",
+      "url": "https://test1253.odoo.com/odoo?menu_id=160&action=286",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 15,
+      "menu_id": 223,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Checks",
+      "url": "https://test1253.odoo.com/odoo?menu_id=223&action=377",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 16,
+      "menu_id": 164,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Currencies",
+      "url": "https://test1253.odoo.com/odoo?menu_id=164&action=66",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 17,
+      "menu_id": 214,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Financial Budgets",
+      "url": "https://test1253.odoo.com/odoo?menu_id=214&action=367",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 18,
+      "menu_id": 224,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Fiscal Categories",
+      "url": "https://test1253.odoo.com/odoo?menu_id=224&action=384",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 19,
+      "menu_id": 165,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Fiscal Positions",
+      "url": "https://test1253.odoo.com/odoo?menu_id=165&action=309",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 20,
+      "menu_id": 190,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Fiscal Years",
+      "url": "https://test1253.odoo.com/odoo?menu_id=190&action=326",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 21,
+      "menu_id": 212,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Horizontal Groups",
+      "url": "https://test1253.odoo.com/odoo?menu_id=212&action=365",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 22,
+      "menu_id": 162,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Journals",
+      "url": "https://test1253.odoo.com/odoo?menu_id=162&action=288",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 23,
+      "menu_id": 166,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Multi-Ledger",
+      "url": "https://test1253.odoo.com/odoo?menu_id=166&action=289",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 24,
+      "menu_id": 196,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Online Synchronization",
+      "url": "https://test1253.odoo.com/odoo?menu_id=196&action=344",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 25,
+      "menu_id": 213,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Return Types",
+      "url": "https://test1253.odoo.com/odoo?menu_id=213&action=376",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 26,
+      "menu_id": 167,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Tax Groups",
+      "url": "https://test1253.odoo.com/odoo?menu_id=167&action=295",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 27,
+      "menu_id": 198,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Tax Units",
+      "url": "https://test1253.odoo.com/odoo?menu_id=198&action=375",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 28,
+      "menu_id": 161,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting/Taxes",
+      "url": "https://test1253.odoo.com/odoo?menu_id=161&action=294",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 29,
+      "menu_id": 176,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Analytic Accounting/Analytic Accounts",
+      "url": "https://test1253.odoo.com/odoo?menu_id=176&action=195",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 30,
+      "menu_id": 175,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Analytic Accounting/Analytic Distribution Models",
+      "url": "https://test1253.odoo.com/odoo?menu_id=175&action=197",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 31,
+      "menu_id": 177,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Analytic Accounting/Analytic Plans",
+      "url": "https://test1253.odoo.com/odoo?menu_id=177&action=196",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 32,
+      "menu_id": 235,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Invoicing/Addendas & Complementos (MX)",
+      "url": "https://test1253.odoo.com/odoo?menu_id=235&action=415",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 33,
+      "menu_id": 226,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Invoicing/Follow-up Levels",
+      "url": "https://test1253.odoo.com/odoo?menu_id=226&action=390",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 34,
+      "menu_id": 171,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Invoicing/Incoterms",
+      "url": "https://test1253.odoo.com/odoo?menu_id=171&action=315",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 35,
+      "menu_id": 170,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Invoicing/Payment Terms",
+      "url": "https://test1253.odoo.com/odoo?menu_id=170&action=296",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 36,
+      "menu_id": 172,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Invoicing/Product Categories",
+      "url": "https://test1253.odoo.com/odoo?menu_id=172&action=208",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 37,
+      "menu_id": 193,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Online Payments/Payment Methods",
+      "url": "https://test1253.odoo.com/odoo?menu_id=193&action=235",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 38,
+      "menu_id": 192,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Online Payments/Payment Providers",
+      "url": "https://test1253.odoo.com/odoo?menu_id=192&action=234",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 39,
+      "menu_id": 194,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Online Payments/Payment Tokens",
+      "url": "https://test1253.odoo.com/odoo?menu_id=194&action=238",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 40,
+      "menu_id": 195,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Online Payments/Payment Transactions",
+      "url": "https://test1253.odoo.com/odoo?menu_id=195&action=236",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 41,
+      "menu_id": 236,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Online Payments/Payment Way Codes (MX)",
+      "url": "https://test1253.odoo.com/odoo?menu_id=236&action=416",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 42,
+      "menu_id": 158,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Configuration/Settings",
+      "url": "https://test1253.odoo.com/odoo?menu_id=158&action=307",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 43,
+      "menu_id": 131,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Customers/Credit Notes",
+      "url": "https://test1253.odoo.com/odoo?menu_id=131&action=274",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 44,
+      "menu_id": 134,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Customers/Customers",
+      "url": "https://test1253.odoo.com/odoo?menu_id=134&action=310",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 45,
+      "menu_id": 130,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Customers/Invoices",
+      "url": "https://test1253.odoo.com/odoo?menu_id=130&action=273",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 46,
+      "menu_id": 132,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Customers/Payments",
+      "url": "https://test1253.odoo.com/odoo?menu_id=132&action=248",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 47,
+      "menu_id": 133,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Customers/Products",
+      "url": "https://test1253.odoo.com/odoo?menu_id=133&action=299",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 48,
+      "menu_id": 128,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Dashboard",
+      "url": "https://test1253.odoo.com/odoo?menu_id=128&action=312",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 49,
+      "menu_id": 204,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Ledgers/General Ledger",
+      "url": "https://test1253.odoo.com/odoo?menu_id=204&action=352",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 50,
+      "menu_id": 203,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Ledgers/Trial Balance",
+      "url": "https://test1253.odoo.com/odoo?menu_id=203&action=356",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 51,
+      "menu_id": 155,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Management/Analytic Report",
+      "url": "https://test1253.odoo.com/odoo?menu_id=155&action=301",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 52,
+      "menu_id": 210,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Management/Executive Summary",
+      "url": "https://test1253.odoo.com/odoo?menu_id=210&action=348",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 53,
+      "menu_id": 154,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Management/Invoice Analysis",
+      "url": "https://test1253.odoo.com/odoo?menu_id=154&action=303",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 54,
+      "menu_id": 201,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Partner Reports/Aged Payable",
+      "url": "https://test1253.odoo.com/odoo?menu_id=201&action=355",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 55,
+      "menu_id": 200,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Partner Reports/Aged Receivable",
+      "url": "https://test1253.odoo.com/odoo?menu_id=200&action=354",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 56,
+      "menu_id": 199,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Partner Reports/Partner Ledger",
+      "url": "https://test1253.odoo.com/odoo?menu_id=199&action=357",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 57,
+      "menu_id": 207,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Statement Reports/Balance Sheet",
+      "url": "https://test1253.odoo.com/odoo?menu_id=207&action=347",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 58,
+      "menu_id": 209,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Statement Reports/Cash Flow Statement",
+      "url": "https://test1253.odoo.com/odoo?menu_id=209&action=346",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 59,
+      "menu_id": 208,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Statement Reports/Profit and Loss",
+      "url": "https://test1253.odoo.com/odoo?menu_id=208&action=349",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 60,
+      "menu_id": 206,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Taxes & Fiscal/EC Sales List",
+      "url": "https://test1253.odoo.com/odoo?menu_id=206&action=360",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 61,
+      "menu_id": 225,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Taxes & Fiscal/Fiscal Report",
+      "url": "https://test1253.odoo.com/odoo?menu_id=225&action=385",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 62,
+      "menu_id": 205,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Reporting/Taxes & Fiscal/Tax Report",
+      "url": "https://test1253.odoo.com/odoo?menu_id=205&action=350",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 63,
+      "menu_id": 260,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Review/Audit/Annual Report",
+      "url": "https://test1253.odoo.com/odoo?menu_id=260&action=474",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 64,
+      "menu_id": 217,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Review/Audit/Working Files",
+      "url": "https://test1253.odoo.com/odoo?menu_id=217&action=379",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 65,
+      "menu_id": 215,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Review/Control/Journal Audit",
+      "url": "https://test1253.odoo.com/odoo?menu_id=215&action=351",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 66,
+      "menu_id": 148,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Review/Control/Journal Items",
+      "url": "https://test1253.odoo.com/odoo?menu_id=148&action=269",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 67,
+      "menu_id": 232,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Review/Inventory/Depreciation Schedule",
+      "url": "https://test1253.odoo.com/odoo?menu_id=232&action=398",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 68,
+      "menu_id": 234,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Review/Inventory/Loans Analysis",
+      "url": "https://test1253.odoo.com/odoo?menu_id=234&action=411",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 69,
+      "menu_id": 179,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Review/Logs/Audit Trail",
+      "url": "https://test1253.odoo.com/odoo?menu_id=179&action=317",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 70,
+      "menu_id": 222,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Review/Regularization Entries/Deferred Expenses",
+      "url": "https://test1253.odoo.com/odoo?menu_id=222&action=361",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 71,
+      "menu_id": 221,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Review/Regularization Entries/Deferred Revenues",
+      "url": "https://test1253.odoo.com/odoo?menu_id=221&action=362",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 72,
+      "menu_id": 220,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Review/Regularization Entries/Unrealized Currencies",
+      "url": "https://test1253.odoo.com/odoo?menu_id=220&action=353",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 73,
+      "menu_id": 136,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Vendors/Bills",
+      "url": "https://test1253.odoo.com/odoo?menu_id=136&action=276",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 74,
+      "menu_id": 138,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Vendors/Payments",
+      "url": "https://test1253.odoo.com/odoo?menu_id=138&action=249",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 75,
+      "menu_id": 139,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Vendors/Products",
+      "url": "https://test1253.odoo.com/odoo?menu_id=139&action=300",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 76,
+      "menu_id": 137,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Vendors/Refunds",
+      "url": "https://test1253.odoo.com/odoo?menu_id=137&action=277",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 77,
+      "menu_id": 140,
+      "root_app": "Accounting",
+      "complete_name": "Accounting/Vendors/Vendors",
+      "url": "https://test1253.odoo.com/odoo?menu_id=140&action=311",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 78,
+      "menu_id": 55,
+      "root_app": "Apps",
+      "complete_name": "Apps/Apply Scheduled Upgrades",
+      "url": "https://test1253.odoo.com/odoo?menu_id=55&action=46",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0078_Apps_Apply_Scheduled_Upgrades.png"
+    },
+    {
+      "idx": 79,
+      "menu_id": 49,
+      "root_app": "Apps",
+      "complete_name": "Apps/Apps/Modules",
+      "url": "https://test1253.odoo.com/odoo?menu_id=49&action=39",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0079_Apps_Modules.png"
+    },
+    {
+      "idx": 80,
+      "menu_id": 67,
+      "root_app": "Apps",
+      "complete_name": "Apps/Import Module",
+      "url": "https://test1253.odoo.com/odoo?menu_id=67&action=85",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 81,
+      "menu_id": 53,
+      "root_app": "Apps",
+      "complete_name": "Apps/Update Apps List",
+      "url": "https://test1253.odoo.com/odoo?menu_id=53&action=43",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 82,
+      "menu_id": 180,
+      "root_app": "Dashboards",
+      "complete_name": "Dashboards",
+      "url": "https://test1253.odoo.com/odoo?menu_id=180&action=319",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0082_Dashboards_Dashboards.png"
+    },
+    {
+      "idx": 83,
+      "menu_id": 183,
+      "root_app": "Dashboards",
+      "complete_name": "Dashboards/Configuration/Dashboards",
+      "url": "https://test1253.odoo.com/odoo?menu_id=183&action=320",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0083_Dashboards_Dashboards.png"
+    },
+    {
+      "idx": 84,
+      "menu_id": 184,
+      "root_app": "Dashboards",
+      "complete_name": "Dashboards/Configuration/Sections",
+      "url": "https://test1253.odoo.com/odoo?menu_id=184&action=321",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 85,
+      "menu_id": 181,
+      "root_app": "Dashboards",
+      "complete_name": "Dashboards/Dashboards",
+      "url": "https://test1253.odoo.com/odoo?menu_id=181&action=319",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 86,
+      "menu_id": 72,
+      "root_app": "Discuss",
+      "complete_name": "Discuss",
+      "url": "https://test1253.odoo.com/odoo?menu_id=72&action=112",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0086_Discuss_Discuss.png"
+    },
+    {
+      "idx": 87,
+      "menu_id": 74,
+      "root_app": "Discuss",
+      "complete_name": "Discuss/Channels",
+      "url": "https://test1253.odoo.com/odoo?menu_id=74&action=110",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0087_Discuss_Channels.png"
+    },
+    {
+      "idx": 88,
+      "menu_id": 80,
+      "root_app": "Discuss",
+      "complete_name": "Discuss/Configuration/Canned Responses",
+      "url": "https://test1253.odoo.com/odoo?menu_id=80&action=113",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 89,
+      "menu_id": 79,
+      "root_app": "Discuss",
+      "complete_name": "Discuss/Configuration/Categories",
+      "url": "https://test1253.odoo.com/odoo?menu_id=79&action=104",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 90,
+      "menu_id": 77,
+      "root_app": "Discuss",
+      "complete_name": "Discuss/Configuration/Notifications",
+      "url": "https://test1253.odoo.com/odoo?menu_id=77&action=129",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 91,
+      "menu_id": 81,
+      "root_app": "Discuss",
+      "complete_name": "Discuss/Configuration/Roles",
+      "url": "https://test1253.odoo.com/odoo?menu_id=81&action=114",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 92,
+      "menu_id": 76,
+      "root_app": "Discuss",
+      "complete_name": "Discuss/Configuration/Settings",
+      "url": "https://test1253.odoo.com/odoo?menu_id=76&action=131",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 93,
+      "menu_id": 78,
+      "root_app": "Discuss",
+      "complete_name": "Discuss/Configuration/Voice & Video",
+      "url": "https://test1253.odoo.com/odoo?menu_id=78&action=130",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 94,
+      "menu_id": 73,
+      "root_app": "Discuss",
+      "complete_name": "Discuss/Discuss",
+      "url": "https://test1253.odoo.com/odoo?menu_id=73&action=112",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 95,
+      "menu_id": 111,
+      "root_app": "Discuss",
+      "complete_name": "Discuss/Technical/Call History",
+      "url": "https://test1253.odoo.com/odoo?menu_id=111&action=142",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 96,
+      "menu_id": 245,
+      "root_app": "Documents",
+      "complete_name": "Documents/Configuration/Activities/Activity Plans",
+      "url": "https://test1253.odoo.com/odoo?menu_id=245&action=431",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0096_Documents_Activity_Plans.png"
+    },
+    {
+      "idx": 97,
+      "menu_id": 244,
+      "root_app": "Documents",
+      "complete_name": "Documents/Configuration/Activities/Activity Types",
+      "url": "https://test1253.odoo.com/odoo?menu_id=244&action=430",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0097_Documents_Activity_Types.png"
+    },
+    {
+      "idx": 98,
+      "menu_id": 240,
+      "root_app": "Documents",
+      "complete_name": "Documents/Configuration/Settings",
+      "url": "https://test1253.odoo.com/odoo?menu_id=240&action=423",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 99,
+      "menu_id": 258,
+      "root_app": "Documents",
+      "complete_name": "Documents/Configuration/Spreadsheet Templates",
+      "url": "https://test1253.odoo.com/odoo?menu_id=258&action=450",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 100,
+      "menu_id": 242,
+      "root_app": "Documents",
+      "complete_name": "Documents/Configuration/Structure/Tags",
+      "url": "https://test1253.odoo.com/odoo?menu_id=242&action=429",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 101,
+      "menu_id": 238,
+      "root_app": "Documents",
+      "complete_name": "Documents/Documents",
+      "url": "https://test1253.odoo.com/odoo?menu_id=238&action=425",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 102,
+      "menu_id": 248,
+      "root_app": "Knowledge",
+      "complete_name": "Knowledge/Articles",
+      "url": "https://test1253.odoo.com/odoo?menu_id=248&action=437",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0102_Knowledge_Articles.png"
+    },
+    {
+      "idx": 103,
+      "menu_id": 251,
+      "root_app": "Knowledge",
+      "complete_name": "Knowledge/Configuration/Favorites",
+      "url": "https://test1253.odoo.com/odoo?menu_id=251&action=444",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0103_Knowledge_Favorites.png"
+    },
+    {
+      "idx": 104,
+      "menu_id": 250,
+      "root_app": "Knowledge",
+      "complete_name": "Knowledge/Configuration/Members",
+      "url": "https://test1253.odoo.com/odoo?menu_id=250&action=445",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 105,
+      "menu_id": 253,
+      "root_app": "Knowledge",
+      "complete_name": "Knowledge/Configuration/Stages",
+      "url": "https://test1253.odoo.com/odoo?menu_id=253&action=446",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 106,
+      "menu_id": 252,
+      "root_app": "Knowledge",
+      "complete_name": "Knowledge/Configuration/Trashed",
+      "url": "https://test1253.odoo.com/odoo?menu_id=252&action=436",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 107,
+      "menu_id": 247,
+      "root_app": "Knowledge",
+      "complete_name": "Knowledge/Home",
+      "url": "https://test1253.odoo.com/odoo?menu_id=247&action=434",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 108,
+      "menu_id": 68,
+      "root_app": "Settings",
+      "complete_name": "Settings/General Settings",
+      "url": "https://test1253.odoo.com/odoo?menu_id=68&action=86",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0108_Settings_General_Settings.png"
+    },
+    {
+      "idx": 109,
+      "menu_id": 19,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Actions/Actions",
+      "url": "https://test1253.odoo.com/odoo?menu_id=19&action=6",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": "screens/0109_Settings_Actions.png"
+    },
+    {
+      "idx": 110,
+      "menu_id": 22,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Actions/Client Actions",
+      "url": "https://test1253.odoo.com/odoo?menu_id=22&action=9",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 111,
+      "menu_id": 25,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Actions/Configuration Wizards",
+      "url": "https://test1253.odoo.com/odoo?menu_id=25&action=12",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 112,
+      "menu_id": 24,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Actions/Embedded Actions",
+      "url": "https://test1253.odoo.com/odoo?menu_id=24&action=11",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 113,
+      "menu_id": 20,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Actions/Reports",
+      "url": "https://test1253.odoo.com/odoo?menu_id=20&action=7",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 114,
+      "menu_id": 23,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Actions/Server Actions",
+      "url": "https://test1253.odoo.com/odoo?menu_id=23&action=10",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 115,
+      "menu_id": 46,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Actions/User-defined Defaults",
+      "url": "https://test1253.odoo.com/odoo?menu_id=46&action=34",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 116,
+      "menu_id": 21,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Actions/Window Actions",
+      "url": "https://test1253.odoo.com/odoo?menu_id=21&action=8",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 117,
+      "menu_id": 106,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Activities/Activity Overview",
+      "url": "https://test1253.odoo.com/odoo?menu_id=106&action=116",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 118,
+      "menu_id": 108,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Activities/Activity Plans",
+      "url": "https://test1253.odoo.com/odoo?menu_id=108&action=119",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 119,
+      "menu_id": 107,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Activities/Activity Types",
+      "url": "https://test1253.odoo.com/odoo?menu_id=107&action=115",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 120,
+      "menu_id": 28,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Automation/Scheduled Actions",
+      "url": "https://test1253.odoo.com/odoo?menu_id=28&action=16",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 121,
+      "menu_id": 29,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Automation/Scheduled Actions Triggers",
+      "url": "https://test1253.odoo.com/odoo?menu_id=29&action=17",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 122,
+      "menu_id": 26,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Database Structure/Assets",
+      "url": "https://test1253.odoo.com/odoo?menu_id=26&action=14",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 123,
+      "menu_id": 40,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Database Structure/Attachments",
+      "url": "https://test1253.odoo.com/odoo?menu_id=40&action=27",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 124,
+      "menu_id": 17,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Database Structure/Decimal Accuracy",
+      "url": "https://test1253.odoo.com/odoo?menu_id=17&action=5",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 125,
+      "menu_id": 33,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Database Structure/Fields",
+      "url": "https://test1253.odoo.com/odoo?menu_id=33&action=21",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 126,
+      "menu_id": 34,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Database Structure/Fields Selection",
+      "url": "https://test1253.odoo.com/odoo?menu_id=34&action=22",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 127,
+      "menu_id": 47,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Database Structure/Logging",
+      "url": "https://test1253.odoo.com/odoo?menu_id=47&action=38",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 128,
+      "menu_id": 38,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Database Structure/ManyToMany Relations",
+      "url": "https://test1253.odoo.com/odoo?menu_id=38&action=25",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 129,
+      "menu_id": 37,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Database Structure/Model Constraints",
+      "url": "https://test1253.odoo.com/odoo?menu_id=37&action=24",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 130,
+      "menu_id": 32,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Database Structure/Models",
+      "url": "https://test1253.odoo.com/odoo?menu_id=32&action=20",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 131,
+      "menu_id": 57,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Database Structure/Profiling",
+      "url": "https://test1253.odoo.com/odoo?menu_id=57&action=52",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 132,
+      "menu_id": 97,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/Email Blacklist",
+      "url": "https://test1253.odoo.com/odoo?menu_id=97&action=141",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 133,
+      "menu_id": 96,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/Followers",
+      "url": "https://test1253.odoo.com/odoo?menu_id=96&action=102",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 134,
+      "menu_id": 104,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/GIF favorite",
+      "url": "https://test1253.odoo.com/odoo?menu_id=104&action=108",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 135,
+      "menu_id": 99,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/Guests",
+      "url": "https://test1253.odoo.com/odoo?menu_id=99&action=135",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 136,
+      "menu_id": 101,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/ICE Servers",
+      "url": "https://test1253.odoo.com/odoo?menu_id=101&action=103",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 137,
+      "menu_id": 103,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/Link Previews",
+      "url": "https://test1253.odoo.com/odoo?menu_id=103&action=107",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 138,
+      "menu_id": 102,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/Message Reactions",
+      "url": "https://test1253.odoo.com/odoo?menu_id=102&action=136",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 139,
+      "menu_id": 91,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/Messages",
+      "url": "https://test1253.odoo.com/odoo?menu_id=91&action=98",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 140,
+      "menu_id": 95,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/Notifications",
+      "url": "https://test1253.odoo.com/odoo?menu_id=95&action=97",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 141,
+      "menu_id": 100,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/RTC sessions",
+      "url": "https://test1253.odoo.com/odoo?menu_id=100&action=106",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 142,
+      "menu_id": 92,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/Scheduled Messages",
+      "url": "https://test1253.odoo.com/odoo?menu_id=92&action=99",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 143,
+      "menu_id": 93,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/Subtypes",
+      "url": "https://test1253.odoo.com/odoo?menu_id=93&action=95",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 144,
+      "menu_id": 94,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/Tracking Values",
+      "url": "https://test1253.odoo.com/odoo?menu_id=94&action=96",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 145,
+      "menu_id": 98,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Discuss/User Settings",
+      "url": "https://test1253.odoo.com/odoo?menu_id=98&action=138",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 146,
+      "menu_id": 84,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Alias Domains",
+      "url": "https://test1253.odoo.com/odoo?menu_id=84&action=132",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 147,
+      "menu_id": 83,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Aliases",
+      "url": "https://test1253.odoo.com/odoo?menu_id=83&action=133",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 148,
+      "menu_id": 87,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Channels",
+      "url": "https://test1253.odoo.com/odoo?menu_id=87&action=109",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 149,
+      "menu_id": 88,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Channels/Members",
+      "url": "https://test1253.odoo.com/odoo?menu_id=88&action=105",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 150,
+      "menu_id": 125,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Digest Emails",
+      "url": "https://test1253.odoo.com/odoo?menu_id=125&action=230",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 151,
+      "menu_id": 126,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Digest Tips",
+      "url": "https://test1253.odoo.com/odoo?menu_id=126&action=231",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 152,
+      "menu_id": 86,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Email Templates",
+      "url": "https://test1253.odoo.com/odoo?menu_id=86&action=139",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 153,
+      "menu_id": 82,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Emails",
+      "url": "https://test1253.odoo.com/odoo?menu_id=82&action=100",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 154,
+      "menu_id": 85,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Incoming Mail Servers",
+      "url": "https://test1253.odoo.com/odoo?menu_id=85&action=94",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 155,
+      "menu_id": 89,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Mail Gateway Allowed",
+      "url": "https://test1253.odoo.com/odoo?menu_id=89&action=134",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 156,
+      "menu_id": 31,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Outgoing Mail Servers",
+      "url": "https://test1253.odoo.com/odoo?menu_id=31&action=19",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 157,
+      "menu_id": 118,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Email/Snailmail Letters",
+      "url": "https://test1253.odoo.com/odoo?menu_id=118&action=167",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 158,
+      "menu_id": 71,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/IAP/In-App Purchase Accounts",
+      "url": "https://test1253.odoo.com/odoo?menu_id=71&action=90",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 159,
+      "menu_id": 256,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Knowledge/Template Categories",
+      "url": "https://test1253.odoo.com/odoo?menu_id=256&action=448",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 160,
+      "menu_id": 257,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Knowledge/Template Stages",
+      "url": "https://test1253.odoo.com/odoo?menu_id=257&action=447",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 161,
+      "menu_id": 255,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Knowledge/Templates",
+      "url": "https://test1253.odoo.com/odoo?menu_id=255&action=443",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 162,
+      "menu_id": 27,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Parameters/System Parameters",
+      "url": "https://test1253.odoo.com/odoo?menu_id=27&action=15",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 163,
+      "menu_id": 113,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Phone / SMS/Phone Blacklist",
+      "url": "https://test1253.odoo.com/odoo?menu_id=113&action=148",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 164,
+      "menu_id": 116,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Phone / SMS/SMS",
+      "url": "https://test1253.odoo.com/odoo?menu_id=116&action=163",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 165,
+      "menu_id": 117,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Phone / SMS/SMS Templates",
+      "url": "https://test1253.odoo.com/odoo?menu_id=117&action=165",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 166,
+      "menu_id": 115,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Privacy/Privacy Logs",
+      "url": "https://test1253.odoo.com/odoo?menu_id=115&action=153",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 167,
+      "menu_id": 65,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Reporting/Paper Format",
+      "url": "https://test1253.odoo.com/odoo?menu_id=65&action=76",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 168,
+      "menu_id": 66,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Reporting/Reports",
+      "url": "https://test1253.odoo.com/odoo?menu_id=66&action=77",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 169,
+      "menu_id": 123,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Resource/Resource Time Off",
+      "url": "https://test1253.odoo.com/odoo?menu_id=123&action=187",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 170,
+      "menu_id": 124,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Resource/Resources",
+      "url": "https://test1253.odoo.com/odoo?menu_id=124&action=185",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 171,
+      "menu_id": 122,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Resource/Working Schedules",
+      "url": "https://test1253.odoo.com/odoo?menu_id=122&action=191",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 172,
+      "menu_id": 39,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Security/Access Rights",
+      "url": "https://test1253.odoo.com/odoo?menu_id=39&action=26",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 173,
+      "menu_id": 41,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Security/Record Rules",
+      "url": "https://test1253.odoo.com/odoo?menu_id=41&action=28",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 174,
+      "menu_id": 63,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Security/User Devices",
+      "url": "https://test1253.odoo.com/odoo?menu_id=63&action=74",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 175,
+      "menu_id": 36,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Sequences & Identifiers/External Identifiers",
+      "url": "https://test1253.odoo.com/odoo?menu_id=36&action=23",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 176,
+      "menu_id": 42,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Sequences & Identifiers/Sequences",
+      "url": "https://test1253.odoo.com/odoo?menu_id=42&action=29",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 177,
+      "menu_id": 259,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Spreadsheet/Contributors",
+      "url": "https://test1253.odoo.com/odoo?menu_id=259&action=449",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 178,
+      "menu_id": 186,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/Spreadsheet/Revisions",
+      "url": "https://test1253.odoo.com/odoo?menu_id=186&action=322",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 179,
+      "menu_id": 45,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/User Interface/Customized Views",
+      "url": "https://test1253.odoo.com/odoo?menu_id=45&action=33",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 180,
+      "menu_id": 43,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/User Interface/Menu Items",
+      "url": "https://test1253.odoo.com/odoo?menu_id=43&action=30",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 181,
+      "menu_id": 119,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/User Interface/Onboardings",
+      "url": "https://test1253.odoo.com/odoo?menu_id=119&action=183",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 182,
+      "menu_id": 120,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/User Interface/Onboardings Steps",
+      "url": "https://test1253.odoo.com/odoo?menu_id=120&action=184",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 183,
+      "menu_id": 69,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/User Interface/Tours",
+      "url": "https://test1253.odoo.com/odoo?menu_id=69&action=87",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 184,
+      "menu_id": 30,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/User Interface/User-defined Filters",
+      "url": "https://test1253.odoo.com/odoo?menu_id=30&action=18",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 185,
+      "menu_id": 44,
+      "root_app": "Settings",
+      "complete_name": "Settings/Technical/User Interface/Views",
+      "url": "https://test1253.odoo.com/odoo?menu_id=44&action=31",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 186,
+      "menu_id": 56,
+      "root_app": "Settings",
+      "complete_name": "Settings/Translations/Import / Export/Export Translation",
+      "url": "https://test1253.odoo.com/odoo?menu_id=56&action=48",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 187,
+      "menu_id": 54,
+      "root_app": "Settings",
+      "complete_name": "Settings/Translations/Import / Export/Import Translation",
+      "url": "https://test1253.odoo.com/odoo?menu_id=54&action=45",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 188,
+      "menu_id": 59,
+      "root_app": "Settings",
+      "complete_name": "Settings/Translations/Languages",
+      "url": "https://test1253.odoo.com/odoo?menu_id=59&action=54",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 189,
+      "menu_id": 58,
+      "root_app": "Settings",
+      "complete_name": "Settings/Users & Companies/Companies",
+      "url": "https://test1253.odoo.com/odoo?menu_id=58&action=53",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 190,
+      "menu_id": 61,
+      "root_app": "Settings",
+      "complete_name": "Settings/Users & Companies/Groups",
+      "url": "https://test1253.odoo.com/odoo?menu_id=61&action=68",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 191,
+      "menu_id": 60,
+      "root_app": "Settings",
+      "complete_name": "Settings/Users & Companies/Privileges",
+      "url": "https://test1253.odoo.com/odoo?menu_id=60&action=67",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    },
+    {
+      "idx": 192,
+      "menu_id": 62,
+      "root_app": "Settings",
+      "complete_name": "Settings/Users & Companies/Users",
+      "url": "https://test1253.odoo.com/odoo?menu_id=62&action=70",
+      "ok": true,
+      "reason": "ok",
+      "screenshot": ""
+    }
+  ]
+}

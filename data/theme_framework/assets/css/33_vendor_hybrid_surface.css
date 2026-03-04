@@ -1,0 +1,131 @@
+﻿/* Vendor-derived hybrid surface layer
+   Source basis: data/theme_framework/vendor/imported/*
+   Consolidates recurring selectors from external backend themes.
+*/
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid {
+  --theme-fw-vendor-primary: #556ee6;
+  --theme-fw-vendor-primary-dark: #4458b8;
+  --theme-fw-vendor-success: #34c38f;
+  --theme-fw-vendor-warning: #f1b44c;
+  --theme-fw-vendor-danger: #f46a6a;
+  --theme-fw-vendor-muted: #74788d;
+  --theme-fw-vendor-panel: rgba(16, 30, 58, 0.9);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_search_panel {
+  background: linear-gradient(180deg, rgba(15, 28, 52, 0.86), rgba(10, 21, 40, 0.9));
+  border-right: 1px solid rgba(110, 148, 221, 0.24);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_search_panel .o_search_panel_section_header {
+  color: #d9e9ff;
+  border-color: rgba(101, 140, 214, 0.24);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_search_panel .list-group-item,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_search_panel .o_search_panel_category_value {
+  color: #bcd1f3;
+  border-radius: 8px;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_search_panel .list-group-item.active,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_search_panel .o_search_panel_category_value.active {
+  background: linear-gradient(120deg, rgba(85, 110, 230, 0.45), rgba(68, 88, 184, 0.4));
+  color: #f4f8ff;
+  border-color: rgba(113, 132, 234, 0.5);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_form_statusbar,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_statusbar_status {
+  background: linear-gradient(180deg, rgba(17, 31, 58, 0.74), rgba(10, 21, 40, 0.82));
+  border: 1px solid rgba(101, 139, 212, 0.22);
+  border-radius: 12px;
+  padding: 4px 8px;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_statusbar_status .btn,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_form_statusbar .btn {
+  border-radius: 999px;
+  border-color: rgba(101, 139, 212, 0.3);
+  color: #cfe1ff;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_statusbar_status .btn-primary,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_statusbar_status .btn.active {
+  color: #061223;
+  background: linear-gradient(120deg, var(--theme-fw-vendor-primary), #67a6ff);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_setting_container,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_base_settings {
+  background: transparent;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_setting_container .o_setting_box,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_base_settings .o_setting_box {
+  background: linear-gradient(180deg, rgba(18, 34, 63, 0.84), rgba(10, 21, 40, 0.88));
+  border: 1px solid rgba(108, 145, 218, 0.24);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(3, 10, 24, 0.32);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_setting_container .o_setting_left_pane,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_base_settings .o_setting_left_pane {
+  border-right: 1px solid rgba(106, 145, 216, 0.18);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_searchview_facet,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_searchview_facet_label {
+  background: rgba(85, 110, 230, 0.26);
+  color: #e9f2ff;
+  border-color: rgba(111, 132, 234, 0.45);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_calendar_view,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_calendar_renderer,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_calendar_sidebar_container {
+  background: transparent;
+  color: #d7e6ff;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_calendar_sidebar_container .ui-datepicker,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_calendar_sidebar_container .o_calendar_filter_item {
+  background: linear-gradient(180deg, rgba(17, 31, 58, 0.8), rgba(11, 22, 42, 0.85));
+  border: 1px solid rgba(99, 137, 210, 0.26);
+  border-radius: 12px;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_graph_view .o_graph_renderer,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_pivot_view .o_pivot,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_cohort_view .o_cohort_renderer {
+  background: linear-gradient(180deg, rgba(16, 29, 56, 0.78), rgba(10, 21, 40, 0.88));
+  border: 1px solid rgba(99, 137, 210, 0.24);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(3, 10, 24, 0.28);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_pivot_view table th,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_pivot_view table td {
+  border-color: rgba(98, 135, 206, 0.22);
+  color: #d8e7ff;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_activity_view .o_activity_record,
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_activity_view .o_activity_cell {
+  background: linear-gradient(180deg, rgba(19, 34, 63, 0.8), rgba(11, 21, 40, 0.9));
+  border: 1px solid rgba(101, 139, 213, 0.24);
+  border-radius: 12px;
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_notification_manager .o_notification.bg-success {
+  border-color: rgba(52, 195, 143, 0.55);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_notification_manager .o_notification.bg-warning {
+  border-color: rgba(241, 180, 76, 0.55);
+}
+
+body.theme-fw-enabled.theme-fw-vendor-hybrid .o_notification_manager .o_notification.bg-danger {
+  border-color: rgba(244, 106, 106, 0.55);
+}

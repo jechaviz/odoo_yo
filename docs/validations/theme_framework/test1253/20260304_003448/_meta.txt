@@ -1,0 +1,3 @@
+﻿host=test1253.odoo.com
+stamp=20260304_003448
+
