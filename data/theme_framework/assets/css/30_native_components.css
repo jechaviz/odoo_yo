@@ -1,0 +1,211 @@
+﻿/* Native Odoo component port: control panel, dropdowns, dialogs, lists, forms, kanban. */
+
+body.theme-fw-enabled .o_action_manager {
+  border-left: 1px solid rgba(115, 153, 225, 0.14);
+}
+
+body.theme-fw-enabled .o_control_panel,
+body.theme-fw-enabled .o-control-panel {
+  background: linear-gradient(180deg, rgba(12, 28, 58, 0.9), rgba(10, 23, 47, 0.9));
+  border: 1px solid var(--theme-fw-border-soft);
+  border-radius: var(--theme-fw-radius);
+  margin: 10px 14px 12px;
+  padding: 10px 12px;
+  box-shadow: var(--theme-fw-shadow);
+}
+
+body.theme-fw-enabled .o_control_panel .breadcrumb,
+body.theme-fw-enabled .o-control-panel .breadcrumb {
+  color: #acc2ea;
+  font-weight: 600;
+}
+
+body.theme-fw-enabled .o_control_panel .breadcrumb a,
+body.theme-fw-enabled .o-control-panel .breadcrumb a {
+  color: #d6e6ff;
+}
+
+body.theme-fw-enabled .o_control_panel .btn,
+body.theme-fw-enabled .o-control-panel .btn {
+  border-radius: 10px;
+  border-color: rgba(118, 156, 228, 0.34);
+}
+
+body.theme-fw-enabled .o_control_panel .btn-primary,
+body.theme-fw-enabled .o-control-panel .btn-primary {
+  background: linear-gradient(120deg, #4a98ff, #64c2ff);
+  border-color: transparent;
+  color: #08182c;
+  font-weight: 700;
+}
+
+body.theme-fw-enabled .o_searchview {
+  border-radius: 12px;
+  border: 1px solid rgba(126, 161, 230, 0.3);
+  background: rgba(15, 30, 57, 0.75);
+}
+
+body.theme-fw-enabled .o_searchview .o_searchview_input {
+  color: #e2ecff;
+}
+
+body.theme-fw-enabled .o_searchview .o_searchview_facet {
+  background: rgba(46, 83, 149, 0.45);
+  border: 1px solid rgba(120, 160, 233, 0.4);
+  border-radius: 9px;
+}
+
+body.theme-fw-enabled .o_content,
+body.theme-fw-enabled .o_action,
+body.theme-fw-enabled .o_view_controller {
+  color: var(--theme-fw-text);
+}
+
+body.theme-fw-enabled .o_renderer,
+body.theme-fw-enabled .o_form_view,
+body.theme-fw-enabled .o_list_renderer,
+body.theme-fw-enabled .o_kanban_renderer,
+body.theme-fw-enabled .o_activity_view {
+  background: transparent;
+}
+
+body.theme-fw-enabled .o_form_view .o_form_sheet_bg {
+  background: transparent;
+}
+
+body.theme-fw-enabled .o_form_view .o_form_sheet,
+body.theme-fw-enabled .o_form_view .o_inner_group,
+body.theme-fw-enabled .o_form_view .o_group {
+  border-radius: 14px;
+}
+
+body.theme-fw-enabled .o_form_view .o_form_sheet {
+  background: linear-gradient(180deg, rgba(18, 34, 64, 0.86), rgba(12, 23, 44, 0.9));
+  border: 1px solid rgba(118, 158, 232, 0.24);
+  box-shadow: 0 16px 32px rgba(2, 8, 24, 0.38);
+}
+
+body.theme-fw-enabled .o_form_view .o_input,
+body.theme-fw-enabled .o_form_view input,
+body.theme-fw-enabled .o_form_view textarea,
+body.theme-fw-enabled .o_form_view select {
+  background: rgba(9, 18, 35, 0.78);
+  border: 1px solid rgba(123, 160, 229, 0.28);
+  color: #dce8ff;
+  border-radius: 10px;
+}
+
+body.theme-fw-enabled .o_form_view .o_input:focus,
+body.theme-fw-enabled .o_form_view input:focus,
+body.theme-fw-enabled .o_form_view textarea:focus,
+body.theme-fw-enabled .o_form_view select:focus {
+  border-color: rgba(96, 162, 255, 0.54);
+  box-shadow: 0 0 0 3px rgba(62, 125, 255, 0.2);
+}
+
+body.theme-fw-enabled .o_form_view .o_notebook .nav-link {
+  border-radius: 10px;
+  color: #b8cdec;
+}
+
+body.theme-fw-enabled .o_form_view .o_notebook .nav-link.active {
+  color: #f2f7ff;
+  background: linear-gradient(180deg, rgba(56, 102, 188, 0.44), rgba(38, 72, 138, 0.5));
+  border-color: rgba(115, 154, 228, 0.4);
+}
+
+body.theme-fw-enabled .o_list_renderer .o_list_table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(16, 30, 57, 0.8), rgba(11, 20, 39, 0.9));
+  box-shadow: 0 12px 28px rgba(3, 10, 25, 0.34);
+}
+
+body.theme-fw-enabled .o_list_renderer .o_list_table thead tr {
+  background: rgba(52, 87, 147, 0.46);
+}
+
+body.theme-fw-enabled .o_list_renderer .o_list_table thead th {
+  color: #e5efff;
+  border-bottom: 1px solid rgba(118, 158, 232, 0.3);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+body.theme-fw-enabled .o_list_renderer .o_list_table tbody td {
+  color: #d8e4fb;
+  border-color: rgba(109, 147, 219, 0.18);
+}
+
+body.theme-fw-enabled .o_list_renderer .o_list_table tbody tr:hover {
+  background: rgba(53, 93, 162, 0.22);
+}
+
+body.theme-fw-enabled .o_list_renderer .o_list_table tbody tr.o_data_row.o_selected_row {
+  background: rgba(72, 118, 199, 0.38);
+}
+
+body.theme-fw-enabled .o_kanban_renderer .o_kanban_record {
+  border: 1px solid rgba(118, 158, 232, 0.26);
+  border-radius: 14px;
+  background: linear-gradient(165deg, rgba(19, 35, 61, 0.9), rgba(12, 23, 42, 0.9));
+  box-shadow: 0 10px 24px rgba(3, 10, 25, 0.3);
+}
+
+body.theme-fw-enabled .o_kanban_renderer .o_kanban_record:hover {
+  border-color: rgba(130, 170, 242, 0.4);
+  transform: translateY(-1px);
+}
+
+body.theme-fw-enabled .o_dialog .modal-content,
+body.theme-fw-enabled .modal-content {
+  background: linear-gradient(180deg, rgba(15, 29, 56, 0.98), rgba(9, 19, 38, 0.98));
+  border: 1px solid rgba(120, 160, 232, 0.32);
+  border-radius: 16px;
+  box-shadow: 0 20px 46px rgba(2, 8, 24, 0.54);
+  color: #e4eeff;
+}
+
+body.theme-fw-enabled .o_dialog .modal-header,
+body.theme-fw-enabled .modal-header {
+  border-bottom: 1px solid rgba(118, 158, 232, 0.2);
+}
+
+body.theme-fw-enabled .o_dropdown_menu,
+body.theme-fw-enabled .o-dropdown--menu.dropdown-menu,
+body.theme-fw-enabled .dropdown-menu {
+  border-radius: 12px;
+  border: 1px solid rgba(120, 160, 232, 0.3);
+  background: linear-gradient(180deg, rgba(17, 33, 62, 0.98), rgba(10, 22, 41, 0.98));
+  box-shadow: 0 14px 32px rgba(3, 10, 25, 0.46);
+}
+
+body.theme-fw-enabled .dropdown-item,
+body.theme-fw-enabled .o-dropdown-item {
+  border-radius: 9px;
+  margin: 2px 6px;
+  color: #d8e6ff;
+}
+
+body.theme-fw-enabled .dropdown-item:hover,
+body.theme-fw-enabled .o-dropdown-item:hover,
+body.theme-fw-enabled .dropdown-item:focus {
+  color: #f5f9ff;
+  background: linear-gradient(180deg, rgba(57, 97, 177, 0.4), rgba(37, 70, 132, 0.38));
+}
+
+body.theme-fw-enabled .o_statusbar_status .btn,
+body.theme-fw-enabled .o_statusbar_status .btn-secondary {
+  border-radius: 999px;
+  border-color: rgba(117, 157, 230, 0.35);
+}
+
+body.theme-fw-enabled .o_statusbar_status .btn-primary,
+body.theme-fw-enabled .o_statusbar_status .btn.active {
+  background: linear-gradient(120deg, rgba(82, 134, 240, 0.9), rgba(65, 196, 224, 0.9));
+  color: #071326;
+}

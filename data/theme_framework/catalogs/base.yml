@@ -1,77 +1,86 @@
-version: "1.0.0"
+﻿version: "1.1.0"
 metadata:
   owner: "odoo_yo"
   purpose: "Generic backend theme framework catalog"
-  notes: "Composable catalog inspired by Odoo backend theme patterns."
+  notes: "Composable catalog for host-scoped Odoo visual ports and deep surface styling."
 
 themes:
-  - key: "procurement_shell_v1"
-    title: "Procurement Shell V1"
-    description: "Baseline procurement surface for procure1."
-    hosts:
-      - "procure1.odoo.com"
+  - key: "core_port_v1"
+    title: "Core Port V1"
+    description: "Shared visual port for native Odoo components."
     assets:
       - name: "Theme Runtime Bootstrap"
         path: "data/theme_framework/assets/js/runtime_bootstrap.js"
         bundle: "web.assets_backend"
         directive: "append"
         sequence: 1100
+      - name: "Theme Topbar User Menu Port JS"
+        path: "data/theme_framework/assets/js/topbar_user_menu_port.js"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1105
       - name: "Theme Core Tokens"
         path: "data/theme_framework/assets/css/00_tokens.css"
         bundle: "web.assets_backend"
         directive: "append"
         sequence: 1110
-      - name: "Theme Topbar User Menu"
-        path: "data/theme_framework/assets/css/10_topbar_user_menu.css"
+      - name: "Theme Topbar Port"
+        path: "data/theme_framework/assets/css/11_port_topbar.css"
         bundle: "web.assets_backend"
         directive: "append"
         sequence: 1120
-      - name: "Theme Sidebar Shell"
-        path: "data/theme_framework/assets/css/20_sidebar_shell.css"
+      - name: "Theme User Menu Port"
+        path: "data/theme_framework/assets/css/12_port_user_menu.css"
         bundle: "web.assets_backend"
         directive: "append"
         sequence: 1130
+      - name: "Theme Header Group Port"
+        path: "data/theme_framework/assets/css/13_port_header_group.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1140
+      - name: "Theme Native Components"
+        path: "data/theme_framework/assets/css/30_native_components.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1150
+      - name: "Theme Navigation Deep"
+        path: "data/theme_framework/assets/css/31_navigation_deep.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1160
+    params:
+      theme_framework.runtime_locale: "es_MX"
+      theme_framework.mode: "core_port"
+
+  - key: "procurement_shell_v1"
+    title: "Procurement Shell V1"
+    description: "Procurement-specific surface tuning for procure1."
+    inherits:
+      - "core_port_v1"
+    hosts:
+      - "procure1.odoo.com"
+    assets:
       - name: "Theme Procurement Surface"
         path: "data/theme_framework/assets/css/31_procurement_surface.css"
         bundle: "web.assets_backend"
         directive: "append"
-        sequence: 1140
+        sequence: 1170
     params:
       theme_framework.active_profile: "procurement"
-      theme_framework.runtime_locale: "es_MX"
 
   - key: "accounting_shell_v1"
     title: "Accounting Shell V1"
-    description: "Baseline accounting and e-invoice surface for test1253."
+    description: "Accounting and e-invoice surface tuning for test1253."
+    inherits:
+      - "core_port_v1"
     hosts:
       - "test1253.odoo.com"
     assets:
-      - name: "Theme Runtime Bootstrap"
-        path: "data/theme_framework/assets/js/runtime_bootstrap.js"
-        bundle: "web.assets_backend"
-        directive: "append"
-        sequence: 1100
-      - name: "Theme Core Tokens"
-        path: "data/theme_framework/assets/css/00_tokens.css"
-        bundle: "web.assets_backend"
-        directive: "append"
-        sequence: 1110
-      - name: "Theme Topbar User Menu"
-        path: "data/theme_framework/assets/css/10_topbar_user_menu.css"
-        bundle: "web.assets_backend"
-        directive: "append"
-        sequence: 1120
-      - name: "Theme Sidebar Shell"
-        path: "data/theme_framework/assets/css/20_sidebar_shell.css"
-        bundle: "web.assets_backend"
-        directive: "append"
-        sequence: 1130
       - name: "Theme Accounting Surface"
         path: "data/theme_framework/assets/css/32_accounting_surface.css"
         bundle: "web.assets_backend"
         directive: "append"
-        sequence: 1140
+        sequence: 1170
     params:
       theme_framework.active_profile: "accounting"
-      theme_framework.runtime_locale: "es_MX"
-

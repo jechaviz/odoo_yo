@@ -1,0 +1,35 @@
+﻿/* Layer 2: header group (top bar + systray + control panel) on native Odoo. */
+
+body.theme-fw-enabled.app-port-header-group-active .o_content {
+  background:
+    radial-gradient(circle at 18% 16%, rgba(43, 97, 210, 0.16), transparent 40%),
+    radial-gradient(circle at 84% 8%, rgba(96, 136, 232, 0.12), transparent 44%),
+    linear-gradient(180deg, #060f22 0%, #081734 54%, #091b3d 100%);
+}
+
+body.theme-fw-enabled.app-port-header-group-active .o_control_panel.app-port-control-panel,
+body.theme-fw-enabled.app-port-header-group-active .o-control-panel.app-port-control-panel {
+  background: linear-gradient(180deg, rgba(10, 28, 62, 0.9), rgba(10, 25, 56, 0.9));
+  border: 1px solid rgba(78, 126, 232, 0.2);
+  border-radius: 14px;
+  margin: 10px 14px 12px;
+  padding: 10px 12px;
+  box-shadow: 0 14px 32px rgba(3, 10, 28, 0.34);
+}
+
+body.theme-fw-enabled.app-port-header-group-active .o_control_panel.app-port-control-panel .breadcrumb,
+body.theme-fw-enabled.app-port-header-group-active .o-control-panel.app-port-control-panel .breadcrumb {
+  color: #a6bde6;
+  font-weight: 600;
+}
+
+body.theme-fw-enabled.app-port-header-group-active .o_control_panel.app-port-control-panel .breadcrumb a,
+body.theme-fw-enabled.app-port-header-group-active .o-control-panel.app-port-control-panel .breadcrumb a {
+  color: #d0e3ff;
+}
+
+body.theme-fw-enabled.app-port-header-group-active .o_control_panel.app-port-control-panel .btn,
+body.theme-fw-enabled.app-port-header-group-active .o-control-panel.app-port-control-panel .btn {
+  border-radius: 10px;
+}
+

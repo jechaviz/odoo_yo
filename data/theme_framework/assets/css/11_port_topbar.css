@@ -1,0 +1,269 @@
+﻿/* Layer 1A: native topbar visual port (no functional override). */
+
+body.theme-fw-enabled.app-port-topbar-active {
+  --app-port-topbar-bg: linear-gradient(180deg, #08162f 0%, #071224 100%);
+  --app-port-topbar-border: rgba(64, 103, 198, 0.24);
+  --app-port-topbar-text: #d6e4ff;
+  --app-port-topbar-icon: #d1ddff;
+  --app-port-topbar-text-soft: #9eb2dc;
+  --app-port-topbar-chip: rgba(18, 32, 62, 0.78);
+  --app-port-topbar-chip-hover: rgba(33, 64, 126, 0.42);
+  --app-port-topbar-focus: rgba(89, 145, 255, 0.55);
+  --app-port-topbar-font: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar {
+  background: var(--app-port-topbar-bg) !important;
+  border-bottom: 1px solid var(--app-port-topbar-border) !important;
+  box-shadow: 0 10px 28px rgba(2, 8, 28, 0.45);
+  min-height: 64px;
+  height: 64px;
+  font-family: var(--app-port-topbar-font) !important;
+  letter-spacing: 0.01em;
+  padding-inline: 12px;
+  padding-block: 0 !important;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 2px;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections > li,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections > li {
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections > li > a,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections > li > a,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections > a,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center;
+  min-height: 34px;
+  padding: 7px 12px !important;
+  border-radius: 10px;
+  color: var(--app-port-topbar-text-soft) !important;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.15;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections > li > a:hover,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections > li > a:hover,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections > a:hover,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections > a:hover,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections > li.active > a,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections > li.active > a,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections > a.active,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections > a.active,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections > a[aria-current="page"],
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections > a[aria-current="page"] {
+  color: #f2f7ff !important;
+  background: rgba(56, 103, 210, 0.28) !important;
+  border-color: rgba(94, 142, 245, 0.36) !important;
+}
+
+/* Discuss tabs use dropdown-item/o_nav_entry classes; override active native dark chip */
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections .dropdown-item.active,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections .dropdown-item.active,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections .o_nav_entry.active,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections .o_nav_entry.active,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections .dropdown-item:active,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections .dropdown-item:active,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections .o_nav_entry:active,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections .o_nav_entry:active,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_sections .o_nav_entry[aria-selected="true"],
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_sections .o_nav_entry[aria-selected="true"] {
+  color: #f2f7ff !important;
+  background: rgba(56, 103, 210, 0.28) !important;
+  border-color: rgba(94, 142, 245, 0.36) !important;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar a,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar a,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar button,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar button {
+  color: var(--app-port-topbar-text) !important;
+  font-family: var(--app-port-topbar-font) !important;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_systray {
+  gap: 6px;
+  margin-right: 2px;
+  align-items: center !important;
+  min-height: 32px;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray .dropdown,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_systray .dropdown {
+  display: inline-flex;
+  align-items: center;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray .dropdown-toggle,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_systray .dropdown-toggle,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray .o_nav_entry {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  min-height: 32px;
+  padding: 0 !important;
+  border-radius: 8px;
+  border: 1px solid transparent !important;
+  background: transparent;
+  box-shadow: none;
+  transition: background-color 140ms ease, box-shadow 140ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray .dropdown-toggle:hover,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_systray .dropdown-toggle:hover,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray .o_nav_entry:hover {
+  background: var(--app-port-topbar-chip-hover);
+  box-shadow: inset 0 0 0 1px rgba(107, 154, 255, 0.22), 0 0 0 1px rgba(26, 47, 86, 0.4);
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray .dropdown-toggle:focus-visible,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_systray .dropdown-toggle:focus-visible,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray .o_nav_entry:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--app-port-topbar-focus);
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray i,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_systray i {
+  color: var(--app-port-topbar-icon);
+  font-size: 15px !important;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_brand,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_brand {
+  display: none !important;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray .badge,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_systray .badge {
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 3px 5px;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_user_menu .oe_topbar_name,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_user_menu .oe_topbar_name,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_switch_company_menu .oe_topbar_name,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_switch_company_menu .oe_topbar_name {
+  display: none !important;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_user_menu .o_avatar,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_user_menu .o_avatar,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_mobile_menu_toggle .o_burger_menu_avatar,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_mobile_menu_toggle .o_burger_menu_avatar {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 12px !important;
+  object-fit: cover;
+  border: 1px solid rgba(109, 146, 225, 0.35);
+  box-shadow: 0 8px 16px rgba(2, 9, 24, 0.35);
+  margin: 0 !important;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_user_menu,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_user_menu {
+  min-height: 32px !important;
+  height: 32px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  align-items: center !important;
+  display: inline-flex !important;
+}
+
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray .dropdown.show > .dropdown-toggle,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_systray .dropdown.show > .dropdown-toggle,
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_systray .dropdown.show > .o_nav_entry,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_systray .dropdown.show > .o_nav_entry {
+  border-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_toggle,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_toggle {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  min-height: 32px;
+  padding: 0 !important;
+  border-radius: 8px;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--app-port-topbar-icon) !important;
+  box-shadow: none !important;
+  transition: background-color 140ms ease, box-shadow 140ms ease;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_toggle .app-port-fa-icon,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_toggle .app-port-fa-icon {
+  line-height: 1 !important;
+  transform: translateY(-0.5px);
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_menu_toggle:hover,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_menu_toggle:hover {
+  background: var(--app-port-topbar-chip-hover) !important;
+  box-shadow: inset 0 0 0 1px rgba(107, 154, 255, 0.22), 0 0 0 1px rgba(26, 47, 86, 0.4) !important;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .app-port-native-icon {
+  display: none !important;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .app-port-fa-icon {
+  color: var(--app-port-topbar-icon) !important;
+  font-size: 14px;
+  line-height: 1;
+  pointer-events: none;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o-mail-MessagingMenu-counter,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o-mail-MessagingMenu-counter {
+  top: -4px;
+  right: -6px;
+}
+
+body.theme-fw-enabled.app-port-topbar-active .o_main_navbar.app-port-topbar .o_user_menu .o-web-UserMenu-imStatus,
+body.theme-fw-enabled.app-port-topbar-active nav.o_navbar.app-port-topbar .o_user_menu .o-web-UserMenu-imStatus {
+  right: -2px;
+  bottom: -2px;
+  top: auto !important;
+  border: 1px solid rgba(11, 21, 39, 0.95);
+}
+

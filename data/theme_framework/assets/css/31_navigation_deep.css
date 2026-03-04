@@ -1,0 +1,89 @@
+﻿/* Deep menus, app switcher and enterprise side panes */
+
+body.theme-fw-enabled .o_main_navbar .o_menu_sections > li > a,
+body.theme-fw-enabled .o_main_navbar .o_menu_sections > a {
+  border-radius: 10px;
+  padding: 7px 12px !important;
+  min-height: 34px;
+  color: #9eb2dc !important;
+  transition: all 140ms ease;
+}
+
+body.theme-fw-enabled .o_main_navbar .o_menu_sections > li.active > a,
+body.theme-fw-enabled .o_main_navbar .o_menu_sections > li > a:hover,
+body.theme-fw-enabled .o_main_navbar .o_menu_sections > a:hover,
+body.theme-fw-enabled .o_main_navbar .o_menu_sections > a.active {
+  color: #f3f8ff !important;
+  background: rgba(58, 104, 204, 0.3) !important;
+  border: 1px solid rgba(102, 147, 236, 0.35);
+}
+
+body.theme-fw-enabled .o_apps_menu .o_apps .o_app,
+body.theme-fw-enabled .o_home_menu .o_apps .o_app {
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+
+body.theme-fw-enabled .o_home_menu_background {
+  background:
+    radial-gradient(circle at 15% 18%, rgba(78, 130, 244, 0.24), transparent 36%),
+    radial-gradient(circle at 84% 10%, rgba(72, 205, 179, 0.16), transparent 34%),
+    linear-gradient(150deg, #070f20 0%, #0b1630 52%, #0a1430 100%) !important;
+}
+
+body.theme-fw-enabled .o_home_menu .o_app .o_app_caption,
+body.theme-fw-enabled .o_home_menu .o_caption,
+body.theme-fw-enabled .o_app .o_caption {
+  color: #d4e5ff !important;
+}
+
+body.theme-fw-enabled .o-mail-DiscussSidebar,
+body.theme-fw-enabled .o-discuss-sidebar,
+body.theme-fw-enabled .o-mail-DiscussContent {
+  background: linear-gradient(180deg, rgba(11, 22, 43, 0.86), rgba(8, 18, 36, 0.9));
+  border-color: rgba(114, 151, 223, 0.22);
+}
+
+body.theme-fw-enabled .o-dropdown--menu .dropdown-divider,
+body.theme-fw-enabled .dropdown-menu .dropdown-divider {
+  border-top-color: rgba(116, 156, 230, 0.22);
+}
+
+body.theme-fw-enabled .o_attachments,
+body.theme-fw-enabled .o_Chatter,
+body.theme-fw-enabled .o-mail-Chatter,
+body.theme-fw-enabled .o-mail-Activity,
+body.theme-fw-enabled .o_activity {
+  background: linear-gradient(180deg, rgba(13, 25, 47, 0.82), rgba(10, 19, 36, 0.88));
+  border-left: 1px solid rgba(111, 147, 217, 0.22);
+}
+
+body.theme-fw-enabled .o_ChatterTopbar_button,
+body.theme-fw-enabled .o-mail-ChatterTopbar-button {
+  border-radius: 10px;
+}
+
+body.theme-fw-enabled .o_notification_manager .o_notification {
+  border-radius: 14px;
+  border: 1px solid rgba(118, 159, 232, 0.32);
+  background: linear-gradient(180deg, rgba(14, 27, 52, 0.96), rgba(10, 20, 39, 0.96));
+  color: #e2ecff;
+}
+
+body.theme-fw-enabled .o_popover {
+  border-radius: 14px;
+  border: 1px solid rgba(117, 157, 229, 0.32);
+  background: linear-gradient(180deg, rgba(14, 27, 52, 0.98), rgba(8, 18, 35, 0.98));
+  color: #dce9ff;
+}
+
+body.theme-fw-enabled .o_pager .btn,
+body.theme-fw-enabled .o_pager button {
+  border-radius: 8px;
+  border-color: rgba(112, 151, 221, 0.3);
+}
+
+body.theme-fw-enabled .o_web_client .o_field_widget .badge,
+body.theme-fw-enabled .badge {
+  border-radius: 999px;
+  border: 1px solid rgba(112, 151, 221, 0.34);
+}

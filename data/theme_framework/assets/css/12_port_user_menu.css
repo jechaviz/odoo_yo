@@ -1,0 +1,193 @@
+﻿/* Layer 1B: native user menu visual port (behavior remains native). */
+
+body.theme-fw-enabled.app-port-user-menu-opening .o-dropdown--menu.dropdown-menu:not(.app-port-user-dropdown),
+body.theme-fw-enabled.app-port-user-menu-opening .o_user_menu .dropdown-menu:not(.app-port-user-dropdown) {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .o-dropdown--menu.dropdown-menu.app-port-user-dropdown,
+body.theme-fw-enabled.app-port-usermenu-active .o_main_navbar.app-port-topbar .o_menu_systray .o_user_menu .dropdown-menu,
+body.theme-fw-enabled.app-port-usermenu-active nav.o_navbar.app-port-topbar .o_menu_systray .o_user_menu .dropdown-menu {
+  background: linear-gradient(180deg, rgba(8, 18, 40, 0.98) 0%, rgba(7, 17, 36, 0.98) 100%) !important;
+  border: 1px solid rgba(86, 128, 214, 0.34) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 24px 46px rgba(2, 8, 24, 0.58), 0 0 0 1px rgba(15, 35, 69, 0.62) inset !important;
+  width: 320px !important;
+  min-width: 320px !important;
+  max-width: 320px !important;
+  padding: 8px 8px 12px !important;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .app-port-user-header {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin: 2px 2px 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(116, 152, 224, 0.24);
+  background: linear-gradient(180deg, rgba(16, 34, 66, 0.9) 0%, rgba(13, 27, 53, 0.9) 100%);
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .app-port-user-header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(122, 158, 228, 0.3);
+  box-shadow: 0 6px 16px rgba(3, 10, 24, 0.45);
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .app-port-user-header__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .app-port-user-header__name {
+  color: #ecf5ff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .app-port-user-header__subtitle {
+  color: #8fb0e6;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-item,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .o-dropdown-item,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown [role="menuitem"] {
+  color: #dce9ff !important;
+  border-radius: 10px !important;
+  margin: 1px 2px !important;
+  padding: 9px 12px !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease, transform 140ms ease;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-item:hover,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .o-dropdown-item:hover,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown [role="menuitem"]:hover {
+  background: linear-gradient(180deg, rgba(42, 78, 152, 0.4) 0%, rgba(33, 64, 124, 0.32) 100%) !important;
+  border-color: rgba(107, 150, 239, 0.34) !important;
+  color: #ffffff !important;
+  transform: translateX(1px);
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-item:focus-visible,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .o-dropdown-item:focus-visible,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown [role="menuitem"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(95, 151, 255, 0.35);
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .app-port-user-item__icon {
+  width: 16px;
+  min-width: 16px;
+  text-align: center;
+  color: rgba(214, 231, 255, 0.88) !important;
+  font-size: 14px;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .app-port-user-item--status .app-port-user-item__icon {
+  color: #4ade80 !important;
+  font-size: 11px;
+  display: none !important;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-divider {
+  border-top-color: rgba(106, 146, 223, 0.24) !important;
+  margin: 8px 8px !important;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-item[aria-haspopup="true"]::after,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .o-dropdown-item[aria-haspopup="true"]::after {
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 10px;
+  color: #8eadde;
+  margin-left: auto;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .text-danger,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-item.text-danger {
+  color: #fecaca !important;
+}
+
+/* Nested status submenu (Online/Away/DND/Offline) */
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-menu,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .o-dropdown--menu.dropdown-menu {
+  background: linear-gradient(180deg, rgba(9, 19, 39, 0.98) 0%, rgba(7, 15, 31, 0.98) 100%) !important;
+  border: 1px solid rgba(93, 136, 224, 0.34) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 18px 36px rgba(2, 8, 24, 0.58), 0 0 0 1px rgba(15, 35, 69, 0.55) inset !important;
+  min-width: 210px !important;
+  padding: 6px !important;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-menu .dropdown-item,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .o-dropdown--menu.dropdown-menu .dropdown-item,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-menu [role="menuitem"] {
+  border-radius: 9px !important;
+  margin: 1px 0 !important;
+  padding: 8px 10px !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  color: #dce9ff !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-menu .dropdown-item:hover,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .o-dropdown--menu.dropdown-menu .dropdown-item:hover,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-menu [role="menuitem"]:hover {
+  background: linear-gradient(180deg, rgba(41, 76, 148, 0.35) 0%, rgba(32, 61, 118, 0.3) 100%) !important;
+  border-color: rgba(107, 150, 239, 0.28) !important;
+  color: #ffffff !important;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-menu .dropdown-item.active,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .o-dropdown--menu.dropdown-menu .dropdown-item.active,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-menu [aria-checked="true"] {
+  background: linear-gradient(180deg, rgba(52, 95, 184, 0.4) 0%, rgba(35, 68, 134, 0.34) 100%) !important;
+  border-color: rgba(132, 171, 247, 0.44) !important;
+  color: #ffffff !important;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-menu .dropdown-item small,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .o-dropdown--menu.dropdown-menu .dropdown-item small,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-menu .text-muted {
+  color: #8ea7d8 !important;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-menu .fa-circle,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .o-dropdown--menu.dropdown-menu .fa-circle {
+  font-size: 11px !important;
+}
+
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .dropdown-menu .fa-check,
+body.theme-fw-enabled.app-port-usermenu-active .app-port-user-dropdown .o-dropdown--menu.dropdown-menu .fa-check {
+  color: #7de3a0 !important;
+}
+
+
