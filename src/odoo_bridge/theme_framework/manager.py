@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Set
 from urllib.parse import urlparse
+from xml.sax.saxutils import escape
 
 from odoo_bridge.odoo_client import OdooClient
 from odoo_bridge.theme_framework.catalog_loader import ThemeCatalogLoader
@@ -175,11 +176,25 @@ class ThemeFrameworkManager:
     def _deploy_theme(self, theme: ThemeSpec) -> Dict[str, Any]:
         asset_count = 0
         view_count = 0
+        asset_payloads: List[Dict[str, Any]] = []
         for asset in theme.assets:
-            self._upsert_asset(theme.key, asset.name, asset.path, asset.bundle, asset.directive, asset.sequence, asset.mimetype)
+            payload = self._upsert_asset(
+                theme.key,
+                asset.name,
+                asset.path,
+                asset.bundle,
+                asset.directive,
+                asset.sequence,
+                asset.mimetype,
+            )
+            if payload:
+                asset_payloads.append(payload)
             asset_count += 1
         for view in theme.qweb_views:
             self._upsert_qweb_view(theme.key, view)
+            view_count += 1
+        if asset_payloads:
+            self._upsert_bootstrap_view(theme.key, asset_payloads)
             view_count += 1
         for key, value in theme.params.items():
             self._upsert_param(key, value)
@@ -200,7 +215,7 @@ class ThemeFrameworkManager:
         directive: str,
         sequence: int,
         mimetype: str,
-    ) -> None:
+    ) -> Dict[str, Any]:
         absolute_path = self._resolve_file(relative_path)
         if not absolute_path.exists():
             raise RuntimeError(f"Theme asset not found: {absolute_path}")
@@ -232,8 +247,15 @@ class ThemeFrameworkManager:
             extra_ids = [int(item) for item in existing if int(item) != canonical_id]
             if extra_ids:
                 self.client.write("ir.asset", extra_ids, {"active": False})
-            return
-        self.client.create("ir.asset", values)
+        else:
+            self.client.create("ir.asset", values)
+        return {
+            "name": ir_asset_name,
+            "web_path": web_path,
+            "mimetype": mimetype,
+            "sequence": int(sequence),
+            "directive": directive,
+        }
 
     def _upsert_attachment(
         self,
@@ -292,6 +314,66 @@ class ThemeFrameworkManager:
                 self.client.write("ir.ui.view", extra_ids, {"active": False})
             return view_id
         return self.client.create("ir.ui.view", values)
+
+    def _webclient_bootstrap_view_id(self) -> int:
+        rows = self.client.search_read(
+            "ir.ui.view",
+            [("key", "=", "web.webclient_bootstrap"), ("type", "=", "qweb")],
+            fields=["id"],
+            limit=1,
+        )
+        if not rows or not rows[0].get("id"):
+            raise RuntimeError("web.webclient_bootstrap view not found")
+        return int(rows[0]["id"])
+
+    def _upsert_bootstrap_view(self, theme_key: str, assets: List[Dict[str, Any]]) -> int:
+        webclient_bootstrap_id = self._webclient_bootstrap_view_id()
+        key = f"{self.config.view_key_prefix}{theme_key}.webclient_bootstrap_extension"
+        values: Dict[str, Any] = {
+            "name": f"{self.config.asset_prefix}:{theme_key}:Webclient Bootstrap Extension",
+            "type": "qweb",
+            "mode": "extension",
+            "priority": 95,
+            "arch_db": self._build_bootstrap_arch(theme_key, assets),
+            "active": True,
+            "key": key,
+            "inherit_id": webclient_bootstrap_id,
+        }
+        existing = self.client.search(
+            "ir.ui.view",
+            [("key", "=", key), ("type", "=", "qweb")],
+            context={"active_test": False},
+        )
+        if existing:
+            view_id = int(sorted(existing)[0])
+            self.client.write("ir.ui.view", [view_id], values)
+            extra_ids = [int(item) for item in existing if int(item) != view_id]
+            if extra_ids:
+                self.client.write("ir.ui.view", extra_ids, {"active": False})
+            return view_id
+        return self.client.create("ir.ui.view", values)
+
+    def _build_bootstrap_arch(self, theme_key: str, assets: List[Dict[str, Any]]) -> str:
+        ordered_assets = sorted(assets, key=lambda item: int(item.get("sequence", 0)))
+        lines: List[str] = []
+        for item in ordered_assets:
+            web_path = str(item.get("web_path") or "").strip()
+            if not web_path:
+                continue
+            mimetype = str(item.get("mimetype") or "").lower()
+            path = escape(web_path, {"\"": "&quot;"})
+            if mimetype == "text/css" or path.endswith(".css"):
+                lines.append(f'<link rel="stylesheet" type="text/css" href="{path}"/>')
+            elif mimetype in {"text/javascript", "application/javascript"} or path.endswith(".js"):
+                lines.append(f'<script type="text/javascript" src="{path}" defer="defer"></script>')
+        inline_assets = "\n        ".join(lines)
+        return (
+            f"<data>\n"
+            f'    <xpath expr="//t[@t-set=\'head_web\']" position="inside">\n'
+            f'        {inline_assets}\n'
+            f"    </xpath>\n"
+            f"</data>"
+        )
 
     def _find_qweb_inherit_id(self, inherit_key: str) -> int:
         rows = self.client.search_read(
