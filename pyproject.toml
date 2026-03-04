@@ -10,8 +10,8 @@ dependencies = [
 [project.scripts]
 odoo-bridge = "odoo_bridge.cli:main"
 odoo-app-ui = "odoo_bridge.app_ui_cli:main"
+odoo-theme = "odoo_bridge.theme_framework_cli:main"
 odoo-yo-bridge = "odoo_yo_bridge.cli:main"
-odoo-yo-invoicing-ui = "odoo_yo_bridge.app_ui_cli:main"
 
 [build-system]
 requires = ["hatchling"]
