@@ -1,0 +1,14 @@
+body.theme-fw-enabled.theme-fw-accounting .o_control_panel .btn-primary {
+  background: linear-gradient(120deg, #69c9ff, #5486ff);
+  color: #061326;
+}
+
+body.theme-fw-enabled.theme-fw-accounting .o_list_renderer .o_list_table thead tr {
+  background: rgba(43, 78, 130, 0.42);
+}
+
+body.theme-fw-enabled.theme-fw-accounting .o_kanban_renderer .o_kanban_record {
+  border: 1px solid rgba(99, 146, 255, 0.34);
+  background: linear-gradient(165deg, rgba(19, 35, 60, 0.93), rgba(21, 39, 68, 0.88));
+}
+

@@ -1,0 +1,14 @@
+body.theme-fw-enabled.theme-fw-procurement .o_control_panel .btn-primary {
+  background: linear-gradient(120deg, #78ecad, #37d48e);
+  color: #052215;
+}
+
+body.theme-fw-enabled.theme-fw-procurement .o_list_renderer .o_list_table thead tr {
+  background: rgba(43, 116, 83, 0.42);
+}
+
+body.theme-fw-enabled.theme-fw-procurement .o_kanban_renderer .o_kanban_record {
+  border: 1px solid rgba(107, 233, 166, 0.32);
+  background: linear-gradient(165deg, rgba(20, 37, 34, 0.93), rgba(21, 45, 39, 0.88));
+}
+

@@ -1,0 +1,77 @@
+version: "1.0.0"
+metadata:
+  owner: "odoo_yo"
+  purpose: "Generic backend theme framework catalog"
+  notes: "Composable catalog inspired by Odoo backend theme patterns."
+
+themes:
+  - key: "procurement_shell_v1"
+    title: "Procurement Shell V1"
+    description: "Baseline procurement surface for procure1."
+    hosts:
+      - "procure1.odoo.com"
+    assets:
+      - name: "Theme Runtime Bootstrap"
+        path: "data/theme_framework/assets/js/runtime_bootstrap.js"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1100
+      - name: "Theme Core Tokens"
+        path: "data/theme_framework/assets/css/00_tokens.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1110
+      - name: "Theme Topbar User Menu"
+        path: "data/theme_framework/assets/css/10_topbar_user_menu.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1120
+      - name: "Theme Sidebar Shell"
+        path: "data/theme_framework/assets/css/20_sidebar_shell.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1130
+      - name: "Theme Procurement Surface"
+        path: "data/theme_framework/assets/css/31_procurement_surface.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1140
+    params:
+      theme_framework.active_profile: "procurement"
+      theme_framework.runtime_locale: "es_MX"
+
+  - key: "accounting_shell_v1"
+    title: "Accounting Shell V1"
+    description: "Baseline accounting and e-invoice surface for test1253."
+    hosts:
+      - "test1253.odoo.com"
+    assets:
+      - name: "Theme Runtime Bootstrap"
+        path: "data/theme_framework/assets/js/runtime_bootstrap.js"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1100
+      - name: "Theme Core Tokens"
+        path: "data/theme_framework/assets/css/00_tokens.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1110
+      - name: "Theme Topbar User Menu"
+        path: "data/theme_framework/assets/css/10_topbar_user_menu.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1120
+      - name: "Theme Sidebar Shell"
+        path: "data/theme_framework/assets/css/20_sidebar_shell.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1130
+      - name: "Theme Accounting Surface"
+        path: "data/theme_framework/assets/css/32_accounting_surface.css"
+        bundle: "web.assets_backend"
+        directive: "append"
+        sequence: 1140
+    params:
+      theme_framework.active_profile: "accounting"
+      theme_framework.runtime_locale: "es_MX"
+

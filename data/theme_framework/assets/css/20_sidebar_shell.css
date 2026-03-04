@@ -1,0 +1,26 @@
+body.theme-fw-enabled .o_web_client .o_action_manager {
+  border-left: 1px solid rgba(143, 171, 215, 0.18);
+}
+
+body.theme-fw-enabled .o_main_navbar .o_menu_toggle,
+body.theme-fw-enabled .o_main_navbar .o_nav_entry {
+  color: var(--theme-fw-text-muted);
+  transition: color 0.14s ease;
+}
+
+body.theme-fw-enabled .o_main_navbar .o_menu_toggle:hover,
+body.theme-fw-enabled .o_main_navbar .o_nav_entry:hover {
+  color: var(--theme-fw-text);
+}
+
+body.theme-fw-enabled .o_control_panel {
+  background: linear-gradient(180deg, rgba(21, 33, 53, 0.72), rgba(13, 23, 40, 0.85));
+  border-bottom: 1px solid rgba(143, 171, 215, 0.16);
+}
+
+body.theme-fw-enabled .o_control_panel .btn-primary {
+  background: linear-gradient(120deg, var(--theme-fw-accent), #63a8ff);
+  border-color: transparent;
+  color: #051325;
+}
+
