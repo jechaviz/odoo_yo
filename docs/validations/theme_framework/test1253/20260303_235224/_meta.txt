@@ -1,0 +1,4 @@
+﻿theme_framework_apply
+20260303_235224
+https://test1253.odoo.com
+

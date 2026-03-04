@@ -1,0 +1,4405 @@
+{
+  "summary": {
+    "generated_at": "2026-03-03T23:53:40",
+    "host": "https://test1253.odoo.com",
+    "total_menus": 260,
+    "actionable_menus": 192,
+    "root_apps": 9,
+    "output_dir": "docs/validations/theme_framework/test1253/20260303_235224/deep_audit"
+  },
+  "menus": [
+    {
+      "id": 62,
+      "name": "Users",
+      "complete_name": "Settings/Users & Companies/Users",
+      "root_app": "Settings",
+      "parent_id": [
+        3,
+        "Settings/Users & Companies"
+      ],
+      "sequence": 0,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,70",
+      "action_model": "ir.actions.act_window",
+      "action_id": 70,
+      "deeplink": "/odoo?menu_id=62&action=70",
+      "is_actionable": true
+    },
+    {
+      "id": 68,
+      "name": "General Settings",
+      "complete_name": "Settings/General Settings",
+      "root_app": "Settings",
+      "parent_id": [
+        1,
+        "Settings"
+      ],
+      "sequence": 0,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,86",
+      "action_model": "ir.actions.act_window",
+      "action_id": 86,
+      "deeplink": "/odoo?menu_id=68&action=86",
+      "is_actionable": true
+    },
+    {
+      "id": 142,
+      "name": "Transactions",
+      "complete_name": "Accounting/Accounting/Transactions",
+      "root_app": "Accounting",
+      "parent_id": [
+        141,
+        "Accounting/Accounting"
+      ],
+      "sequence": 0,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=142",
+      "is_actionable": false
+    },
+    {
+      "id": 158,
+      "name": "Settings",
+      "complete_name": "Accounting/Configuration/Settings",
+      "root_app": "Accounting",
+      "parent_id": [
+        157,
+        "Accounting/Configuration"
+      ],
+      "sequence": 0,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,307",
+      "action_model": "ir.actions.act_window",
+      "action_id": 307,
+      "deeplink": "/odoo?menu_id=158&action=307",
+      "is_actionable": true
+    },
+    {
+      "id": 238,
+      "name": "Documents",
+      "complete_name": "Documents/Documents",
+      "root_app": "Documents",
+      "parent_id": [
+        237,
+        "Documents"
+      ],
+      "sequence": 0,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,425",
+      "action_model": "ir.actions.client",
+      "action_id": 425,
+      "deeplink": "/odoo?menu_id=238&action=425",
+      "is_actionable": true
+    },
+    {
+      "id": 3,
+      "name": "Users & Companies",
+      "complete_name": "Settings/Users & Companies",
+      "root_app": "Settings",
+      "parent_id": [
+        1,
+        "Settings"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=3",
+      "is_actionable": false
+    },
+    {
+      "id": 43,
+      "name": "Menu Items",
+      "complete_name": "Settings/Technical/User Interface/Menu Items",
+      "root_app": "Settings",
+      "parent_id": [
+        9,
+        "Settings/Technical/User Interface"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,30",
+      "action_model": "ir.actions.act_window",
+      "action_id": 30,
+      "deeplink": "/odoo?menu_id=43&action=30",
+      "is_actionable": true
+    },
+    {
+      "id": 49,
+      "name": "Modules",
+      "complete_name": "Apps/Apps/Modules",
+      "root_app": "Apps",
+      "parent_id": [
+        48,
+        "Apps/Apps"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,39",
+      "action_model": "ir.actions.act_window",
+      "action_id": 39,
+      "deeplink": "/odoo?menu_id=49&action=39",
+      "is_actionable": true
+    },
+    {
+      "id": 59,
+      "name": "Languages",
+      "complete_name": "Settings/Translations/Languages",
+      "root_app": "Settings",
+      "parent_id": [
+        4,
+        "Settings/Translations"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,54",
+      "action_model": "ir.actions.act_window",
+      "action_id": 54,
+      "deeplink": "/odoo?menu_id=59&action=54",
+      "is_actionable": true
+    },
+    {
+      "id": 76,
+      "name": "Settings",
+      "complete_name": "Discuss/Configuration/Settings",
+      "root_app": "Discuss",
+      "parent_id": [
+        75,
+        "Discuss/Configuration"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_url,131",
+      "action_model": "ir.actions.act_url",
+      "action_id": 131,
+      "deeplink": "/odoo?menu_id=76&action=131",
+      "is_actionable": true
+    },
+    {
+      "id": 82,
+      "name": "Emails",
+      "complete_name": "Settings/Technical/Email/Emails",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,100",
+      "action_model": "ir.actions.act_window",
+      "action_id": 100,
+      "deeplink": "/odoo?menu_id=82&action=100",
+      "is_actionable": true
+    },
+    {
+      "id": 90,
+      "name": "Discuss",
+      "complete_name": "Settings/Technical/Discuss",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=90",
+      "is_actionable": false
+    },
+    {
+      "id": 91,
+      "name": "Messages",
+      "complete_name": "Settings/Technical/Discuss/Messages",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,98",
+      "action_model": "ir.actions.act_window",
+      "action_id": 98,
+      "deeplink": "/odoo?menu_id=91&action=98",
+      "is_actionable": true
+    },
+    {
+      "id": 115,
+      "name": "Privacy Logs",
+      "complete_name": "Settings/Technical/Privacy/Privacy Logs",
+      "root_app": "Settings",
+      "parent_id": [
+        114,
+        "Settings/Technical/Privacy"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,153",
+      "action_model": "ir.actions.act_window",
+      "action_id": 153,
+      "deeplink": "/odoo?menu_id=115&action=153",
+      "is_actionable": true
+    },
+    {
+      "id": 116,
+      "name": "SMS",
+      "complete_name": "Settings/Technical/Phone / SMS/SMS",
+      "root_app": "Settings",
+      "parent_id": [
+        112,
+        "Settings/Technical/Phone / SMS"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,163",
+      "action_model": "ir.actions.act_window",
+      "action_id": 163,
+      "deeplink": "/odoo?menu_id=116&action=163",
+      "is_actionable": true
+    },
+    {
+      "id": 119,
+      "name": "Onboardings",
+      "complete_name": "Settings/Technical/User Interface/Onboardings",
+      "root_app": "Settings",
+      "parent_id": [
+        9,
+        "Settings/Technical/User Interface"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,183",
+      "action_model": "ir.actions.act_window",
+      "action_id": 183,
+      "deeplink": "/odoo?menu_id=119&action=183",
+      "is_actionable": true
+    },
+    {
+      "id": 120,
+      "name": "Onboardings Steps",
+      "complete_name": "Settings/Technical/User Interface/Onboardings Steps",
+      "root_app": "Settings",
+      "parent_id": [
+        9,
+        "Settings/Technical/User Interface"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,184",
+      "action_model": "ir.actions.act_window",
+      "action_id": 184,
+      "deeplink": "/odoo?menu_id=120&action=184",
+      "is_actionable": true
+    },
+    {
+      "id": 122,
+      "name": "Working Schedules",
+      "complete_name": "Settings/Technical/Resource/Working Schedules",
+      "root_app": "Settings",
+      "parent_id": [
+        121,
+        "Settings/Technical/Resource"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,191",
+      "action_model": "ir.actions.act_window",
+      "action_id": 191,
+      "deeplink": "/odoo?menu_id=122&action=191",
+      "is_actionable": true
+    },
+    {
+      "id": 128,
+      "name": "Dashboard",
+      "complete_name": "Accounting/Dashboard",
+      "root_app": "Accounting",
+      "parent_id": [
+        227,
+        "Accounting"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,312",
+      "action_model": "ir.actions.act_window",
+      "action_id": 312,
+      "deeplink": "/odoo?menu_id=128&action=312",
+      "is_actionable": true
+    },
+    {
+      "id": 130,
+      "name": "Invoices",
+      "complete_name": "Accounting/Customers/Invoices",
+      "root_app": "Accounting",
+      "parent_id": [
+        129,
+        "Accounting/Customers"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,273",
+      "action_model": "ir.actions.act_window",
+      "action_id": 273,
+      "deeplink": "/odoo?menu_id=130&action=273",
+      "is_actionable": true
+    },
+    {
+      "id": 136,
+      "name": "Bills",
+      "complete_name": "Accounting/Vendors/Bills",
+      "root_app": "Accounting",
+      "parent_id": [
+        135,
+        "Accounting/Vendors"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,276",
+      "action_model": "ir.actions.act_window",
+      "action_id": 276,
+      "deeplink": "/odoo?menu_id=136&action=276",
+      "is_actionable": true
+    },
+    {
+      "id": 143,
+      "name": "Journal Entries",
+      "complete_name": "Accounting/Accounting/Transactions/Journal Entries",
+      "root_app": "Accounting",
+      "parent_id": [
+        142,
+        "Accounting/Accounting/Transactions"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,270",
+      "action_model": "ir.actions.act_window",
+      "action_id": 270,
+      "deeplink": "/odoo?menu_id=143&action=270",
+      "is_actionable": true
+    },
+    {
+      "id": 154,
+      "name": "Invoice Analysis",
+      "complete_name": "Accounting/Reporting/Management/Invoice Analysis",
+      "root_app": "Accounting",
+      "parent_id": [
+        153,
+        "Accounting/Reporting/Management"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,303",
+      "action_model": "ir.actions.act_window",
+      "action_id": 303,
+      "deeplink": "/odoo?menu_id=154&action=303",
+      "is_actionable": true
+    },
+    {
+      "id": 156,
+      "name": "Statement Reports",
+      "complete_name": "Accounting/Reporting/Statement Reports",
+      "root_app": "Accounting",
+      "parent_id": [
+        150,
+        "Accounting/Reporting"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=156",
+      "is_actionable": false
+    },
+    {
+      "id": 160,
+      "name": "Chart of Accounts",
+      "complete_name": "Accounting/Configuration/Accounting/Chart of Accounts",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,286",
+      "action_model": "ir.actions.act_window",
+      "action_id": 286,
+      "deeplink": "/odoo?menu_id=160&action=286",
+      "is_actionable": true
+    },
+    {
+      "id": 181,
+      "name": "Dashboards",
+      "complete_name": "Dashboards/Dashboards",
+      "root_app": "Dashboards",
+      "parent_id": [
+        180,
+        "Dashboards"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,319",
+      "action_model": "ir.actions.client",
+      "action_id": 319,
+      "deeplink": "/odoo?menu_id=181&action=319",
+      "is_actionable": true
+    },
+    {
+      "id": 247,
+      "name": "Home",
+      "complete_name": "Knowledge/Home",
+      "root_app": "Knowledge",
+      "parent_id": [
+        246,
+        "Knowledge"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.server,434",
+      "action_model": "ir.actions.server",
+      "action_id": 434,
+      "deeplink": "/odoo?menu_id=247&action=434",
+      "is_actionable": true
+    },
+    {
+      "id": 250,
+      "name": "Members",
+      "complete_name": "Knowledge/Configuration/Members",
+      "root_app": "Knowledge",
+      "parent_id": [
+        249,
+        "Knowledge/Configuration"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,445",
+      "action_model": "ir.actions.act_window",
+      "action_id": 445,
+      "deeplink": "/odoo?menu_id=250&action=445",
+      "is_actionable": true
+    },
+    {
+      "id": 259,
+      "name": "Contributors",
+      "complete_name": "Settings/Technical/Spreadsheet/Contributors",
+      "root_app": "Settings",
+      "parent_id": [
+        185,
+        "Settings/Technical/Spreadsheet"
+      ],
+      "sequence": 1,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,449",
+      "action_model": "ir.actions.act_window",
+      "action_id": 449,
+      "deeplink": "/odoo?menu_id=259&action=449",
+      "is_actionable": true
+    },
+    {
+      "id": 4,
+      "name": "Translations",
+      "complete_name": "Settings/Translations",
+      "root_app": "Settings",
+      "parent_id": [
+        1,
+        "Settings"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=4",
+      "is_actionable": false
+    },
+    {
+      "id": 28,
+      "name": "Scheduled Actions",
+      "complete_name": "Settings/Technical/Automation/Scheduled Actions",
+      "root_app": "Settings",
+      "parent_id": [
+        12,
+        "Settings/Technical/Automation"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,16",
+      "action_model": "ir.actions.act_window",
+      "action_id": 16,
+      "deeplink": "/odoo?menu_id=28&action=16",
+      "is_actionable": true
+    },
+    {
+      "id": 44,
+      "name": "Views",
+      "complete_name": "Settings/Technical/User Interface/Views",
+      "root_app": "Settings",
+      "parent_id": [
+        9,
+        "Settings/Technical/User Interface"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,31",
+      "action_model": "ir.actions.act_window",
+      "action_id": 31,
+      "deeplink": "/odoo?menu_id=44&action=31",
+      "is_actionable": true
+    },
+    {
+      "id": 65,
+      "name": "Paper Format",
+      "complete_name": "Settings/Technical/Reporting/Paper Format",
+      "root_app": "Settings",
+      "parent_id": [
+        64,
+        "Settings/Technical/Reporting"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,76",
+      "action_model": "ir.actions.act_window",
+      "action_id": 76,
+      "deeplink": "/odoo?menu_id=65&action=76",
+      "is_actionable": true
+    },
+    {
+      "id": 77,
+      "name": "Notifications",
+      "complete_name": "Discuss/Configuration/Notifications",
+      "root_app": "Discuss",
+      "parent_id": [
+        75,
+        "Discuss/Configuration"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,129",
+      "action_model": "ir.actions.client",
+      "action_id": 129,
+      "deeplink": "/odoo?menu_id=77&action=129",
+      "is_actionable": true
+    },
+    {
+      "id": 92,
+      "name": "Scheduled Messages",
+      "complete_name": "Settings/Technical/Discuss/Scheduled Messages",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,99",
+      "action_model": "ir.actions.act_window",
+      "action_id": 99,
+      "deeplink": "/odoo?menu_id=92&action=99",
+      "is_actionable": true
+    },
+    {
+      "id": 105,
+      "name": "Activities",
+      "complete_name": "Settings/Technical/Activities",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=105",
+      "is_actionable": false
+    },
+    {
+      "id": 117,
+      "name": "SMS Templates",
+      "complete_name": "Settings/Technical/Phone / SMS/SMS Templates",
+      "root_app": "Settings",
+      "parent_id": [
+        112,
+        "Settings/Technical/Phone / SMS"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,165",
+      "action_model": "ir.actions.act_window",
+      "action_id": 165,
+      "deeplink": "/odoo?menu_id=117&action=165",
+      "is_actionable": true
+    },
+    {
+      "id": 123,
+      "name": "Resource Time Off",
+      "complete_name": "Settings/Technical/Resource/Resource Time Off",
+      "root_app": "Settings",
+      "parent_id": [
+        121,
+        "Settings/Technical/Resource"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,187",
+      "action_model": "ir.actions.act_window",
+      "action_id": 187,
+      "deeplink": "/odoo?menu_id=123&action=187",
+      "is_actionable": true
+    },
+    {
+      "id": 129,
+      "name": "Customers",
+      "complete_name": "Accounting/Customers",
+      "root_app": "Accounting",
+      "parent_id": [
+        227,
+        "Accounting"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=129",
+      "is_actionable": false
+    },
+    {
+      "id": 131,
+      "name": "Credit Notes",
+      "complete_name": "Accounting/Customers/Credit Notes",
+      "root_app": "Accounting",
+      "parent_id": [
+        129,
+        "Accounting/Customers"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,274",
+      "action_model": "ir.actions.act_window",
+      "action_id": 274,
+      "deeplink": "/odoo?menu_id=131&action=274",
+      "is_actionable": true
+    },
+    {
+      "id": 137,
+      "name": "Refunds",
+      "complete_name": "Accounting/Vendors/Refunds",
+      "root_app": "Accounting",
+      "parent_id": [
+        135,
+        "Accounting/Vendors"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,277",
+      "action_model": "ir.actions.act_window",
+      "action_id": 277,
+      "deeplink": "/odoo?menu_id=137&action=277",
+      "is_actionable": true
+    },
+    {
+      "id": 161,
+      "name": "Taxes",
+      "complete_name": "Accounting/Configuration/Accounting/Taxes",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,294",
+      "action_model": "ir.actions.act_window",
+      "action_id": 294,
+      "deeplink": "/odoo?menu_id=161&action=294",
+      "is_actionable": true
+    },
+    {
+      "id": 202,
+      "name": "Ledgers",
+      "complete_name": "Accounting/Reporting/Ledgers",
+      "root_app": "Accounting",
+      "parent_id": [
+        150,
+        "Accounting/Reporting"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=202",
+      "is_actionable": false
+    },
+    {
+      "id": 248,
+      "name": "Articles",
+      "complete_name": "Knowledge/Articles",
+      "root_app": "Knowledge",
+      "parent_id": [
+        246,
+        "Knowledge"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,437",
+      "action_model": "ir.actions.act_window",
+      "action_id": 437,
+      "deeplink": "/odoo?menu_id=248&action=437",
+      "is_actionable": true
+    },
+    {
+      "id": 251,
+      "name": "Favorites",
+      "complete_name": "Knowledge/Configuration/Favorites",
+      "root_app": "Knowledge",
+      "parent_id": [
+        249,
+        "Knowledge/Configuration"
+      ],
+      "sequence": 2,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,444",
+      "action_model": "ir.actions.act_window",
+      "action_id": 444,
+      "deeplink": "/odoo?menu_id=251&action=444",
+      "is_actionable": true
+    },
+    {
+      "id": 6,
+      "name": "Import / Export",
+      "complete_name": "Settings/Translations/Import / Export",
+      "root_app": "Settings",
+      "parent_id": [
+        4,
+        "Settings/Translations"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=6",
+      "is_actionable": false
+    },
+    {
+      "id": 7,
+      "name": "General Settings",
+      "complete_name": "Settings/General Settings",
+      "root_app": "Settings",
+      "parent_id": [
+        1,
+        "Settings"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=7",
+      "is_actionable": false
+    },
+    {
+      "id": 10,
+      "name": "Email",
+      "complete_name": "Settings/Technical/Email",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=10",
+      "is_actionable": false
+    },
+    {
+      "id": 29,
+      "name": "Scheduled Actions Triggers",
+      "complete_name": "Settings/Technical/Automation/Scheduled Actions Triggers",
+      "root_app": "Settings",
+      "parent_id": [
+        12,
+        "Settings/Technical/Automation"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,17",
+      "action_model": "ir.actions.act_window",
+      "action_id": 17,
+      "deeplink": "/odoo?menu_id=29&action=17",
+      "is_actionable": true
+    },
+    {
+      "id": 41,
+      "name": "Record Rules",
+      "complete_name": "Settings/Technical/Security/Record Rules",
+      "root_app": "Settings",
+      "parent_id": [
+        13,
+        "Settings/Technical/Security"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,28",
+      "action_model": "ir.actions.act_window",
+      "action_id": 28,
+      "deeplink": "/odoo?menu_id=41&action=28",
+      "is_actionable": true
+    },
+    {
+      "id": 45,
+      "name": "Customized Views",
+      "complete_name": "Settings/Technical/User Interface/Customized Views",
+      "root_app": "Settings",
+      "parent_id": [
+        9,
+        "Settings/Technical/User Interface"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,33",
+      "action_model": "ir.actions.act_window",
+      "action_id": 33,
+      "deeplink": "/odoo?menu_id=45&action=33",
+      "is_actionable": true
+    },
+    {
+      "id": 61,
+      "name": "Groups",
+      "complete_name": "Settings/Users & Companies/Groups",
+      "root_app": "Settings",
+      "parent_id": [
+        3,
+        "Settings/Users & Companies"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,68",
+      "action_model": "ir.actions.act_window",
+      "action_id": 68,
+      "deeplink": "/odoo?menu_id=61&action=68",
+      "is_actionable": true
+    },
+    {
+      "id": 66,
+      "name": "Reports",
+      "complete_name": "Settings/Technical/Reporting/Reports",
+      "root_app": "Settings",
+      "parent_id": [
+        64,
+        "Settings/Technical/Reporting"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,77",
+      "action_model": "ir.actions.act_window",
+      "action_id": 77,
+      "deeplink": "/odoo?menu_id=66&action=77",
+      "is_actionable": true
+    },
+    {
+      "id": 112,
+      "name": "Phone / SMS",
+      "complete_name": "Settings/Technical/Phone / SMS",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=112",
+      "is_actionable": false
+    },
+    {
+      "id": 113,
+      "name": "Phone Blacklist",
+      "complete_name": "Settings/Technical/Phone / SMS/Phone Blacklist",
+      "root_app": "Settings",
+      "parent_id": [
+        112,
+        "Settings/Technical/Phone / SMS"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,148",
+      "action_model": "ir.actions.act_window",
+      "action_id": 148,
+      "deeplink": "/odoo?menu_id=113&action=148",
+      "is_actionable": true
+    },
+    {
+      "id": 124,
+      "name": "Resources",
+      "complete_name": "Settings/Technical/Resource/Resources",
+      "root_app": "Settings",
+      "parent_id": [
+        121,
+        "Settings/Technical/Resource"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,185",
+      "action_model": "ir.actions.act_window",
+      "action_id": 185,
+      "deeplink": "/odoo?menu_id=124&action=185",
+      "is_actionable": true
+    },
+    {
+      "id": 135,
+      "name": "Vendors",
+      "complete_name": "Accounting/Vendors",
+      "root_app": "Accounting",
+      "parent_id": [
+        227,
+        "Accounting"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=135",
+      "is_actionable": false
+    },
+    {
+      "id": 151,
+      "name": "Partner Reports",
+      "complete_name": "Accounting/Reporting/Partner Reports",
+      "root_app": "Accounting",
+      "parent_id": [
+        150,
+        "Accounting/Reporting"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=151",
+      "is_actionable": false
+    },
+    {
+      "id": 162,
+      "name": "Journals",
+      "complete_name": "Accounting/Configuration/Accounting/Journals",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,288",
+      "action_model": "ir.actions.act_window",
+      "action_id": 288,
+      "deeplink": "/odoo?menu_id=162&action=288",
+      "is_actionable": true
+    },
+    {
+      "id": 252,
+      "name": "Trashed",
+      "complete_name": "Knowledge/Configuration/Trashed",
+      "root_app": "Knowledge",
+      "parent_id": [
+        249,
+        "Knowledge/Configuration"
+      ],
+      "sequence": 3,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,436",
+      "action_model": "ir.actions.act_window",
+      "action_id": 436,
+      "deeplink": "/odoo?menu_id=252&action=436",
+      "is_actionable": true
+    },
+    {
+      "id": 5,
+      "name": "Application Terms",
+      "complete_name": "Settings/Translations/Application Terms",
+      "root_app": "Settings",
+      "parent_id": [
+        4,
+        "Settings/Translations"
+      ],
+      "sequence": 4,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=5",
+      "is_actionable": false
+    },
+    {
+      "id": 93,
+      "name": "Subtypes",
+      "complete_name": "Settings/Technical/Discuss/Subtypes",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 4,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,95",
+      "action_model": "ir.actions.act_window",
+      "action_id": 95,
+      "deeplink": "/odoo?menu_id=93&action=95",
+      "is_actionable": true
+    },
+    {
+      "id": 141,
+      "name": "Accounting",
+      "complete_name": "Accounting/Accounting",
+      "root_app": "Accounting",
+      "parent_id": [
+        227,
+        "Accounting"
+      ],
+      "sequence": 4,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=141",
+      "is_actionable": false
+    },
+    {
+      "id": 152,
+      "name": "Taxes & Fiscal",
+      "complete_name": "Accounting/Reporting/Taxes & Fiscal",
+      "root_app": "Accounting",
+      "parent_id": [
+        150,
+        "Accounting/Reporting"
+      ],
+      "sequence": 4,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=152",
+      "is_actionable": false
+    },
+    {
+      "id": 163,
+      "name": "Reporting",
+      "complete_name": "Accounting/Configuration/Accounting/Reporting",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 4,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=163",
+      "is_actionable": false
+    },
+    {
+      "id": 253,
+      "name": "Stages",
+      "complete_name": "Knowledge/Configuration/Stages",
+      "root_app": "Knowledge",
+      "parent_id": [
+        249,
+        "Knowledge/Configuration"
+      ],
+      "sequence": 4,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,446",
+      "action_model": "ir.actions.act_window",
+      "action_id": 446,
+      "deeplink": "/odoo?menu_id=253&action=446",
+      "is_actionable": true
+    },
+    {
+      "id": 255,
+      "name": "Templates",
+      "complete_name": "Settings/Technical/Knowledge/Templates",
+      "root_app": "Settings",
+      "parent_id": [
+        254,
+        "Settings/Technical/Knowledge"
+      ],
+      "sequence": 4,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,443",
+      "action_model": "ir.actions.act_window",
+      "action_id": 443,
+      "deeplink": "/odoo?menu_id=255&action=443",
+      "is_actionable": true
+    },
+    {
+      "id": 18,
+      "name": "Actions",
+      "complete_name": "Settings/Technical/Actions",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=18",
+      "is_actionable": false
+    },
+    {
+      "id": 30,
+      "name": "User-defined Filters",
+      "complete_name": "Settings/Technical/User Interface/User-defined Filters",
+      "root_app": "Settings",
+      "parent_id": [
+        9,
+        "Settings/Technical/User Interface"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,18",
+      "action_model": "ir.actions.act_window",
+      "action_id": 18,
+      "deeplink": "/odoo?menu_id=30&action=18",
+      "is_actionable": true
+    },
+    {
+      "id": 31,
+      "name": "Outgoing Mail Servers",
+      "complete_name": "Settings/Technical/Email/Outgoing Mail Servers",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,19",
+      "action_model": "ir.actions.act_window",
+      "action_id": 19,
+      "deeplink": "/odoo?menu_id=31&action=19",
+      "is_actionable": true
+    },
+    {
+      "id": 48,
+      "name": "Apps",
+      "complete_name": "Apps/Apps",
+      "root_app": "Apps",
+      "parent_id": [
+        15,
+        "Apps"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=48",
+      "is_actionable": false
+    },
+    {
+      "id": 60,
+      "name": "Privileges",
+      "complete_name": "Settings/Users & Companies/Privileges",
+      "root_app": "Settings",
+      "parent_id": [
+        3,
+        "Settings/Users & Companies"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,67",
+      "action_model": "ir.actions.act_window",
+      "action_id": 67,
+      "deeplink": "/odoo?menu_id=60&action=67",
+      "is_actionable": true
+    },
+    {
+      "id": 69,
+      "name": "Tours",
+      "complete_name": "Settings/Technical/User Interface/Tours",
+      "root_app": "Settings",
+      "parent_id": [
+        9,
+        "Settings/Technical/User Interface"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,87",
+      "action_model": "ir.actions.act_window",
+      "action_id": 87,
+      "deeplink": "/odoo?menu_id=69&action=87",
+      "is_actionable": true
+    },
+    {
+      "id": 70,
+      "name": "IAP",
+      "complete_name": "Settings/Technical/IAP",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=70",
+      "is_actionable": false
+    },
+    {
+      "id": 72,
+      "name": "Discuss",
+      "complete_name": "Discuss",
+      "root_app": "Discuss",
+      "parent_id": false,
+      "sequence": 5,
+      "web_icon": "mail,static/description/icon.png",
+      "action_raw": "ir.actions.client,112",
+      "action_model": "ir.actions.client",
+      "action_id": 112,
+      "deeplink": "/odoo?menu_id=72&action=112",
+      "is_actionable": true
+    },
+    {
+      "id": 78,
+      "name": "Voice & Video",
+      "complete_name": "Discuss/Configuration/Voice & Video",
+      "root_app": "Discuss",
+      "parent_id": [
+        75,
+        "Discuss/Configuration"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,130",
+      "action_model": "ir.actions.client",
+      "action_id": 130,
+      "deeplink": "/odoo?menu_id=78&action=130",
+      "is_actionable": true
+    },
+    {
+      "id": 94,
+      "name": "Tracking Values",
+      "complete_name": "Settings/Technical/Discuss/Tracking Values",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,96",
+      "action_model": "ir.actions.act_window",
+      "action_id": 96,
+      "deeplink": "/odoo?menu_id=94&action=96",
+      "is_actionable": true
+    },
+    {
+      "id": 153,
+      "name": "Management",
+      "complete_name": "Accounting/Reporting/Management",
+      "root_app": "Accounting",
+      "parent_id": [
+        150,
+        "Accounting/Reporting"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=153",
+      "is_actionable": false
+    },
+    {
+      "id": 164,
+      "name": "Currencies",
+      "complete_name": "Accounting/Configuration/Accounting/Currencies",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,66",
+      "action_model": "ir.actions.act_window",
+      "action_id": 66,
+      "deeplink": "/odoo?menu_id=164&action=66",
+      "is_actionable": true
+    },
+    {
+      "id": 185,
+      "name": "Spreadsheet",
+      "complete_name": "Settings/Technical/Spreadsheet",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=185",
+      "is_actionable": false
+    },
+    {
+      "id": 235,
+      "name": "Addendas & Complementos (MX)",
+      "complete_name": "Accounting/Configuration/Invoicing/Addendas & Complementos (MX)",
+      "root_app": "Accounting",
+      "parent_id": [
+        169,
+        "Accounting/Configuration/Invoicing"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,415",
+      "action_model": "ir.actions.act_window",
+      "action_id": 415,
+      "deeplink": "/odoo?menu_id=235&action=415",
+      "is_actionable": true
+    },
+    {
+      "id": 256,
+      "name": "Template Categories",
+      "complete_name": "Settings/Technical/Knowledge/Template Categories",
+      "root_app": "Settings",
+      "parent_id": [
+        254,
+        "Settings/Technical/Knowledge"
+      ],
+      "sequence": 5,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,448",
+      "action_model": "ir.actions.act_window",
+      "action_id": 448,
+      "deeplink": "/odoo?menu_id=256&action=448",
+      "is_actionable": true
+    },
+    {
+      "id": 85,
+      "name": "Incoming Mail Servers",
+      "complete_name": "Settings/Technical/Email/Incoming Mail Servers",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 6,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,94",
+      "action_model": "ir.actions.act_window",
+      "action_id": 94,
+      "deeplink": "/odoo?menu_id=85&action=94",
+      "is_actionable": true
+    },
+    {
+      "id": 148,
+      "name": "Journal Items",
+      "complete_name": "Accounting/Review/Control/Journal Items",
+      "root_app": "Accounting",
+      "parent_id": [
+        147,
+        "Accounting/Review/Control"
+      ],
+      "sequence": 6,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,269",
+      "action_model": "ir.actions.act_window",
+      "action_id": 269,
+      "deeplink": "/odoo?menu_id=148&action=269",
+      "is_actionable": true
+    },
+    {
+      "id": 165,
+      "name": "Fiscal Positions",
+      "complete_name": "Accounting/Configuration/Accounting/Fiscal Positions",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 6,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,309",
+      "action_model": "ir.actions.act_window",
+      "action_id": 309,
+      "deeplink": "/odoo?menu_id=165&action=309",
+      "is_actionable": true
+    },
+    {
+      "id": 257,
+      "name": "Template Stages",
+      "complete_name": "Settings/Technical/Knowledge/Template Stages",
+      "root_app": "Settings",
+      "parent_id": [
+        254,
+        "Settings/Technical/Knowledge"
+      ],
+      "sequence": 6,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,447",
+      "action_model": "ir.actions.act_window",
+      "action_id": 447,
+      "deeplink": "/odoo?menu_id=257&action=447",
+      "is_actionable": true
+    },
+    {
+      "id": 146,
+      "name": "Review",
+      "complete_name": "Accounting/Review",
+      "root_app": "Accounting",
+      "parent_id": [
+        227,
+        "Accounting"
+      ],
+      "sequence": 7,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=146",
+      "is_actionable": false
+    },
+    {
+      "id": 166,
+      "name": "Multi-Ledger",
+      "complete_name": "Accounting/Configuration/Accounting/Multi-Ledger",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 7,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,289",
+      "action_model": "ir.actions.act_window",
+      "action_id": 289,
+      "deeplink": "/odoo?menu_id=166&action=289",
+      "is_actionable": true
+    },
+    {
+      "id": 167,
+      "name": "Tax Groups",
+      "complete_name": "Accounting/Configuration/Accounting/Tax Groups",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 8,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,295",
+      "action_model": "ir.actions.act_window",
+      "action_id": 295,
+      "deeplink": "/odoo?menu_id=167&action=295",
+      "is_actionable": true
+    },
+    {
+      "id": 198,
+      "name": "Tax Units",
+      "complete_name": "Accounting/Configuration/Accounting/Tax Units",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 8,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,375",
+      "action_model": "ir.actions.act_window",
+      "action_id": 375,
+      "deeplink": "/odoo?menu_id=198&action=375",
+      "is_actionable": true
+    },
+    {
+      "id": 168,
+      "name": "Cash Roundings",
+      "complete_name": "Accounting/Configuration/Accounting/Cash Roundings",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 9,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,304",
+      "action_model": "ir.actions.act_window",
+      "action_id": 304,
+      "deeplink": "/odoo?menu_id=168&action=304",
+      "is_actionable": true
+    },
+    {
+      "id": 9,
+      "name": "User Interface",
+      "complete_name": "Settings/Technical/User Interface",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=9",
+      "is_actionable": false
+    },
+    {
+      "id": 11,
+      "name": "Database Structure",
+      "complete_name": "Settings/Technical/Database Structure",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=11",
+      "is_actionable": false
+    },
+    {
+      "id": 12,
+      "name": "Automation",
+      "complete_name": "Settings/Technical/Automation",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=12",
+      "is_actionable": false
+    },
+    {
+      "id": 17,
+      "name": "Decimal Accuracy",
+      "complete_name": "Settings/Technical/Database Structure/Decimal Accuracy",
+      "root_app": "Settings",
+      "parent_id": [
+        11,
+        "Settings/Technical/Database Structure"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,5",
+      "action_model": "ir.actions.act_window",
+      "action_id": 5,
+      "deeplink": "/odoo?menu_id=17&action=5",
+      "is_actionable": true
+    },
+    {
+      "id": 19,
+      "name": "Actions",
+      "complete_name": "Settings/Technical/Actions/Actions",
+      "root_app": "Settings",
+      "parent_id": [
+        18,
+        "Settings/Technical/Actions"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,6",
+      "action_model": "ir.actions.act_window",
+      "action_id": 6,
+      "deeplink": "/odoo?menu_id=19&action=6",
+      "is_actionable": true
+    },
+    {
+      "id": 20,
+      "name": "Reports",
+      "complete_name": "Settings/Technical/Actions/Reports",
+      "root_app": "Settings",
+      "parent_id": [
+        18,
+        "Settings/Technical/Actions"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,7",
+      "action_model": "ir.actions.act_window",
+      "action_id": 7,
+      "deeplink": "/odoo?menu_id=20&action=7",
+      "is_actionable": true
+    },
+    {
+      "id": 21,
+      "name": "Window Actions",
+      "complete_name": "Settings/Technical/Actions/Window Actions",
+      "root_app": "Settings",
+      "parent_id": [
+        18,
+        "Settings/Technical/Actions"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,8",
+      "action_model": "ir.actions.act_window",
+      "action_id": 8,
+      "deeplink": "/odoo?menu_id=21&action=8",
+      "is_actionable": true
+    },
+    {
+      "id": 22,
+      "name": "Client Actions",
+      "complete_name": "Settings/Technical/Actions/Client Actions",
+      "root_app": "Settings",
+      "parent_id": [
+        18,
+        "Settings/Technical/Actions"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,9",
+      "action_model": "ir.actions.act_window",
+      "action_id": 9,
+      "deeplink": "/odoo?menu_id=22&action=9",
+      "is_actionable": true
+    },
+    {
+      "id": 23,
+      "name": "Server Actions",
+      "complete_name": "Settings/Technical/Actions/Server Actions",
+      "root_app": "Settings",
+      "parent_id": [
+        18,
+        "Settings/Technical/Actions"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,10",
+      "action_model": "ir.actions.act_window",
+      "action_id": 10,
+      "deeplink": "/odoo?menu_id=23&action=10",
+      "is_actionable": true
+    },
+    {
+      "id": 24,
+      "name": "Embedded Actions",
+      "complete_name": "Settings/Technical/Actions/Embedded Actions",
+      "root_app": "Settings",
+      "parent_id": [
+        18,
+        "Settings/Technical/Actions"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,11",
+      "action_model": "ir.actions.act_window",
+      "action_id": 11,
+      "deeplink": "/odoo?menu_id=24&action=11",
+      "is_actionable": true
+    },
+    {
+      "id": 25,
+      "name": "Configuration Wizards",
+      "complete_name": "Settings/Technical/Actions/Configuration Wizards",
+      "root_app": "Settings",
+      "parent_id": [
+        18,
+        "Settings/Technical/Actions"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,12",
+      "action_model": "ir.actions.act_window",
+      "action_id": 12,
+      "deeplink": "/odoo?menu_id=25&action=12",
+      "is_actionable": true
+    },
+    {
+      "id": 26,
+      "name": "Assets",
+      "complete_name": "Settings/Technical/Database Structure/Assets",
+      "root_app": "Settings",
+      "parent_id": [
+        11,
+        "Settings/Technical/Database Structure"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,14",
+      "action_model": "ir.actions.act_window",
+      "action_id": 14,
+      "deeplink": "/odoo?menu_id=26&action=14",
+      "is_actionable": true
+    },
+    {
+      "id": 27,
+      "name": "System Parameters",
+      "complete_name": "Settings/Technical/Parameters/System Parameters",
+      "root_app": "Settings",
+      "parent_id": [
+        14,
+        "Settings/Technical/Parameters"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,15",
+      "action_model": "ir.actions.act_window",
+      "action_id": 15,
+      "deeplink": "/odoo?menu_id=27&action=15",
+      "is_actionable": true
+    },
+    {
+      "id": 32,
+      "name": "Models",
+      "complete_name": "Settings/Technical/Database Structure/Models",
+      "root_app": "Settings",
+      "parent_id": [
+        11,
+        "Settings/Technical/Database Structure"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,20",
+      "action_model": "ir.actions.act_window",
+      "action_id": 20,
+      "deeplink": "/odoo?menu_id=32&action=20",
+      "is_actionable": true
+    },
+    {
+      "id": 33,
+      "name": "Fields",
+      "complete_name": "Settings/Technical/Database Structure/Fields",
+      "root_app": "Settings",
+      "parent_id": [
+        11,
+        "Settings/Technical/Database Structure"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,21",
+      "action_model": "ir.actions.act_window",
+      "action_id": 21,
+      "deeplink": "/odoo?menu_id=33&action=21",
+      "is_actionable": true
+    },
+    {
+      "id": 34,
+      "name": "Fields Selection",
+      "complete_name": "Settings/Technical/Database Structure/Fields Selection",
+      "root_app": "Settings",
+      "parent_id": [
+        11,
+        "Settings/Technical/Database Structure"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,22",
+      "action_model": "ir.actions.act_window",
+      "action_id": 22,
+      "deeplink": "/odoo?menu_id=34&action=22",
+      "is_actionable": true
+    },
+    {
+      "id": 36,
+      "name": "External Identifiers",
+      "complete_name": "Settings/Technical/Sequences & Identifiers/External Identifiers",
+      "root_app": "Settings",
+      "parent_id": [
+        35,
+        "Settings/Technical/Sequences & Identifiers"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,23",
+      "action_model": "ir.actions.act_window",
+      "action_id": 23,
+      "deeplink": "/odoo?menu_id=36&action=23",
+      "is_actionable": true
+    },
+    {
+      "id": 37,
+      "name": "Model Constraints",
+      "complete_name": "Settings/Technical/Database Structure/Model Constraints",
+      "root_app": "Settings",
+      "parent_id": [
+        11,
+        "Settings/Technical/Database Structure"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,24",
+      "action_model": "ir.actions.act_window",
+      "action_id": 24,
+      "deeplink": "/odoo?menu_id=37&action=24",
+      "is_actionable": true
+    },
+    {
+      "id": 38,
+      "name": "ManyToMany Relations",
+      "complete_name": "Settings/Technical/Database Structure/ManyToMany Relations",
+      "root_app": "Settings",
+      "parent_id": [
+        11,
+        "Settings/Technical/Database Structure"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,25",
+      "action_model": "ir.actions.act_window",
+      "action_id": 25,
+      "deeplink": "/odoo?menu_id=38&action=25",
+      "is_actionable": true
+    },
+    {
+      "id": 39,
+      "name": "Access Rights",
+      "complete_name": "Settings/Technical/Security/Access Rights",
+      "root_app": "Settings",
+      "parent_id": [
+        13,
+        "Settings/Technical/Security"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,26",
+      "action_model": "ir.actions.act_window",
+      "action_id": 26,
+      "deeplink": "/odoo?menu_id=39&action=26",
+      "is_actionable": true
+    },
+    {
+      "id": 40,
+      "name": "Attachments",
+      "complete_name": "Settings/Technical/Database Structure/Attachments",
+      "root_app": "Settings",
+      "parent_id": [
+        11,
+        "Settings/Technical/Database Structure"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,27",
+      "action_model": "ir.actions.act_window",
+      "action_id": 27,
+      "deeplink": "/odoo?menu_id=40&action=27",
+      "is_actionable": true
+    },
+    {
+      "id": 42,
+      "name": "Sequences",
+      "complete_name": "Settings/Technical/Sequences & Identifiers/Sequences",
+      "root_app": "Settings",
+      "parent_id": [
+        35,
+        "Settings/Technical/Sequences & Identifiers"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,29",
+      "action_model": "ir.actions.act_window",
+      "action_id": 29,
+      "deeplink": "/odoo?menu_id=42&action=29",
+      "is_actionable": true
+    },
+    {
+      "id": 46,
+      "name": "User-defined Defaults",
+      "complete_name": "Settings/Technical/Actions/User-defined Defaults",
+      "root_app": "Settings",
+      "parent_id": [
+        18,
+        "Settings/Technical/Actions"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,34",
+      "action_model": "ir.actions.act_window",
+      "action_id": 34,
+      "deeplink": "/odoo?menu_id=46&action=34",
+      "is_actionable": true
+    },
+    {
+      "id": 47,
+      "name": "Logging",
+      "complete_name": "Settings/Technical/Database Structure/Logging",
+      "root_app": "Settings",
+      "parent_id": [
+        11,
+        "Settings/Technical/Database Structure"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,38",
+      "action_model": "ir.actions.act_window",
+      "action_id": 38,
+      "deeplink": "/odoo?menu_id=47&action=38",
+      "is_actionable": true
+    },
+    {
+      "id": 54,
+      "name": "Import Translation",
+      "complete_name": "Settings/Translations/Import / Export/Import Translation",
+      "root_app": "Settings",
+      "parent_id": [
+        6,
+        "Settings/Translations/Import / Export"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,45",
+      "action_model": "ir.actions.act_window",
+      "action_id": 45,
+      "deeplink": "/odoo?menu_id=54&action=45",
+      "is_actionable": true
+    },
+    {
+      "id": 56,
+      "name": "Export Translation",
+      "complete_name": "Settings/Translations/Import / Export/Export Translation",
+      "root_app": "Settings",
+      "parent_id": [
+        6,
+        "Settings/Translations/Import / Export"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,48",
+      "action_model": "ir.actions.act_window",
+      "action_id": 48,
+      "deeplink": "/odoo?menu_id=56&action=48",
+      "is_actionable": true
+    },
+    {
+      "id": 57,
+      "name": "Profiling",
+      "complete_name": "Settings/Technical/Database Structure/Profiling",
+      "root_app": "Settings",
+      "parent_id": [
+        11,
+        "Settings/Technical/Database Structure"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,52",
+      "action_model": "ir.actions.act_window",
+      "action_id": 52,
+      "deeplink": "/odoo?menu_id=57&action=52",
+      "is_actionable": true
+    },
+    {
+      "id": 58,
+      "name": "Companies",
+      "complete_name": "Settings/Users & Companies/Companies",
+      "root_app": "Settings",
+      "parent_id": [
+        3,
+        "Settings/Users & Companies"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,53",
+      "action_model": "ir.actions.act_window",
+      "action_id": 53,
+      "deeplink": "/odoo?menu_id=58&action=53",
+      "is_actionable": true
+    },
+    {
+      "id": 63,
+      "name": "User Devices",
+      "complete_name": "Settings/Technical/Security/User Devices",
+      "root_app": "Settings",
+      "parent_id": [
+        13,
+        "Settings/Technical/Security"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,74",
+      "action_model": "ir.actions.act_window",
+      "action_id": 74,
+      "deeplink": "/odoo?menu_id=63&action=74",
+      "is_actionable": true
+    },
+    {
+      "id": 71,
+      "name": "In-App Purchase Accounts",
+      "complete_name": "Settings/Technical/IAP/In-App Purchase Accounts",
+      "root_app": "Settings",
+      "parent_id": [
+        70,
+        "Settings/Technical/IAP"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,90",
+      "action_model": "ir.actions.act_window",
+      "action_id": 90,
+      "deeplink": "/odoo?menu_id=71&action=90",
+      "is_actionable": true
+    },
+    {
+      "id": 73,
+      "name": "Discuss",
+      "complete_name": "Discuss/Discuss",
+      "root_app": "Discuss",
+      "parent_id": [
+        72,
+        "Discuss"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,112",
+      "action_model": "ir.actions.client",
+      "action_id": 112,
+      "deeplink": "/odoo?menu_id=73&action=112",
+      "is_actionable": true
+    },
+    {
+      "id": 79,
+      "name": "Categories",
+      "complete_name": "Discuss/Configuration/Categories",
+      "root_app": "Discuss",
+      "parent_id": [
+        75,
+        "Discuss/Configuration"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,104",
+      "action_model": "ir.actions.act_window",
+      "action_id": 104,
+      "deeplink": "/odoo?menu_id=79&action=104",
+      "is_actionable": true
+    },
+    {
+      "id": 86,
+      "name": "Email Templates",
+      "complete_name": "Settings/Technical/Email/Email Templates",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,139",
+      "action_model": "ir.actions.act_window",
+      "action_id": 139,
+      "deeplink": "/odoo?menu_id=86&action=139",
+      "is_actionable": true
+    },
+    {
+      "id": 106,
+      "name": "Activity Overview",
+      "complete_name": "Settings/Technical/Activities/Activity Overview",
+      "root_app": "Settings",
+      "parent_id": [
+        105,
+        "Settings/Technical/Activities"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,116",
+      "action_model": "ir.actions.act_window",
+      "action_id": 116,
+      "deeplink": "/odoo?menu_id=106&action=116",
+      "is_actionable": true
+    },
+    {
+      "id": 109,
+      "name": "Integrations",
+      "complete_name": "Discuss/Integrations",
+      "root_app": "Discuss",
+      "parent_id": [
+        72,
+        "Discuss"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=109",
+      "is_actionable": false
+    },
+    {
+      "id": 155,
+      "name": "Analytic Report",
+      "complete_name": "Accounting/Reporting/Management/Analytic Report",
+      "root_app": "Accounting",
+      "parent_id": [
+        153,
+        "Accounting/Reporting/Management"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,301",
+      "action_model": "ir.actions.act_window",
+      "action_id": 301,
+      "deeplink": "/odoo?menu_id=155&action=301",
+      "is_actionable": true
+    },
+    {
+      "id": 159,
+      "name": "Accounting",
+      "complete_name": "Accounting/Configuration/Accounting",
+      "root_app": "Accounting",
+      "parent_id": [
+        157,
+        "Accounting/Configuration"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=159",
+      "is_actionable": false
+    },
+    {
+      "id": 170,
+      "name": "Payment Terms",
+      "complete_name": "Accounting/Configuration/Invoicing/Payment Terms",
+      "root_app": "Accounting",
+      "parent_id": [
+        169,
+        "Accounting/Configuration/Invoicing"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,296",
+      "action_model": "ir.actions.act_window",
+      "action_id": 296,
+      "deeplink": "/odoo?menu_id=170&action=296",
+      "is_actionable": true
+    },
+    {
+      "id": 175,
+      "name": "Analytic Distribution Models",
+      "complete_name": "Accounting/Configuration/Analytic Accounting/Analytic Distribution Models",
+      "root_app": "Accounting",
+      "parent_id": [
+        174,
+        "Accounting/Configuration/Analytic Accounting"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,197",
+      "action_model": "ir.actions.act_window",
+      "action_id": 197,
+      "deeplink": "/odoo?menu_id=175&action=197",
+      "is_actionable": true
+    },
+    {
+      "id": 179,
+      "name": "Audit Trail",
+      "complete_name": "Accounting/Review/Logs/Audit Trail",
+      "root_app": "Accounting",
+      "parent_id": [
+        149,
+        "Accounting/Review/Logs"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,317",
+      "action_model": "ir.actions.act_window",
+      "action_id": 317,
+      "deeplink": "/odoo?menu_id=179&action=317",
+      "is_actionable": true
+    },
+    {
+      "id": 183,
+      "name": "Dashboards",
+      "complete_name": "Dashboards/Configuration/Dashboards",
+      "root_app": "Dashboards",
+      "parent_id": [
+        182,
+        "Dashboards/Configuration"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,320",
+      "action_model": "ir.actions.act_window",
+      "action_id": 320,
+      "deeplink": "/odoo?menu_id=183&action=320",
+      "is_actionable": true
+    },
+    {
+      "id": 186,
+      "name": "Revisions",
+      "complete_name": "Settings/Technical/Spreadsheet/Revisions",
+      "root_app": "Settings",
+      "parent_id": [
+        185,
+        "Settings/Technical/Spreadsheet"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,322",
+      "action_model": "ir.actions.act_window",
+      "action_id": 322,
+      "deeplink": "/odoo?menu_id=186&action=322",
+      "is_actionable": true
+    },
+    {
+      "id": 188,
+      "name": "Account Tags",
+      "complete_name": "Accounting/Configuration/Accounting/Account Tags",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,324",
+      "action_model": "ir.actions.act_window",
+      "action_id": 324,
+      "deeplink": "/odoo?menu_id=188&action=324",
+      "is_actionable": true
+    },
+    {
+      "id": 189,
+      "name": "Account Groups",
+      "complete_name": "Accounting/Configuration/Accounting/Account Groups",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,325",
+      "action_model": "ir.actions.act_window",
+      "action_id": 325,
+      "deeplink": "/odoo?menu_id=189&action=325",
+      "is_actionable": true
+    },
+    {
+      "id": 190,
+      "name": "Fiscal Years",
+      "complete_name": "Accounting/Configuration/Accounting/Fiscal Years",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,326",
+      "action_model": "ir.actions.act_window",
+      "action_id": 326,
+      "deeplink": "/odoo?menu_id=190&action=326",
+      "is_actionable": true
+    },
+    {
+      "id": 192,
+      "name": "Payment Providers",
+      "complete_name": "Accounting/Configuration/Online Payments/Payment Providers",
+      "root_app": "Accounting",
+      "parent_id": [
+        173,
+        "Accounting/Configuration/Online Payments"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,234",
+      "action_model": "ir.actions.act_window",
+      "action_id": 234,
+      "deeplink": "/odoo?menu_id=192&action=234",
+      "is_actionable": true
+    },
+    {
+      "id": 199,
+      "name": "Partner Ledger",
+      "complete_name": "Accounting/Reporting/Partner Reports/Partner Ledger",
+      "root_app": "Accounting",
+      "parent_id": [
+        151,
+        "Accounting/Reporting/Partner Reports"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,357",
+      "action_model": "ir.actions.client",
+      "action_id": 357,
+      "deeplink": "/odoo?menu_id=199&action=357",
+      "is_actionable": true
+    },
+    {
+      "id": 200,
+      "name": "Aged Receivable",
+      "complete_name": "Accounting/Reporting/Partner Reports/Aged Receivable",
+      "root_app": "Accounting",
+      "parent_id": [
+        151,
+        "Accounting/Reporting/Partner Reports"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,354",
+      "action_model": "ir.actions.client",
+      "action_id": 354,
+      "deeplink": "/odoo?menu_id=200&action=354",
+      "is_actionable": true
+    },
+    {
+      "id": 201,
+      "name": "Aged Payable",
+      "complete_name": "Accounting/Reporting/Partner Reports/Aged Payable",
+      "root_app": "Accounting",
+      "parent_id": [
+        151,
+        "Accounting/Reporting/Partner Reports"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,355",
+      "action_model": "ir.actions.client",
+      "action_id": 355,
+      "deeplink": "/odoo?menu_id=201&action=355",
+      "is_actionable": true
+    },
+    {
+      "id": 203,
+      "name": "Trial Balance",
+      "complete_name": "Accounting/Reporting/Ledgers/Trial Balance",
+      "root_app": "Accounting",
+      "parent_id": [
+        202,
+        "Accounting/Reporting/Ledgers"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,356",
+      "action_model": "ir.actions.client",
+      "action_id": 356,
+      "deeplink": "/odoo?menu_id=203&action=356",
+      "is_actionable": true
+    },
+    {
+      "id": 204,
+      "name": "General Ledger",
+      "complete_name": "Accounting/Reporting/Ledgers/General Ledger",
+      "root_app": "Accounting",
+      "parent_id": [
+        202,
+        "Accounting/Reporting/Ledgers"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,352",
+      "action_model": "ir.actions.client",
+      "action_id": 352,
+      "deeplink": "/odoo?menu_id=204&action=352",
+      "is_actionable": true
+    },
+    {
+      "id": 205,
+      "name": "Tax Report",
+      "complete_name": "Accounting/Reporting/Taxes & Fiscal/Tax Report",
+      "root_app": "Accounting",
+      "parent_id": [
+        152,
+        "Accounting/Reporting/Taxes & Fiscal"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,350",
+      "action_model": "ir.actions.client",
+      "action_id": 350,
+      "deeplink": "/odoo?menu_id=205&action=350",
+      "is_actionable": true
+    },
+    {
+      "id": 207,
+      "name": "Balance Sheet",
+      "complete_name": "Accounting/Reporting/Statement Reports/Balance Sheet",
+      "root_app": "Accounting",
+      "parent_id": [
+        156,
+        "Accounting/Reporting/Statement Reports"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,347",
+      "action_model": "ir.actions.client",
+      "action_id": 347,
+      "deeplink": "/odoo?menu_id=207&action=347",
+      "is_actionable": true
+    },
+    {
+      "id": 208,
+      "name": "Profit and Loss",
+      "complete_name": "Accounting/Reporting/Statement Reports/Profit and Loss",
+      "root_app": "Accounting",
+      "parent_id": [
+        156,
+        "Accounting/Reporting/Statement Reports"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,349",
+      "action_model": "ir.actions.client",
+      "action_id": 349,
+      "deeplink": "/odoo?menu_id=208&action=349",
+      "is_actionable": true
+    },
+    {
+      "id": 209,
+      "name": "Cash Flow Statement",
+      "complete_name": "Accounting/Reporting/Statement Reports/Cash Flow Statement",
+      "root_app": "Accounting",
+      "parent_id": [
+        156,
+        "Accounting/Reporting/Statement Reports"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,346",
+      "action_model": "ir.actions.client",
+      "action_id": 346,
+      "deeplink": "/odoo?menu_id=209&action=346",
+      "is_actionable": true
+    },
+    {
+      "id": 210,
+      "name": "Executive Summary",
+      "complete_name": "Accounting/Reporting/Management/Executive Summary",
+      "root_app": "Accounting",
+      "parent_id": [
+        153,
+        "Accounting/Reporting/Management"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,348",
+      "action_model": "ir.actions.client",
+      "action_id": 348,
+      "deeplink": "/odoo?menu_id=210&action=348",
+      "is_actionable": true
+    },
+    {
+      "id": 211,
+      "name": "Accounting Reports",
+      "complete_name": "Accounting/Configuration/Accounting/Accounting Reports",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,364",
+      "action_model": "ir.actions.act_window",
+      "action_id": 364,
+      "deeplink": "/odoo?menu_id=211&action=364",
+      "is_actionable": true
+    },
+    {
+      "id": 212,
+      "name": "Horizontal Groups",
+      "complete_name": "Accounting/Configuration/Accounting/Horizontal Groups",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,365",
+      "action_model": "ir.actions.act_window",
+      "action_id": 365,
+      "deeplink": "/odoo?menu_id=212&action=365",
+      "is_actionable": true
+    },
+    {
+      "id": 215,
+      "name": "Journal Audit",
+      "complete_name": "Accounting/Review/Control/Journal Audit",
+      "root_app": "Accounting",
+      "parent_id": [
+        147,
+        "Accounting/Review/Control"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,351",
+      "action_model": "ir.actions.client",
+      "action_id": 351,
+      "deeplink": "/odoo?menu_id=215&action=351",
+      "is_actionable": true
+    },
+    {
+      "id": 217,
+      "name": "Working Files",
+      "complete_name": "Accounting/Review/Audit/Working Files",
+      "root_app": "Accounting",
+      "parent_id": [
+        216,
+        "Accounting/Review/Audit"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,379",
+      "action_model": "ir.actions.act_window",
+      "action_id": 379,
+      "deeplink": "/odoo?menu_id=217&action=379",
+      "is_actionable": true
+    },
+    {
+      "id": 220,
+      "name": "Unrealized Currencies",
+      "complete_name": "Accounting/Review/Regularization Entries/Unrealized Currencies",
+      "root_app": "Accounting",
+      "parent_id": [
+        219,
+        "Accounting/Review/Regularization Entries"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,353",
+      "action_model": "ir.actions.client",
+      "action_id": 353,
+      "deeplink": "/odoo?menu_id=220&action=353",
+      "is_actionable": true
+    },
+    {
+      "id": 221,
+      "name": "Deferred Revenues",
+      "complete_name": "Accounting/Review/Regularization Entries/Deferred Revenues",
+      "root_app": "Accounting",
+      "parent_id": [
+        219,
+        "Accounting/Review/Regularization Entries"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,362",
+      "action_model": "ir.actions.client",
+      "action_id": 362,
+      "deeplink": "/odoo?menu_id=221&action=362",
+      "is_actionable": true
+    },
+    {
+      "id": 222,
+      "name": "Deferred Expenses",
+      "complete_name": "Accounting/Review/Regularization Entries/Deferred Expenses",
+      "root_app": "Accounting",
+      "parent_id": [
+        219,
+        "Accounting/Review/Regularization Entries"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,361",
+      "action_model": "ir.actions.client",
+      "action_id": 361,
+      "deeplink": "/odoo?menu_id=222&action=361",
+      "is_actionable": true
+    },
+    {
+      "id": 223,
+      "name": "Checks",
+      "complete_name": "Accounting/Configuration/Accounting/Checks",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,377",
+      "action_model": "ir.actions.act_window",
+      "action_id": 377,
+      "deeplink": "/odoo?menu_id=223&action=377",
+      "is_actionable": true
+    },
+    {
+      "id": 224,
+      "name": "Fiscal Categories",
+      "complete_name": "Accounting/Configuration/Accounting/Fiscal Categories",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,384",
+      "action_model": "ir.actions.act_window",
+      "action_id": 384,
+      "deeplink": "/odoo?menu_id=224&action=384",
+      "is_actionable": true
+    },
+    {
+      "id": 228,
+      "name": "Assets & Liabilities",
+      "complete_name": "Accounting/Accounting/Assets & Liabilities",
+      "root_app": "Accounting",
+      "parent_id": [
+        141,
+        "Accounting/Accounting"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=228",
+      "is_actionable": false
+    },
+    {
+      "id": 230,
+      "name": "Asset Models",
+      "complete_name": "Accounting/Configuration/Accounting/Asset Models",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,393",
+      "action_model": "ir.actions.act_window",
+      "action_id": 393,
+      "deeplink": "/odoo?menu_id=230&action=393",
+      "is_actionable": true
+    },
+    {
+      "id": 239,
+      "name": "Configuration",
+      "complete_name": "Documents/Configuration",
+      "root_app": "Documents",
+      "parent_id": [
+        237,
+        "Documents"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=239",
+      "is_actionable": false
+    },
+    {
+      "id": 240,
+      "name": "Settings",
+      "complete_name": "Documents/Configuration/Settings",
+      "root_app": "Documents",
+      "parent_id": [
+        239,
+        "Documents/Configuration"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,423",
+      "action_model": "ir.actions.act_window",
+      "action_id": 423,
+      "deeplink": "/odoo?menu_id=240&action=423",
+      "is_actionable": true
+    },
+    {
+      "id": 242,
+      "name": "Tags",
+      "complete_name": "Documents/Configuration/Structure/Tags",
+      "root_app": "Documents",
+      "parent_id": [
+        241,
+        "Documents/Configuration/Structure"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,429",
+      "action_model": "ir.actions.act_window",
+      "action_id": 429,
+      "deeplink": "/odoo?menu_id=242&action=429",
+      "is_actionable": true
+    },
+    {
+      "id": 244,
+      "name": "Activity Types",
+      "complete_name": "Documents/Configuration/Activities/Activity Types",
+      "root_app": "Documents",
+      "parent_id": [
+        243,
+        "Documents/Configuration/Activities"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,430",
+      "action_model": "ir.actions.act_window",
+      "action_id": 430,
+      "deeplink": "/odoo?menu_id=244&action=430",
+      "is_actionable": true
+    },
+    {
+      "id": 254,
+      "name": "Knowledge",
+      "complete_name": "Settings/Technical/Knowledge",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=254",
+      "is_actionable": false
+    },
+    {
+      "id": 260,
+      "name": "Annual Report",
+      "complete_name": "Accounting/Review/Audit/Annual Report",
+      "root_app": "Accounting",
+      "parent_id": [
+        216,
+        "Accounting/Review/Audit"
+      ],
+      "sequence": 10,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,474",
+      "action_model": "ir.actions.act_window",
+      "action_id": 474,
+      "deeplink": "/odoo?menu_id=260&action=474",
+      "is_actionable": true
+    },
+    {
+      "id": 83,
+      "name": "Aliases",
+      "complete_name": "Settings/Technical/Email/Aliases",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 11,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,133",
+      "action_model": "ir.actions.act_window",
+      "action_id": 133,
+      "deeplink": "/odoo?menu_id=83&action=133",
+      "is_actionable": true
+    },
+    {
+      "id": 213,
+      "name": "Return Types",
+      "complete_name": "Accounting/Configuration/Accounting/Return Types",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 11,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,376",
+      "action_model": "ir.actions.act_window",
+      "action_id": 376,
+      "deeplink": "/odoo?menu_id=213&action=376",
+      "is_actionable": true
+    },
+    {
+      "id": 226,
+      "name": "Follow-up Levels",
+      "complete_name": "Accounting/Configuration/Invoicing/Follow-up Levels",
+      "root_app": "Accounting",
+      "parent_id": [
+        169,
+        "Accounting/Configuration/Invoicing"
+      ],
+      "sequence": 11,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,390",
+      "action_model": "ir.actions.act_window",
+      "action_id": 390,
+      "deeplink": "/odoo?menu_id=226&action=390",
+      "is_actionable": true
+    },
+    {
+      "id": 84,
+      "name": "Alias Domains",
+      "complete_name": "Settings/Technical/Email/Alias Domains",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 12,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,132",
+      "action_model": "ir.actions.act_window",
+      "action_id": 132,
+      "deeplink": "/odoo?menu_id=84&action=132",
+      "is_actionable": true
+    },
+    {
+      "id": 214,
+      "name": "Financial Budgets",
+      "complete_name": "Accounting/Configuration/Accounting/Financial Budgets",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 12,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,367",
+      "action_model": "ir.actions.act_window",
+      "action_id": 367,
+      "deeplink": "/odoo?menu_id=214&action=367",
+      "is_actionable": true
+    },
+    {
+      "id": 50,
+      "name": "Theme Store",
+      "complete_name": "Apps/Apps/Theme Store",
+      "root_app": "Apps",
+      "parent_id": [
+        48,
+        "Apps/Apps"
+      ],
+      "sequence": 15,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=50",
+      "is_actionable": false
+    },
+    {
+      "id": 64,
+      "name": "Reporting",
+      "complete_name": "Settings/Technical/Reporting",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 15,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=64",
+      "is_actionable": false
+    },
+    {
+      "id": 80,
+      "name": "Canned Responses",
+      "complete_name": "Discuss/Configuration/Canned Responses",
+      "root_app": "Discuss",
+      "parent_id": [
+        75,
+        "Discuss/Configuration"
+      ],
+      "sequence": 15,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,113",
+      "action_model": "ir.actions.act_window",
+      "action_id": 113,
+      "deeplink": "/odoo?menu_id=80&action=113",
+      "is_actionable": true
+    },
+    {
+      "id": 111,
+      "name": "Call History",
+      "complete_name": "Discuss/Technical/Call History",
+      "root_app": "Discuss",
+      "parent_id": [
+        110,
+        "Discuss/Technical"
+      ],
+      "sequence": 15,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,142",
+      "action_model": "ir.actions.act_window",
+      "action_id": 142,
+      "deeplink": "/odoo?menu_id=111&action=142",
+      "is_actionable": true
+    },
+    {
+      "id": 132,
+      "name": "Payments",
+      "complete_name": "Accounting/Customers/Payments",
+      "root_app": "Accounting",
+      "parent_id": [
+        129,
+        "Accounting/Customers"
+      ],
+      "sequence": 15,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,248",
+      "action_model": "ir.actions.act_window",
+      "action_id": 248,
+      "deeplink": "/odoo?menu_id=132&action=248",
+      "is_actionable": true
+    },
+    {
+      "id": 193,
+      "name": "Payment Methods",
+      "complete_name": "Accounting/Configuration/Online Payments/Payment Methods",
+      "root_app": "Accounting",
+      "parent_id": [
+        173,
+        "Accounting/Configuration/Online Payments"
+      ],
+      "sequence": 15,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,235",
+      "action_model": "ir.actions.act_window",
+      "action_id": 235,
+      "deeplink": "/odoo?menu_id=193&action=235",
+      "is_actionable": true
+    },
+    {
+      "id": 246,
+      "name": "Knowledge",
+      "complete_name": "Knowledge",
+      "root_app": "Knowledge",
+      "parent_id": false,
+      "sequence": 17,
+      "web_icon": "knowledge,static/description/icon.png",
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=246",
+      "is_actionable": false
+    },
+    {
+      "id": 74,
+      "name": "Channels",
+      "complete_name": "Discuss/Channels",
+      "root_app": "Discuss",
+      "parent_id": [
+        72,
+        "Discuss"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,110",
+      "action_model": "ir.actions.act_window",
+      "action_id": 110,
+      "deeplink": "/odoo?menu_id=74&action=110",
+      "is_actionable": true
+    },
+    {
+      "id": 87,
+      "name": "Channels",
+      "complete_name": "Settings/Technical/Email/Channels",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,109",
+      "action_model": "ir.actions.act_window",
+      "action_id": 109,
+      "deeplink": "/odoo?menu_id=87&action=109",
+      "is_actionable": true
+    },
+    {
+      "id": 95,
+      "name": "Notifications",
+      "complete_name": "Settings/Technical/Discuss/Notifications",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,97",
+      "action_model": "ir.actions.act_window",
+      "action_id": 97,
+      "deeplink": "/odoo?menu_id=95&action=97",
+      "is_actionable": true
+    },
+    {
+      "id": 107,
+      "name": "Activity Types",
+      "complete_name": "Settings/Technical/Activities/Activity Types",
+      "root_app": "Settings",
+      "parent_id": [
+        105,
+        "Settings/Technical/Activities"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,115",
+      "action_model": "ir.actions.act_window",
+      "action_id": 115,
+      "deeplink": "/odoo?menu_id=107&action=115",
+      "is_actionable": true
+    },
+    {
+      "id": 138,
+      "name": "Payments",
+      "complete_name": "Accounting/Vendors/Payments",
+      "root_app": "Accounting",
+      "parent_id": [
+        135,
+        "Accounting/Vendors"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,249",
+      "action_model": "ir.actions.act_window",
+      "action_id": 249,
+      "deeplink": "/odoo?menu_id=138&action=249",
+      "is_actionable": true
+    },
+    {
+      "id": 145,
+      "name": "Closing",
+      "complete_name": "Accounting/Accounting/Closing",
+      "root_app": "Accounting",
+      "parent_id": [
+        141,
+        "Accounting/Accounting"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=145",
+      "is_actionable": false
+    },
+    {
+      "id": 147,
+      "name": "Control",
+      "complete_name": "Accounting/Review/Control",
+      "root_app": "Accounting",
+      "parent_id": [
+        146,
+        "Accounting/Review"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=147",
+      "is_actionable": false
+    },
+    {
+      "id": 150,
+      "name": "Reporting",
+      "complete_name": "Accounting/Reporting",
+      "root_app": "Accounting",
+      "parent_id": [
+        227,
+        "Accounting"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=150",
+      "is_actionable": false
+    },
+    {
+      "id": 169,
+      "name": "Invoicing",
+      "complete_name": "Accounting/Configuration/Invoicing",
+      "root_app": "Accounting",
+      "parent_id": [
+        157,
+        "Accounting/Configuration"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=169",
+      "is_actionable": false
+    },
+    {
+      "id": 171,
+      "name": "Incoterms",
+      "complete_name": "Accounting/Configuration/Invoicing/Incoterms",
+      "root_app": "Accounting",
+      "parent_id": [
+        169,
+        "Accounting/Configuration/Invoicing"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,315",
+      "action_model": "ir.actions.act_window",
+      "action_id": 315,
+      "deeplink": "/odoo?menu_id=171&action=315",
+      "is_actionable": true
+    },
+    {
+      "id": 176,
+      "name": "Analytic Accounts",
+      "complete_name": "Accounting/Configuration/Analytic Accounting/Analytic Accounts",
+      "root_app": "Accounting",
+      "parent_id": [
+        174,
+        "Accounting/Configuration/Analytic Accounting"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,195",
+      "action_model": "ir.actions.act_window",
+      "action_id": 195,
+      "deeplink": "/odoo?menu_id=176&action=195",
+      "is_actionable": true
+    },
+    {
+      "id": 184,
+      "name": "Sections",
+      "complete_name": "Dashboards/Configuration/Sections",
+      "root_app": "Dashboards",
+      "parent_id": [
+        182,
+        "Dashboards/Configuration"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,321",
+      "action_model": "ir.actions.act_window",
+      "action_id": 321,
+      "deeplink": "/odoo?menu_id=184&action=321",
+      "is_actionable": true
+    },
+    {
+      "id": 194,
+      "name": "Payment Tokens",
+      "complete_name": "Accounting/Configuration/Online Payments/Payment Tokens",
+      "root_app": "Accounting",
+      "parent_id": [
+        173,
+        "Accounting/Configuration/Online Payments"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,238",
+      "action_model": "ir.actions.act_window",
+      "action_id": 238,
+      "deeplink": "/odoo?menu_id=194&action=238",
+      "is_actionable": true
+    },
+    {
+      "id": 196,
+      "name": "Online Synchronization",
+      "complete_name": "Accounting/Configuration/Accounting/Online Synchronization",
+      "root_app": "Accounting",
+      "parent_id": [
+        159,
+        "Accounting/Configuration/Accounting"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,344",
+      "action_model": "ir.actions.act_window",
+      "action_id": 344,
+      "deeplink": "/odoo?menu_id=196&action=344",
+      "is_actionable": true
+    },
+    {
+      "id": 206,
+      "name": "EC Sales List",
+      "complete_name": "Accounting/Reporting/Taxes & Fiscal/EC Sales List",
+      "root_app": "Accounting",
+      "parent_id": [
+        152,
+        "Accounting/Reporting/Taxes & Fiscal"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,360",
+      "action_model": "ir.actions.client",
+      "action_id": 360,
+      "deeplink": "/odoo?menu_id=206&action=360",
+      "is_actionable": true
+    },
+    {
+      "id": 232,
+      "name": "Depreciation Schedule",
+      "complete_name": "Accounting/Review/Inventory/Depreciation Schedule",
+      "root_app": "Accounting",
+      "parent_id": [
+        218,
+        "Accounting/Review/Inventory"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,398",
+      "action_model": "ir.actions.client",
+      "action_id": 398,
+      "deeplink": "/odoo?menu_id=232&action=398",
+      "is_actionable": true
+    },
+    {
+      "id": 245,
+      "name": "Activity Plans",
+      "complete_name": "Documents/Configuration/Activities/Activity Plans",
+      "root_app": "Documents",
+      "parent_id": [
+        243,
+        "Documents/Configuration/Activities"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,431",
+      "action_model": "ir.actions.act_window",
+      "action_id": 431,
+      "deeplink": "/odoo?menu_id=245&action=431",
+      "is_actionable": true
+    },
+    {
+      "id": 258,
+      "name": "Spreadsheet Templates",
+      "complete_name": "Documents/Configuration/Spreadsheet Templates",
+      "root_app": "Documents",
+      "parent_id": [
+        239,
+        "Documents/Configuration"
+      ],
+      "sequence": 20,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,450",
+      "action_model": "ir.actions.act_window",
+      "action_id": 450,
+      "deeplink": "/odoo?menu_id=258&action=450",
+      "is_actionable": true
+    },
+    {
+      "id": 35,
+      "name": "Sequences & Identifiers",
+      "complete_name": "Settings/Technical/Sequences & Identifiers",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 21,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=35",
+      "is_actionable": false
+    },
+    {
+      "id": 88,
+      "name": "Channels/Members",
+      "complete_name": "Settings/Technical/Email/Channels/Members",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 21,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,105",
+      "action_model": "ir.actions.act_window",
+      "action_id": 105,
+      "deeplink": "/odoo?menu_id=88&action=105",
+      "is_actionable": true
+    },
+    {
+      "id": 96,
+      "name": "Followers",
+      "complete_name": "Settings/Technical/Discuss/Followers",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 21,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,102",
+      "action_model": "ir.actions.act_window",
+      "action_id": 102,
+      "deeplink": "/odoo?menu_id=96&action=102",
+      "is_actionable": true
+    },
+    {
+      "id": 89,
+      "name": "Mail Gateway Allowed",
+      "complete_name": "Settings/Technical/Email/Mail Gateway Allowed",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 22,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,134",
+      "action_model": "ir.actions.act_window",
+      "action_id": 134,
+      "deeplink": "/odoo?menu_id=89&action=134",
+      "is_actionable": true
+    },
+    {
+      "id": 97,
+      "name": "Email Blacklist",
+      "complete_name": "Settings/Technical/Discuss/Email Blacklist",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 22,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,141",
+      "action_model": "ir.actions.act_window",
+      "action_id": 141,
+      "deeplink": "/odoo?menu_id=97&action=141",
+      "is_actionable": true
+    },
+    {
+      "id": 14,
+      "name": "Parameters",
+      "complete_name": "Settings/Technical/Parameters",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 24,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=14",
+      "is_actionable": false
+    },
+    {
+      "id": 13,
+      "name": "Security",
+      "complete_name": "Settings/Technical/Security",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 25,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=13",
+      "is_actionable": false
+    },
+    {
+      "id": 81,
+      "name": "Roles",
+      "complete_name": "Discuss/Configuration/Roles",
+      "root_app": "Discuss",
+      "parent_id": [
+        75,
+        "Discuss/Configuration"
+      ],
+      "sequence": 25,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,114",
+      "action_model": "ir.actions.act_window",
+      "action_id": 114,
+      "deeplink": "/odoo?menu_id=81&action=114",
+      "is_actionable": true
+    },
+    {
+      "id": 195,
+      "name": "Payment Transactions",
+      "complete_name": "Accounting/Configuration/Online Payments/Payment Transactions",
+      "root_app": "Accounting",
+      "parent_id": [
+        173,
+        "Accounting/Configuration/Online Payments"
+      ],
+      "sequence": 25,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,236",
+      "action_model": "ir.actions.act_window",
+      "action_id": 236,
+      "deeplink": "/odoo?menu_id=195&action=236",
+      "is_actionable": true
+    },
+    {
+      "id": 231,
+      "name": "Assets and Revenues",
+      "complete_name": "Accounting/Configuration/Assets and Revenues",
+      "root_app": "Accounting",
+      "parent_id": [
+        157,
+        "Accounting/Configuration"
+      ],
+      "sequence": 25,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=231",
+      "is_actionable": false
+    },
+    {
+      "id": 114,
+      "name": "Privacy",
+      "complete_name": "Settings/Technical/Privacy",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 26,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=114",
+      "is_actionable": false
+    },
+    {
+      "id": 108,
+      "name": "Activity Plans",
+      "complete_name": "Settings/Technical/Activities/Activity Plans",
+      "root_app": "Settings",
+      "parent_id": [
+        105,
+        "Settings/Technical/Activities"
+      ],
+      "sequence": 30,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,119",
+      "action_model": "ir.actions.act_window",
+      "action_id": 119,
+      "deeplink": "/odoo?menu_id=108&action=119",
+      "is_actionable": true
+    },
+    {
+      "id": 121,
+      "name": "Resource",
+      "complete_name": "Settings/Technical/Resource",
+      "root_app": "Settings",
+      "parent_id": [
+        8,
+        "Settings/Technical"
+      ],
+      "sequence": 30,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=121",
+      "is_actionable": false
+    },
+    {
+      "id": 172,
+      "name": "Product Categories",
+      "complete_name": "Accounting/Configuration/Invoicing/Product Categories",
+      "root_app": "Accounting",
+      "parent_id": [
+        169,
+        "Accounting/Configuration/Invoicing"
+      ],
+      "sequence": 30,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,208",
+      "action_model": "ir.actions.act_window",
+      "action_id": 208,
+      "deeplink": "/odoo?menu_id=172&action=208",
+      "is_actionable": true
+    },
+    {
+      "id": 173,
+      "name": "Online Payments",
+      "complete_name": "Accounting/Configuration/Online Payments",
+      "root_app": "Accounting",
+      "parent_id": [
+        157,
+        "Accounting/Configuration"
+      ],
+      "sequence": 30,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=173",
+      "is_actionable": false
+    },
+    {
+      "id": 177,
+      "name": "Analytic Plans",
+      "complete_name": "Accounting/Configuration/Analytic Accounting/Analytic Plans",
+      "root_app": "Accounting",
+      "parent_id": [
+        174,
+        "Accounting/Configuration/Analytic Accounting"
+      ],
+      "sequence": 30,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,196",
+      "action_model": "ir.actions.act_window",
+      "action_id": 196,
+      "deeplink": "/odoo?menu_id=177&action=196",
+      "is_actionable": true
+    },
+    {
+      "id": 216,
+      "name": "Audit",
+      "complete_name": "Accounting/Review/Audit",
+      "root_app": "Accounting",
+      "parent_id": [
+        146,
+        "Accounting/Review"
+      ],
+      "sequence": 30,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=216",
+      "is_actionable": false
+    },
+    {
+      "id": 234,
+      "name": "Loans Analysis",
+      "complete_name": "Accounting/Review/Inventory/Loans Analysis",
+      "root_app": "Accounting",
+      "parent_id": [
+        218,
+        "Accounting/Review/Inventory"
+      ],
+      "sequence": 30,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,411",
+      "action_model": "ir.actions.act_window",
+      "action_id": 411,
+      "deeplink": "/odoo?menu_id=234&action=411",
+      "is_actionable": true
+    },
+    {
+      "id": 144,
+      "name": "Analytic Items",
+      "complete_name": "Accounting/Accounting/Transactions/Analytic Items",
+      "root_app": "Accounting",
+      "parent_id": [
+        142,
+        "Accounting/Accounting/Transactions"
+      ],
+      "sequence": 31,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,193",
+      "action_model": "ir.actions.act_window",
+      "action_id": 193,
+      "deeplink": "/odoo?menu_id=144&action=193",
+      "is_actionable": true
+    },
+    {
+      "id": 157,
+      "name": "Configuration",
+      "complete_name": "Accounting/Configuration",
+      "root_app": "Accounting",
+      "parent_id": [
+        227,
+        "Accounting"
+      ],
+      "sequence": 35,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=157",
+      "is_actionable": false
+    },
+    {
+      "id": 180,
+      "name": "Dashboards",
+      "complete_name": "Dashboards",
+      "root_app": "Dashboards",
+      "parent_id": false,
+      "sequence": 37,
+      "web_icon": "spreadsheet_dashboard,static/description/icon.png",
+      "action_raw": "ir.actions.client,319",
+      "action_model": "ir.actions.client",
+      "action_id": 319,
+      "deeplink": "/odoo?menu_id=180&action=319",
+      "is_actionable": true
+    },
+    {
+      "id": 53,
+      "name": "Update Apps List",
+      "complete_name": "Apps/Update Apps List",
+      "root_app": "Apps",
+      "parent_id": [
+        15,
+        "Apps"
+      ],
+      "sequence": 40,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,43",
+      "action_model": "ir.actions.act_window",
+      "action_id": 43,
+      "deeplink": "/odoo?menu_id=53&action=43",
+      "is_actionable": true
+    },
+    {
+      "id": 75,
+      "name": "Configuration",
+      "complete_name": "Discuss/Configuration",
+      "root_app": "Discuss",
+      "parent_id": [
+        72,
+        "Discuss"
+      ],
+      "sequence": 40,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=75",
+      "is_actionable": false
+    },
+    {
+      "id": 174,
+      "name": "Analytic Accounting",
+      "complete_name": "Accounting/Configuration/Analytic Accounting",
+      "root_app": "Accounting",
+      "parent_id": [
+        157,
+        "Accounting/Configuration"
+      ],
+      "sequence": 40,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=174",
+      "is_actionable": false
+    },
+    {
+      "id": 218,
+      "name": "Inventory",
+      "complete_name": "Accounting/Review/Inventory",
+      "root_app": "Accounting",
+      "parent_id": [
+        146,
+        "Accounting/Review"
+      ],
+      "sequence": 40,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=218",
+      "is_actionable": false
+    },
+    {
+      "id": 225,
+      "name": "Fiscal Report",
+      "complete_name": "Accounting/Reporting/Taxes & Fiscal/Fiscal Report",
+      "root_app": "Accounting",
+      "parent_id": [
+        152,
+        "Accounting/Reporting/Taxes & Fiscal"
+      ],
+      "sequence": 40,
+      "web_icon": false,
+      "action_raw": "ir.actions.client,385",
+      "action_model": "ir.actions.client",
+      "action_id": 385,
+      "deeplink": "/odoo?menu_id=225&action=385",
+      "is_actionable": true
+    },
+    {
+      "id": 241,
+      "name": "Structure",
+      "complete_name": "Documents/Configuration/Structure",
+      "root_app": "Documents",
+      "parent_id": [
+        239,
+        "Documents/Configuration"
+      ],
+      "sequence": 40,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=241",
+      "is_actionable": false
+    },
+    {
+      "id": 2,
+      "name": "Custom Shortcuts",
+      "complete_name": "Settings/Custom Shortcuts",
+      "root_app": "Settings",
+      "parent_id": [
+        1,
+        "Settings"
+      ],
+      "sequence": 50,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=2",
+      "is_actionable": false
+    },
+    {
+      "id": 55,
+      "name": "Apply Scheduled Upgrades",
+      "complete_name": "Apps/Apply Scheduled Upgrades",
+      "root_app": "Apps",
+      "parent_id": [
+        15,
+        "Apps"
+      ],
+      "sequence": 50,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,46",
+      "action_model": "ir.actions.act_window",
+      "action_id": 46,
+      "deeplink": "/odoo?menu_id=55&action=46",
+      "is_actionable": true
+    },
+    {
+      "id": 98,
+      "name": "User Settings",
+      "complete_name": "Settings/Technical/Discuss/User Settings",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 50,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,138",
+      "action_model": "ir.actions.act_window",
+      "action_id": 138,
+      "deeplink": "/odoo?menu_id=98&action=138",
+      "is_actionable": true
+    },
+    {
+      "id": 118,
+      "name": "Snailmail Letters",
+      "complete_name": "Settings/Technical/Email/Snailmail Letters",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 50,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,167",
+      "action_model": "ir.actions.act_window",
+      "action_id": 167,
+      "deeplink": "/odoo?menu_id=118&action=167",
+      "is_actionable": true
+    },
+    {
+      "id": 219,
+      "name": "Regularization Entries",
+      "complete_name": "Accounting/Review/Regularization Entries",
+      "root_app": "Accounting",
+      "parent_id": [
+        146,
+        "Accounting/Review"
+      ],
+      "sequence": 50,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=219",
+      "is_actionable": false
+    },
+    {
+      "id": 236,
+      "name": "Payment Way Codes (MX)",
+      "complete_name": "Accounting/Configuration/Online Payments/Payment Way Codes (MX)",
+      "root_app": "Accounting",
+      "parent_id": [
+        173,
+        "Accounting/Configuration/Online Payments"
+      ],
+      "sequence": 50,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,416",
+      "action_model": "ir.actions.act_window",
+      "action_id": 416,
+      "deeplink": "/odoo?menu_id=236&action=416",
+      "is_actionable": true
+    },
+    {
+      "id": 243,
+      "name": "Activities",
+      "complete_name": "Documents/Configuration/Activities",
+      "root_app": "Documents",
+      "parent_id": [
+        239,
+        "Documents/Configuration"
+      ],
+      "sequence": 50,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=243",
+      "is_actionable": false
+    },
+    {
+      "id": 99,
+      "name": "Guests",
+      "complete_name": "Settings/Technical/Discuss/Guests",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 51,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,135",
+      "action_model": "ir.actions.act_window",
+      "action_id": 135,
+      "deeplink": "/odoo?menu_id=99&action=135",
+      "is_actionable": true
+    },
+    {
+      "id": 100,
+      "name": "RTC sessions",
+      "complete_name": "Settings/Technical/Discuss/RTC sessions",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 52,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,106",
+      "action_model": "ir.actions.act_window",
+      "action_id": 106,
+      "deeplink": "/odoo?menu_id=100&action=106",
+      "is_actionable": true
+    },
+    {
+      "id": 101,
+      "name": "ICE Servers",
+      "complete_name": "Settings/Technical/Discuss/ICE Servers",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 53,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,103",
+      "action_model": "ir.actions.act_window",
+      "action_id": 103,
+      "deeplink": "/odoo?menu_id=101&action=103",
+      "is_actionable": true
+    },
+    {
+      "id": 102,
+      "name": "Message Reactions",
+      "complete_name": "Settings/Technical/Discuss/Message Reactions",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 54,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,136",
+      "action_model": "ir.actions.act_window",
+      "action_id": 136,
+      "deeplink": "/odoo?menu_id=102&action=136",
+      "is_actionable": true
+    },
+    {
+      "id": 103,
+      "name": "Link Previews",
+      "complete_name": "Settings/Technical/Discuss/Link Previews",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 55,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,107",
+      "action_model": "ir.actions.act_window",
+      "action_id": 107,
+      "deeplink": "/odoo?menu_id=103&action=107",
+      "is_actionable": true
+    },
+    {
+      "id": 127,
+      "name": "Invoicing",
+      "complete_name": "Invoicing",
+      "root_app": "Invoicing",
+      "parent_id": false,
+      "sequence": 55,
+      "web_icon": "account,static/description/icon.png",
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=127",
+      "is_actionable": false
+    },
+    {
+      "id": 104,
+      "name": "GIF favorite",
+      "complete_name": "Settings/Technical/Discuss/GIF favorite",
+      "root_app": "Settings",
+      "parent_id": [
+        90,
+        "Settings/Technical/Discuss"
+      ],
+      "sequence": 56,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,108",
+      "action_model": "ir.actions.act_window",
+      "action_id": 108,
+      "deeplink": "/odoo?menu_id=104&action=108",
+      "is_actionable": true
+    },
+    {
+      "id": 149,
+      "name": "Logs",
+      "complete_name": "Accounting/Review/Logs",
+      "root_app": "Accounting",
+      "parent_id": [
+        146,
+        "Accounting/Review"
+      ],
+      "sequence": 60,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=149",
+      "is_actionable": false
+    },
+    {
+      "id": 227,
+      "name": "Accounting",
+      "complete_name": "Accounting",
+      "root_app": "Accounting",
+      "parent_id": false,
+      "sequence": 60,
+      "web_icon": "accountant,static/description/icon.png",
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=227",
+      "is_actionable": false
+    },
+    {
+      "id": 229,
+      "name": "Assets",
+      "complete_name": "Accounting/Accounting/Assets & Liabilities/Assets",
+      "root_app": "Accounting",
+      "parent_id": [
+        228,
+        "Accounting/Accounting/Assets & Liabilities"
+      ],
+      "sequence": 60,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,392",
+      "action_model": "ir.actions.act_window",
+      "action_id": 392,
+      "deeplink": "/odoo?menu_id=229&action=392",
+      "is_actionable": true
+    },
+    {
+      "id": 233,
+      "name": "Loans",
+      "complete_name": "Accounting/Accounting/Assets & Liabilities/Loans",
+      "root_app": "Accounting",
+      "parent_id": [
+        228,
+        "Accounting/Accounting/Assets & Liabilities"
+      ],
+      "sequence": 62,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,410",
+      "action_model": "ir.actions.act_window",
+      "action_id": 410,
+      "deeplink": "/odoo?menu_id=233&action=410",
+      "is_actionable": true
+    },
+    {
+      "id": 187,
+      "name": "Reconcile",
+      "complete_name": "Accounting/Accounting/Closing/Reconcile",
+      "root_app": "Accounting",
+      "parent_id": [
+        145,
+        "Accounting/Accounting/Closing"
+      ],
+      "sequence": 65,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,329",
+      "action_model": "ir.actions.act_window",
+      "action_id": 329,
+      "deeplink": "/odoo?menu_id=187&action=329",
+      "is_actionable": true
+    },
+    {
+      "id": 237,
+      "name": "Documents",
+      "complete_name": "Documents",
+      "root_app": "Documents",
+      "parent_id": false,
+      "sequence": 65,
+      "web_icon": "documents,static/description/icon.png",
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=237",
+      "is_actionable": false
+    },
+    {
+      "id": 197,
+      "name": "Tax Returns",
+      "complete_name": "Accounting/Accounting/Closing/Tax Returns",
+      "root_app": "Accounting",
+      "parent_id": [
+        145,
+        "Accounting/Accounting/Closing"
+      ],
+      "sequence": 67,
+      "web_icon": false,
+      "action_raw": "ir.actions.server,371",
+      "action_model": "ir.actions.server",
+      "action_id": 371,
+      "deeplink": "/odoo?menu_id=197&action=371",
+      "is_actionable": true
+    },
+    {
+      "id": 191,
+      "name": "Lock Dates…",
+      "complete_name": "Accounting/Accounting/Closing/Lock Dates…",
+      "root_app": "Accounting",
+      "parent_id": [
+        145,
+        "Accounting/Accounting/Closing"
+      ],
+      "sequence": 70,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,336",
+      "action_model": "ir.actions.act_window",
+      "action_id": 336,
+      "deeplink": "/odoo?menu_id=191&action=336",
+      "is_actionable": true
+    },
+    {
+      "id": 125,
+      "name": "Digest Emails",
+      "complete_name": "Settings/Technical/Email/Digest Emails",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 80,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,230",
+      "action_model": "ir.actions.act_window",
+      "action_id": 230,
+      "deeplink": "/odoo?menu_id=125&action=230",
+      "is_actionable": true
+    },
+    {
+      "id": 178,
+      "name": "Secure Entries",
+      "complete_name": "Accounting/Accounting/Closing/Secure Entries",
+      "root_app": "Accounting",
+      "parent_id": [
+        145,
+        "Accounting/Accounting/Closing"
+      ],
+      "sequence": 80,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,316",
+      "action_model": "ir.actions.act_window",
+      "action_id": 316,
+      "deeplink": "/odoo?menu_id=178&action=316",
+      "is_actionable": true
+    },
+    {
+      "id": 126,
+      "name": "Digest Tips",
+      "complete_name": "Settings/Technical/Email/Digest Tips",
+      "root_app": "Settings",
+      "parent_id": [
+        10,
+        "Settings/Technical/Email"
+      ],
+      "sequence": 81,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,231",
+      "action_model": "ir.actions.act_window",
+      "action_id": 231,
+      "deeplink": "/odoo?menu_id=126&action=231",
+      "is_actionable": true
+    },
+    {
+      "id": 51,
+      "name": "Third-Party Apps",
+      "complete_name": "Apps/Apps/Third-Party Apps",
+      "root_app": "Apps",
+      "parent_id": [
+        48,
+        "Apps/Apps"
+      ],
+      "sequence": 99,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=51",
+      "is_actionable": false
+    },
+    {
+      "id": 52,
+      "name": "Theme Store",
+      "complete_name": "Apps/Apps/Theme Store",
+      "root_app": "Apps",
+      "parent_id": [
+        48,
+        "Apps/Apps"
+      ],
+      "sequence": 99,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=52",
+      "is_actionable": false
+    },
+    {
+      "id": 249,
+      "name": "Configuration",
+      "complete_name": "Knowledge/Configuration",
+      "root_app": "Knowledge",
+      "parent_id": [
+        246,
+        "Knowledge"
+      ],
+      "sequence": 99,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=249",
+      "is_actionable": false
+    },
+    {
+      "id": 67,
+      "name": "Import Module",
+      "complete_name": "Apps/Import Module",
+      "root_app": "Apps",
+      "parent_id": [
+        15,
+        "Apps"
+      ],
+      "sequence": 100,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,85",
+      "action_model": "ir.actions.act_window",
+      "action_id": 85,
+      "deeplink": "/odoo?menu_id=67&action=85",
+      "is_actionable": true
+    },
+    {
+      "id": 110,
+      "name": "Technical",
+      "complete_name": "Discuss/Technical",
+      "root_app": "Discuss",
+      "parent_id": [
+        72,
+        "Discuss"
+      ],
+      "sequence": 100,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=110",
+      "is_actionable": false
+    },
+    {
+      "id": 133,
+      "name": "Products",
+      "complete_name": "Accounting/Customers/Products",
+      "root_app": "Accounting",
+      "parent_id": [
+        129,
+        "Accounting/Customers"
+      ],
+      "sequence": 100,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,299",
+      "action_model": "ir.actions.act_window",
+      "action_id": 299,
+      "deeplink": "/odoo?menu_id=133&action=299",
+      "is_actionable": true
+    },
+    {
+      "id": 139,
+      "name": "Products",
+      "complete_name": "Accounting/Vendors/Products",
+      "root_app": "Accounting",
+      "parent_id": [
+        135,
+        "Accounting/Vendors"
+      ],
+      "sequence": 100,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,300",
+      "action_model": "ir.actions.act_window",
+      "action_id": 300,
+      "deeplink": "/odoo?menu_id=139&action=300",
+      "is_actionable": true
+    },
+    {
+      "id": 8,
+      "name": "Technical",
+      "complete_name": "Settings/Technical",
+      "root_app": "Settings",
+      "parent_id": [
+        1,
+        "Settings"
+      ],
+      "sequence": 110,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=8",
+      "is_actionable": false
+    },
+    {
+      "id": 134,
+      "name": "Customers",
+      "complete_name": "Accounting/Customers/Customers",
+      "root_app": "Accounting",
+      "parent_id": [
+        129,
+        "Accounting/Customers"
+      ],
+      "sequence": 110,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,310",
+      "action_model": "ir.actions.act_window",
+      "action_id": 310,
+      "deeplink": "/odoo?menu_id=134&action=310",
+      "is_actionable": true
+    },
+    {
+      "id": 182,
+      "name": "Configuration",
+      "complete_name": "Dashboards/Configuration",
+      "root_app": "Dashboards",
+      "parent_id": [
+        180,
+        "Dashboards"
+      ],
+      "sequence": 150,
+      "web_icon": false,
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=182",
+      "is_actionable": false
+    },
+    {
+      "id": 140,
+      "name": "Vendors",
+      "complete_name": "Accounting/Vendors/Vendors",
+      "root_app": "Accounting",
+      "parent_id": [
+        135,
+        "Accounting/Vendors"
+      ],
+      "sequence": 200,
+      "web_icon": false,
+      "action_raw": "ir.actions.act_window,311",
+      "action_model": "ir.actions.act_window",
+      "action_id": 311,
+      "deeplink": "/odoo?menu_id=140&action=311",
+      "is_actionable": true
+    },
+    {
+      "id": 15,
+      "name": "Apps",
+      "complete_name": "Apps",
+      "root_app": "Apps",
+      "parent_id": false,
+      "sequence": 500,
+      "web_icon": "base,static/description/modules.png",
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=15",
+      "is_actionable": false
+    },
+    {
+      "id": 1,
+      "name": "Settings",
+      "complete_name": "Settings",
+      "root_app": "Settings",
+      "parent_id": false,
+      "sequence": 550,
+      "web_icon": "base,static/description/settings.png",
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=1",
+      "is_actionable": false
+    },
+    {
+      "id": 16,
+      "name": "Tests",
+      "complete_name": "Tests",
+      "root_app": "Tests",
+      "parent_id": false,
+      "sequence": 1000,
+      "web_icon": "base,static/description/exception.png",
+      "action_raw": "",
+      "action_model": null,
+      "action_id": null,
+      "deeplink": "/odoo?menu_id=16",
+      "is_actionable": false
+    }
+  ]
+}

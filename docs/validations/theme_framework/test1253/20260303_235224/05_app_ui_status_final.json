@@ -1,0 +1,18 @@
+﻿{
+  "status": "ok",
+  "active_view": {
+    "id": null,
+    "key": null,
+    "name": null,
+    "active": false
+  },
+  "params": [],
+  "rollout": {
+    "mode": "off",
+    "live_mode": false,
+    "port_stage": "native",
+    "pilot_users_count": 0,
+    "pilot_users_hash": "97d170e1550eee4afc0af065b78cda302a97674c",
+    "pilot_users": []
+  }
+}

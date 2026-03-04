@@ -1,0 +1,57 @@
+﻿{
+  "status": "ok",
+  "host": "test1253.odoo.com",
+  "active_themes": [
+    "accounting_shell_v1"
+  ],
+  "params": [
+    {
+      "id": 88,
+      "key": "theme_framework.active_themes",
+      "value": "[\"accounting_shell_v1\"]"
+    },
+    {
+      "id": 89,
+      "key": "theme_framework.catalog_version",
+      "value": "1.0.0"
+    }
+  ],
+  "assets": [
+    {
+      "id": 1,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Runtime Bootstrap",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1100
+    },
+    {
+      "id": 2,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Core Tokens",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1110
+    },
+    {
+      "id": 3,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Topbar User Menu",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1120
+    },
+    {
+      "id": 4,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Sidebar Shell",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1130
+    },
+    {
+      "id": 5,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Accounting Surface",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1140
+    }
+  ],
+  "views": []
+}

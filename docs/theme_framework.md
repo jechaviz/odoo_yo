@@ -1,4 +1,4 @@
-# Backend Theme Framework (odoo_yo)
+﻿# Backend Theme Framework (odoo_yo)
 
 This framework is the new baseline to build backend themes in `odoo_yo`, combining:
 
@@ -20,14 +20,15 @@ This framework is the new baseline to build backend themes in `odoo_yo`, combini
 - CLI: `src/odoo_bridge/theme_framework_cli.py`
 - Catalogs: `data/theme_framework/catalogs/`
 - Theme assets: `data/theme_framework/assets/`
+- Audit scripts: `scripts/theme_framework/`
 
 ## Runtime Model
 
 The framework deploys to Odoo Online through:
 
 1. `ir.attachment` for binary asset payloads.
-2. `ir.asset` for bundle inclusion into `web.assets_backend`.
-3. `ir.ui.view` for optional QWeb overrides.
+2. `ir.asset` registry records (auditability/idempotency).
+3. `ir.ui.view` bootstrap extension (`web.webclient_bootstrap`) to guarantee asset injection in Odoo Online.
 4. `ir.config_parameter` for active theme profile metadata.
 
 This makes publication reversible and environment-aware.
@@ -70,29 +71,52 @@ Commands:
 uv run odoo-theme --status --allow-any-host
 uv run odoo-theme --themes procurement_shell_v1 --allow-any-host
 uv run odoo-theme --themes accounting_shell_v1 --allow-any-host
-uv run odoo-theme --rollback --themes procurement_shell_v1 --allow-any-host
+uv run odoo-theme --rollback --themes accounting_shell_v1 --allow-any-host
 ```
+
+## Deep Validation Workflow
+
+1. Export full actionable menu map:
+
+```bash
+uv run python scripts/theme_framework/deep_menu_map.py --allow-any-host --out-dir docs/validations/theme_framework/test1253/<stamp>/deep_audit
+```
+
+2. Run deep visual traversal (all actionable menus + screenshots):
+
+```bash
+node scripts/theme_framework/deep_visual_audit.js \
+  --menu-map=docs/validations/theme_framework/test1253/<stamp>/deep_audit/deep_menu_map.json \
+  --out-dir=docs/validations/theme_framework/test1253/<stamp>/deep_audit \
+  --sample-per-root=2
+```
+
+3. Review outputs:
+
+- `deep_menu_map.json`
+- `deep_menu_summary.md`
+- `deep_visual_audit.json`
+- `deep_visual_audit.md`
+- `deep_audit/screens/*.png`
 
 ## Validation Artifacts
 
-- Canonical final audit:
-- `docs/validations/theme_framework/test1253/20260303_233645/`
-- Audit summary:
-- `docs/validations/theme_framework/test1253/20260303_233645/audit.md`
+- Canonical audited run:
+- `docs/validations/theme_framework/test1253/20260303_235224/`
+- Audit report:
+- `docs/validations/theme_framework/test1253/20260303_235224/audit.md`
 
 ## Design Discipline
 
 1. Keep assets granular and composable.
 2. Keep QWeb patches minimal and purpose-driven.
-3. Prefer scoped CSS classes (`theme-fw-*`) and avoid global destructive selectors.
+3. Prefer scoped CSS classes and avoid global destructive selectors.
 4. Use host-gated profiles until UX parity is validated.
-5. Expand by adding new YAML catalogs, not hardcoded logic.
+5. Expand by adding YAML profiles, not hardcoded host branches.
 
 ## Next Iteration Plan
 
-1. Add explicit topbar/user-menu QWeb patches in `qweb_views` for pixel parity.
-2. Add staged port profiles (`native -> topbar -> user_menu -> sidebar -> shell`).
-3. Add visual parity probe output to `docs/validations/theme_framework/`.
-4. Add procurement reverse-auction surface package (`oktio`) as a separate theme module.
-5. Add accounting CFDI surface package as a separate theme module.
-6. Add screenshot-based visual parity audit (reference vs live) in the same validation folder per run.
+1. Add procurement-specific port profile (`procure1`) and validate with same deep audit flow.
+2. Add component-level parity checklist (topbar, user menu, control panel, list/form/kanban/dialog).
+3. Add screenshot diff scoring (baseline vs live) for geometry/color drift control.
+4. Add automated rollback-on-failure gate when deep visual pass drops below threshold.

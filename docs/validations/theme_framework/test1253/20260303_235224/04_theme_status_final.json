@@ -1,0 +1,93 @@
+﻿{
+  "status": "ok",
+  "host": "test1253.odoo.com",
+  "active_themes": [
+    "accounting_shell_v1"
+  ],
+  "params": [
+    {
+      "id": 88,
+      "key": "theme_framework.active_themes",
+      "value": "[\"accounting_shell_v1\"]"
+    },
+    {
+      "id": 89,
+      "key": "theme_framework.catalog_version",
+      "value": "1.1.0"
+    }
+  ],
+  "assets": [
+    {
+      "id": 1,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Runtime Bootstrap",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1100
+    },
+    {
+      "id": 16,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Topbar User Menu Port JS",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1105
+    },
+    {
+      "id": 2,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Core Tokens",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1110
+    },
+    {
+      "id": 17,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Topbar Port",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1120
+    },
+    {
+      "id": 18,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme User Menu Port",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1130
+    },
+    {
+      "id": 19,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Header Group Port",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1140
+    },
+    {
+      "id": 20,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Native Components",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1150
+    },
+    {
+      "id": 21,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Navigation Deep",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1160
+    },
+    {
+      "id": 5,
+      "name": "[ThemeFW]:accounting_shell_v1:Theme Accounting Surface",
+      "bundle": "web.assets_backend",
+      "active": true,
+      "sequence": 1170
+    }
+  ],
+  "views": [
+    {
+      "id": 1302,
+      "name": "[ThemeFW]:accounting_shell_v1:Webclient Bootstrap Extension",
+      "key": "theme_framework.accounting_shell_v1.webclient_bootstrap_extension",
+      "active": true,
+      "priority": 95
+    }
+  ]
+}
