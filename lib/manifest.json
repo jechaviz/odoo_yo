@@ -1,0 +1,20 @@
+{
+  "odoo_backend_assets": [
+    {
+      "name": "Generic Web - List Column Drag Reorder (JS)",
+      "path": "odoo/web/list_column_drag_reorder.js",
+      "mimetype": "application/javascript",
+      "bundle": "web.assets_backend",
+      "directive": "append",
+      "sequence": 9998
+    },
+    {
+      "name": "Generic Web - List Column Drag Reorder (CSS)",
+      "path": "odoo/web/list_column_drag_reorder.css",
+      "mimetype": "text/css",
+      "bundle": "web.assets_backend",
+      "directive": "append",
+      "sequence": 9999
+    }
+  ]
+}

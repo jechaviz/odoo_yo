@@ -1,0 +1,83 @@
+.o_list_renderer th.o_lib_draggable_column {
+    cursor: grab;
+}
+
+.o_list_renderer th.o_lib_dragging_column {
+    opacity: 0.55;
+}
+
+.o_list_renderer th.o_lib_drop_before {
+    box-shadow: inset 2px 0 0 #00a3ff;
+}
+
+.o_list_renderer th.o_lib_drop_after {
+    box-shadow: inset -2px 0 0 #00a3ff;
+}
+
+/* Reusable utility: allow wrapped content on specific list columns. */
+.o_list_renderer th.o_lib_word_wrap_cell,
+.o_list_renderer td.o_lib_word_wrap_cell,
+table.o_list_table th.o_lib_word_wrap_cell,
+table.o_list_table td.o_lib_word_wrap_cell {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+.o_list_renderer td.o_lib_word_wrap_cell .o_field_many2one,
+.o_list_renderer td.o_lib_word_wrap_cell .o_field_widget,
+.o_list_renderer td.o_lib_word_wrap_cell a,
+.o_list_renderer td.o_lib_word_wrap_cell span,
+table.o_list_table td.o_lib_word_wrap_cell .o_field_many2one,
+table.o_list_table td.o_lib_word_wrap_cell .o_field_widget,
+table.o_list_table td.o_lib_word_wrap_cell a,
+table.o_list_table td.o_lib_word_wrap_cell span {
+    display: block !important;
+    max-width: none !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+.o_list_renderer tr.o_lib_has_wrapped_cell,
+table.o_list_table tr.o_lib_has_wrapped_cell {
+    height: auto !important;
+}
+
+/* Fallback for fields where class propagation is not reliable on list cells. */
+.o_list_renderer th[data-name="x_asset_lot_id"],
+.o_list_renderer td[name="x_asset_lot_id"] {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+.o_list_renderer td[name="x_asset_lot_id"] .o_field_many2one,
+.o_list_renderer td[name="x_asset_lot_id"] .o_field_widget,
+.o_list_renderer td[name="x_asset_lot_id"] a,
+.o_list_renderer td[name="x_asset_lot_id"] .text-truncate,
+.o_list_renderer td[name="x_asset_lot_id"] span {
+    display: block !important;
+    max-width: none !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+/* Description column in rental order lines should also wrap. */
+.o_list_renderer td[name="name"] .o_field_widget,
+.o_list_renderer td[name="name"] a,
+.o_list_renderer td[name="name"] .text-truncate,
+.o_list_renderer td[name="name"] span {
+    display: block !important;
+    max-width: none !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
